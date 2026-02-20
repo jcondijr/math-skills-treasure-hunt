@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Skills: Treasure Hunt</title>
+  <style>
+    :root {
+      --bg: #070d21;
+      --card: #121a34;
+      --ink: #eaf0ff;
+      --accent: #5f7dff;
+      --accent-dark: #4765df;
+      --ok: #39c475;
+      --ok-dark: #1f9355;
+      --warm: #f59e0b;
+      --warm-dark: #d78200;
+      --bad: #ff5ca8;
+      --soft: #2a3a70;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Avenir Next", "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% -5%, #1a295f 0%, #0d1739 35%, #070d21 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid #27386e;
+      box-shadow: 0 10px 36px rgba(2, 6, 20, 0.52);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 35px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    select,
+    input,
+    button {
+      font-size: 19px;
+      border-radius: 12px;
+      border: 1px solid #3f5296;
+      padding: 12px 14px;
+      min-height: 52px;
+    }
+
+    select,
+    input {
+      background: #0b1431;
+      min-width: 110px;
+      color: #eef3ff;
+      font-weight: 600;
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(68, 94, 220, 0.25);
+      transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease;
+    }
+
+    button:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #9cb2ff;
+      outline-offset: 2px;
+    }
+
+    #startBtn,
+    #restartBtn {
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+    }
+
+    #submitBtn {
+      background: #8098ff;
+      color: #fff;
+    }
+
+    #nextBtn {
+      background: linear-gradient(180deg, #24a464 0%, var(--ok-dark) 100%);
+    }
+
+    #rerollBtn {
+      background: linear-gradient(180deg, var(--warm) 0%, var(--warm-dark) 100%);
+      margin-top: 12px;
+    }
+
+    .question {
+      font-size: 50px;
+      font-weight: bold;
+      margin: 10px 0 6px;
+      letter-spacing: 1px;
+    }
+
+    .meta {
+      font-size: 21px;
+      color: #b8c7f5;
+      margin-bottom: 10px;
+    }
+
+    .progress-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #cad6ff;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 18px;
+      background: #0b1431;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid #354981;
+      margin-bottom: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #5b7cfa 0%, #6f86ff 50%, #57b6ff 100%);
+      transition: width 240ms ease;
+    }
+
+    .feedback {
+      min-height: 32px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .feedback.ok {
+      color: var(--ok);
+    }
+
+    .feedback.bad {
+      color: var(--bad);
+    }
+
+    .item-wrap,
+    .jj-wrap {
+      margin-top: 14px;
+      border: 1px solid var(--soft);
+      border-radius: 14px;
+      padding: 14px;
+      background: #0d1737;
+    }
+
+    .item-wrap img,
+    .jj-wrap img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      border: 1px solid #3a4e89;
+      display: block;
+    }
+
+    .item-title {
+      font-size: 22px;
+      margin: 10px 0 6px;
+      font-weight: 800;
+    }
+
+    .price {
+      font-size: 22px;
+      color: #52d58a;
+      font-weight: bold;
+      margin: 0 0 8px;
+    }
+
+    .small {
+      font-size: 15px;
+      color: #9eb0e8;
+    }
+
+    #itemLink {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 700;
+      text-underline-offset: 2px;
+      color: #a9c0ff;
+    }
+
+    .loading-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #c9d8ff;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #2f427a;
+      border-top-color: #8eabff;
+      animation: spin 0.85s linear infinite;
+      flex: 0 0 auto;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .result {
+      font-size: 34px;
+      margin: 0 0 8px;
+      font-weight: bold;
+    }
+
+    .confetti {
+      font-size: 26px;
+      line-height: 1.6;
+      letter-spacing: 4px;
+    }
+
+    .pop {
+      animation: pop-in 220ms ease;
+    }
+
+    @keyframes pop-in {
+      0% {
+        transform: scale(0.97);
+        opacity: 0.75;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .question {
+        font-size: 44px;
+      }
+
+      .row {
+        gap: 10px;
+      }
+
+      .row > label {
+        width: 100%;
+      }
+
+      .row > select,
+      .row > input,
+      .row > button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Math Skills: Treasure Hunt</h1>
+      <div class="row">
+        <label for="tableNumber">Pick your number:</label>
+        <select id="tableNumber">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <button id="startBtn">Start 10 Questions</button>
+      </div>
+      <p class="small">Answer one question at a time. Wrong answers show JJ, then try again until right.</p>
+    </div>
+
+    <div id="gameCard" class="card hidden">
+      <div class="progress-row">
+        <div>Round Progress</div>
+        <div id="progressLabel">0 / 10</div>
+      </div>
+      <div class="progress-track" aria-label="Question progress">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <div id="progressHint" class="small">Let's begin the treasure hunt!</div>
+      <div id="questionMeta" class="meta"></div>
+      <div id="questionText" class="question"></div>
+
+      <div class="row">
+        <label for="answerInput">Your answer:</label>
+        <input id="answerInput" type="number" inputmode="numeric" />
+        <button id="submitBtn">Submit</button>
+        <button id="nextBtn" class="hidden">Continue to Next Question</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+
+      <div id="itemWrap" class="item-wrap hidden">
+        <div id="itemLoading" class="loading-row" role="status" aria-live="polite">
+          <span class="spinner" aria-hidden="true"></span>
+          <span>Loading reward item...</span>
+        </div>
+        <img id="itemImg" alt="Reward item" class="hidden" />
+        <a id="itemLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden">View full item on eBay</a>
+        <div id="itemTitle" class="item-title"></div>
+        <div id="itemPrice" class="price"></div>
+        <div id="itemNote" class="small"></div>
+        <button id="rerollBtn" class="hidden">Pull Different Award 🔄</button>
+      </div>
+
+      <div id="jjWrap" class="jj-wrap hidden">
+        <div class="item-title">Oops! Try again after saying hi to JJ!</div>
+        <img id="jjImg" alt="JJ from Cocomelon" />
+      </div>
+    </div>
+
+    <div id="resultCard" class="card hidden">
+      <div id="resultText" class="result"></div>
+      <div class="confetti">🎉 ⭐ 🎉 ⭐ 🎉</div>
+      <p id="resultDetails"></p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script>
+    const TABLE_OPTIONS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const MULTIPLIERS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const CATEGORIES = [
+      {
+        label: "Dragon Ball",
+        query: "dragon ball toy poster game",
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/c/c8/Dragon_Ball_Super_key_visual.jpg"
+      },
+      {
+        label: "Coin",
+        query: "collectible coin",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Coins.jpg/640px-Coins.jpg"
+      },
+      {
+        label: "Football card",
+        query: "football trading card",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Football_iu_1996.jpg/640px-Football_iu_1996.jpg"
+      },
+      {
+        label: "Basketball card",
+        query: "basketball trading card",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/640px-Basketball.png"
+      },
+      {
+        label: "Gem",
+        query: "gem stone",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Crystal_21139.jpg/640px-Crystal_21139.jpg"
+      }
+    ];
+
+    const RELIABLE_REWARDS = {
+      "Dragon Ball": [
+        {
+          title: "Dragon Ball figure collectible reward",
+          image:
+            "https://images.unsplash.com/photo-1608889175638-9322300c46d8?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball poster style reward item",
+          image:
+            "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball game collectible reward",
+          image:
+            "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=900&q=80"
+        }
+      ],
+      Coin: [
+        {
+          title: "Collector coin set reward",
+          image:
+            "https://images.unsplash.com/photo-1621171596284-f6f1f5d98f4f?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Rare-style coin collectible reward",
+          image:
+            "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Vintage coin display reward",
+          image:
+            "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=900&q=80"
+        }
+      ],
+      "Football card": [
+        {
+          title: "Vintage Football Card in Protective Sleeve",
+          image:
+            "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Rookie Football Card Collector Pick",
+          image:
+            "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Limited Edition Football Card Style Reward",
+          image:
+            "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=900&q=80"
+        }
+      ],
+      "Basketball card": [
+        {
+          title: "Basketball Card in Top Loader Case",
+          image:
+            "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Star Player Basketball Card Reward",
+          image:
+            "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Collector Basketball Card Showcase",
+          image:
+            "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=900&q=80"
+        }
+      ],
+      Gem: [
+        {
+          title: "Polished Gemstone Collector Piece",
+          image:
+            "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Shiny Crystal Gem Reward",
+          image:
+            "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Colorful Mineral Gem Display Piece",
+          image:
+            "https://images.unsplash.com/photo-1615486363972-f79e843b70b2?auto=format&fit=crop&w=900&q=80"
+        }
+      ]
+    };
+
+    const FALLBACK_ITEM_LINKS = {
+      "Dragon Ball": [
+        "https://www.ebay.com/itm/386902915711",
+        "https://www.ebay.com/itm/353249156517",
+        "https://www.ebay.com/itm/205243738364",
+        "https://www.ebay.com/itm/176641485739",
+        "https://www.ebay.com/itm/385939266291"
+      ],
+      Coin: [
+        "https://www.ebay.com/itm/285583918465",
+        "https://www.ebay.com/itm/321658007838",
+        "https://www.ebay.com/itm/286280694644",
+        "https://www.ebay.com/itm/363307855284",
+        "https://www.ebay.com/itm/155988218335"
+      ],
+      "Football card": [
+        "https://www.ebay.com/itm/284816002483",
+        "https://www.ebay.com/itm/393229000843",
+        "https://www.ebay.com/itm/364269910375",
+        "https://www.ebay.com/itm/274702987780",
+        "https://www.ebay.com/itm/386730409373"
+      ],
+      "Basketball card": [
+        "https://www.ebay.com/itm/235821181458",
+        "https://www.ebay.com/itm/303904481039",
+        "https://www.ebay.com/itm/304019092854",
+        "https://www.ebay.com/itm/276696748182",
+        "https://www.ebay.com/itm/324585840656"
+      ],
+      Gem: [
+        "https://www.ebay.com/itm/306051557695",
+        "https://www.ebay.com/itm/152659287508",
+        "https://www.ebay.com/itm/260846355853",
+        "https://www.ebay.com/itm/251008669455",
+        "https://www.ebay.com/itm/265742285187"
+      ]
+    };
+
+    // Reliable YouTube thumbnails from known Cocomelon videos featuring JJ.
+    const JJ_IMAGES = [
+      "https://i.ytimg.com/vi/uaUnTxoF4hU/hqdefault.jpg",
+      "https://i.ytimg.com/vi/Lig3cP174Jo/hqdefault.jpg",
+      "https://i.ytimg.com/vi/w_IINnpSjY8/hqdefault.jpg",
+      "https://i.ytimg.com/vi/HL5GUuK49Ag/hqdefault.jpg",
+      "https://i.ytimg.com/vi/nD_f5oEUGgg/hqdefault.jpg"
+    ];
+
+    const tableNumberEl = document.getElementById("tableNumber");
+    const startBtn = document.getElementById("startBtn");
+    const gameCard = document.getElementById("gameCard");
+    const progressLabel = document.getElementById("progressLabel");
+    const progressFill = document.getElementById("progressFill");
+    const progressHint = document.getElementById("progressHint");
+    const questionMeta = document.getElementById("questionMeta");
+    const questionText = document.getElementById("questionText");
+    const answerInput = document.getElementById("answerInput");
+    const submitBtn = document.getElementById("submitBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const rerollBtn = document.getElementById("rerollBtn");
+    const feedback = document.getElementById("feedback");
+
+    const itemWrap = document.getElementById("itemWrap");
+    const itemLoading = document.getElementById("itemLoading");
+    const itemImg = document.getElementById("itemImg");
+    const itemLink = document.getElementById("itemLink");
+    const itemTitle = document.getElementById("itemTitle");
+    const itemPrice = document.getElementById("itemPrice");
+    const itemNote = document.getElementById("itemNote");
+
+    const jjWrap = document.getElementById("jjWrap");
+    const jjImg = document.getElementById("jjImg");
+
+    const resultCard = document.getElementById("resultCard");
+    const resultText = document.getElementById("resultText");
+    const resultDetails = document.getElementById("resultDetails");
+    const restartBtn = document.getElementById("restartBtn");
+
+    const state = {
+      selectedTable: 2,
+      questions: [],
+      currentIndex: 0,
+      firstTryCorrect: 0,
+      attempts: 0,
+      rewardPlan: [],
+      seenRewardKeys: new Set(),
+      currentRewardKey: "",
+      currentRewardContext: null
+    };
+
+    function randFrom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function formatPrice(num) {
+      return `$${Number(num).toFixed(2)}`;
+    }
+
+    function shuffled(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function buildQuestions(tableNumber, count = 10) {
+      const list = [];
+      let prevMultiplier = null;
+      for (let i = 0; i < count; i += 1) {
+        const pool = MULTIPLIERS.filter((m) => m !== prevMultiplier);
+        const multiplier = randFrom(pool.length ? pool : MULTIPLIERS);
+        list.push({
+          left: tableNumber,
+          right: multiplier,
+          answer: tableNumber * multiplier,
+          solved: false,
+          usedWrongAttempt: false
+        });
+        prevMultiplier = multiplier;
+      }
+      return list;
+    }
+
+    function buildRewardPlan(count = 10) {
+      const categories = shuffled(CATEGORIES);
+      const base = Math.floor(count / categories.length);
+      const remainder = count % categories.length;
+      const counts = categories.map((_, idx) => base + (idx < remainder ? 1 : 0));
+
+      const plan = [];
+      categories.forEach((cat, idx) => {
+        for (let i = 0; i < counts[idx]; i += 1) {
+          plan.push(cat);
+        }
+      });
+      return shuffled(plan);
+    }
+
+    function updateProgressUI() {
+      const total = state.questions.length || 10;
+      const current = state.questions[state.currentIndex];
+      const solvedCurrent = current && current.solved ? 1 : 0;
+      const completed = Math.min(total, state.currentIndex + solvedCurrent);
+      const pct = Math.round((completed / total) * 100);
+      progressLabel.textContent = `${completed} / ${total}`;
+      progressFill.style.width = `${pct}%`;
+      if (completed === 0) {
+        progressHint.textContent = "Let's begin the treasure hunt!";
+      } else if (completed === Math.floor(total / 2)) {
+        progressHint.textContent = "Halfway there! Keep going!";
+      } else if (completed === total - 1) {
+        progressHint.textContent = "Final question coming up!";
+      } else if (completed === total) {
+        progressHint.textContent = "Treasure round complete! 🎉";
+      } else {
+        progressHint.textContent = "Nice work! One question at a time.";
+      }
+    }
+
+    function triggerPop(element) {
+      if (!element) return;
+      element.classList.remove("pop");
+      void element.offsetWidth;
+      element.classList.add("pop");
+    }
+
+    function playCorrectSound() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const now = ctx.currentTime;
+      const freqs = [523.25, 659.25, 783.99];
+      freqs.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.2, now + idx * 0.08 + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.08 + 0.12);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + idx * 0.08);
+        osc.stop(now + idx * 0.08 + 0.14);
+      });
+    }
+
+    function playWrongSound() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(180, now);
+      osc.frequency.exponentialRampToValueAtTime(120, now + 0.2);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.18, now + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.24);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.25);
+    }
+
+    function playRoundCompleteSound() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const now = ctx.currentTime;
+      const notes = [523.25, 659.25, 783.99, 1046.5];
+      notes.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now + idx * 0.12);
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.22, now + idx * 0.12 + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.12 + 0.17);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + idx * 0.12);
+        osc.stop(now + idx * 0.12 + 0.2);
+      });
+    }
+
+    function renderQuestion() {
+      const q = state.questions[state.currentIndex];
+      updateProgressUI();
+      questionMeta.textContent = `Question ${state.currentIndex + 1} of ${state.questions.length}`;
+      questionText.textContent = `${q.left} x ${q.right} = ?`;
+      answerInput.disabled = false;
+      answerInput.value = "";
+      setTimeout(() => answerInput.focus(), 0);
+      feedback.textContent = "";
+      feedback.className = "feedback";
+      submitBtn.disabled = false;
+      nextBtn.classList.add("hidden");
+      rerollBtn.classList.add("hidden");
+      rerollBtn.disabled = false;
+      itemWrap.classList.add("hidden");
+      jjWrap.classList.add("hidden");
+    }
+
+    function buildEbaySearchUrl(categoryQuery, low, high) {
+      return `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(
+        categoryQuery
+      )}&LH_BIN=1&_udlo=${low}&_udhi=${high}&rt=nc&_ipg=50`;
+    }
+
+    function extractPriceFromText(text) {
+      const match = String(text || "").match(/\$([0-9]+(?:\.[0-9]{1,2})?)/);
+      return match ? Number(match[1]) : null;
+    }
+
+    function buildRewardKey(item) {
+      if (!item) return "";
+      if (item.link) return `link:${item.link}`;
+      if (item.image) return `img:${item.image}`;
+      return `title:${item.title || ""}`;
+    }
+
+    async function enrichItemFromLink(link, answerValue, category) {
+      if (!link) return null;
+      const apiUrl = `https://api.microlink.io/?url=${encodeURIComponent(link)}`;
+      const response = await fetch(apiUrl);
+      if (!response.ok) throw new Error("Metadata lookup failed");
+      const payload = await response.json();
+      if (!payload || payload.status !== "success" || !payload.data) {
+        throw new Error("No metadata available");
+      }
+
+      const data = payload.data;
+      const title = data.title || `${category.label} reward`;
+      const image = data.image && data.image.url ? data.image.url : category.image;
+      const fromTitlePrice = extractPriceFromText(title);
+
+      return {
+        category: category.label,
+        link,
+        title,
+        image,
+        priceText: fromTitlePrice
+          ? `Price: ${formatPrice(fromTitlePrice)} | Target: ${formatPrice(answerValue)}`
+          : `Target: ${formatPrice(answerValue)}`
+      };
+    }
+
+    function buildReliableReward(category, answerValue, excludedKeys = []) {
+      const excluded = new Set(excludedKeys);
+      const pool = RELIABLE_REWARDS[category.label] || [];
+      const filteredPool = pool.filter(
+        (entry) => !excluded.has(`img:${entry.image}`) && !excluded.has(`title:${entry.title}`)
+      );
+      const picked = filteredPool.length
+        ? randFrom(filteredPool)
+        : (pool.length ? randFrom(pool) : null);
+      const linkPool = FALLBACK_ITEM_LINKS[category.label] || [];
+      const filteredLinks = linkPool.filter((link) => !excluded.has(`link:${link}`));
+      const fallbackLink = filteredLinks.length
+        ? randFrom(filteredLinks)
+        : (linkPool.length ? randFrom(linkPool) : "");
+
+      return {
+        category: category.label,
+        link: fallbackLink,
+        title: picked ? picked.title : `${category.label} reward`,
+        image: picked ? picked.image : category.image,
+        priceText: `Target: ${formatPrice(answerValue)}`
+      };
+    }
+
+    async function fetchDirectItemViaLocalApi(categoryQuery, answerValue) {
+      const low = Math.max(1, answerValue - 1);
+      const high = answerValue + 1;
+      const url =
+        `http://127.0.0.1:8765/api/item?query=${encodeURIComponent(categoryQuery)}` +
+        `&target=${encodeURIComponent(answerValue)}&low=${encodeURIComponent(low)}&high=${encodeURIComponent(high)}`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Local item API unavailable");
+      const data = await response.json();
+      if (!data) throw new Error("No item in API response");
+      return data;
+    }
+
+    async function fetchItemForAnswer(answerValue, questionIndex, options = {}) {
+      const forcedCategory = options.categoryLabel
+        ? CATEGORIES.find((c) => c.label === options.categoryLabel)
+        : null;
+      const category = forcedCategory || state.rewardPlan[questionIndex] || randFrom(CATEGORIES);
+      const excludedKeys = options.excludedKeys || [];
+
+      try {
+        const directItem = await fetchDirectItemViaLocalApi(category.query, answerValue);
+        if (!directItem.link) {
+          return buildReliableReward(category, answerValue, excludedKeys);
+        }
+        try {
+          return await enrichItemFromLink(directItem.link, answerValue, category);
+        } catch (metaErr) {
+          const lowFidelity = {
+            category: category.label,
+            link: directItem.link,
+            title: directItem.title || `${category.label} reward`,
+            image: directItem.image || category.image,
+            priceText: directItem.price
+              ? `Price: ${formatPrice(directItem.price)} | Target: ${formatPrice(answerValue)}`
+              : `Target: ${formatPrice(answerValue)}`
+          };
+          if (lowFidelity.image && lowFidelity.title && lowFidelity.title !== "Direct eBay item") {
+            return lowFidelity;
+          }
+          const reliable = buildReliableReward(category, answerValue, excludedKeys);
+          try {
+            return await enrichItemFromLink(reliable.link, answerValue, category);
+          } catch (err) {
+            return reliable;
+          }
+        }
+      } catch (directErr) {
+        // If local direct-item API is unavailable, use reliable in-app rewards.
+      }
+      const reliable = buildReliableReward(category, answerValue, excludedKeys);
+      try {
+        return await enrichItemFromLink(reliable.link, answerValue, category);
+      } catch (err) {
+        return reliable;
+      }
+    }
+
+    async function showReward(answerValue, options = {}) {
+      itemWrap.classList.remove("hidden");
+      itemLoading.classList.remove("hidden");
+      itemImg.classList.add("hidden");
+      itemLink.classList.add("hidden");
+      itemTitle.textContent = "";
+      itemPrice.textContent = "";
+      itemNote.textContent = "";
+
+      const categoryLabel =
+        options.categoryLabel ||
+        (state.currentRewardContext && state.currentRewardContext.categoryLabel) ||
+        ((state.rewardPlan[state.currentIndex] && state.rewardPlan[state.currentIndex].label) || "");
+
+      const excludedKeys = new Set(state.seenRewardKeys);
+      if (options.forceDifferent && state.currentRewardKey) {
+        excludedKeys.add(state.currentRewardKey);
+      }
+
+      let item = null;
+      for (let attempt = 0; attempt < 6; attempt += 1) {
+        const candidate = await fetchItemForAnswer(answerValue, state.currentIndex, {
+          categoryLabel,
+          excludedKeys: Array.from(excludedKeys)
+        });
+        const candidateKey = buildRewardKey(candidate);
+        if (!candidateKey || !excludedKeys.has(candidateKey)) {
+          item = candidate;
+          state.currentRewardKey = candidateKey;
+          break;
+        }
+        excludedKeys.add(candidateKey);
+      }
+
+      if (!item) {
+        const fallbackCategory =
+          CATEGORIES.find((c) => c.label === categoryLabel) ||
+          state.rewardPlan[state.currentIndex] ||
+          randFrom(CATEGORIES);
+        item = buildReliableReward(fallbackCategory, answerValue, Array.from(excludedKeys));
+        state.currentRewardKey = buildRewardKey(item);
+      }
+
+      if (state.currentRewardKey) {
+        state.seenRewardKeys.add(state.currentRewardKey);
+      }
+
+      itemLoading.classList.add("hidden");
+      itemTitle.textContent = `You earned: ${item.category}!`;
+      itemPrice.textContent = item.priceText;
+      itemNote.textContent = item.title;
+      if (item.link) {
+        itemLink.href = item.link;
+        itemLink.classList.remove("hidden");
+      }
+      itemImg.src = item.image;
+      itemImg.onerror = () => {
+        itemImg.src =
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Crystal_21139.jpg/640px-Crystal_21139.jpg";
+      };
+      itemImg.classList.remove("hidden");
+      triggerPop(itemWrap);
+    }
+
+    async function handleRerollReward() {
+      if (rerollBtn.disabled || !state.currentRewardContext) return;
+      rerollBtn.disabled = true;
+      try {
+        await showReward(state.currentRewardContext.answerValue, {
+          forceDifferent: true,
+          categoryLabel: state.currentRewardContext.categoryLabel
+        });
+      } finally {
+        rerollBtn.disabled = false;
+      }
+    }
+
+    function loadJjImageWithFallback(urls, idx = 0) {
+      if (idx >= urls.length) {
+        jjImg.onerror = null;
+        jjImg.src =
+          "https://i.ytimg.com/vi/uaUnTxoF4hU/hqdefault.jpg";
+        return;
+      }
+      jjImg.onerror = () => loadJjImageWithFallback(urls, idx + 1);
+      jjImg.src = urls[idx];
+    }
+
+    function showJjImage() {
+      loadJjImageWithFallback(shuffled(JJ_IMAGES));
+      jjWrap.classList.remove("hidden");
+    }
+
+    function showResults() {
+      gameCard.classList.add("hidden");
+      resultCard.classList.remove("hidden");
+      playRoundCompleteSound();
+
+      const total = state.questions.length;
+      const percent = Math.round((state.firstTryCorrect / total) * 100);
+
+      resultText.textContent = `Round complete! Score: ${state.firstTryCorrect}/${total}`;
+      resultDetails.textContent = `First-try accuracy: ${percent}% | Total attempts: ${state.attempts}`;
+    }
+
+    function startRound() {
+      state.selectedTable = Number(tableNumberEl.value);
+      state.questions = buildQuestions(state.selectedTable, 10);
+      state.rewardPlan = buildRewardPlan(10);
+      state.currentIndex = 0;
+      state.firstTryCorrect = 0;
+      state.attempts = 0;
+      state.seenRewardKeys = new Set();
+      state.currentRewardKey = "";
+      state.currentRewardContext = null;
+
+      resultCard.classList.add("hidden");
+      gameCard.classList.remove("hidden");
+      renderQuestion();
+    }
+
+    async function handleSubmit() {
+      if (submitBtn.disabled || answerInput.disabled) return;
+      const q = state.questions[state.currentIndex];
+      const userAnswer = Number(answerInput.value);
+      if (!Number.isFinite(userAnswer)) return;
+
+      state.attempts += 1;
+      submitBtn.disabled = true;
+
+      if (userAnswer === q.answer) {
+        playCorrectSound();
+        feedback.textContent = "Correct! Great job! 🎉";
+        feedback.className = "feedback ok";
+        triggerPop(feedback);
+
+        if (!q.usedWrongAttempt) {
+          state.firstTryCorrect += 1;
+        }
+
+        jjWrap.classList.add("hidden");
+        answerInput.disabled = true;
+        state.currentRewardContext = {
+          answerValue: q.answer,
+          categoryLabel: (state.rewardPlan[state.currentIndex] && state.rewardPlan[state.currentIndex].label) || ""
+        };
+        try {
+          await showReward(q.answer, { categoryLabel: state.currentRewardContext.categoryLabel });
+        } catch (err) {
+          itemWrap.classList.remove("hidden");
+          itemLoading.classList.add("hidden");
+          itemTitle.textContent = "You earned a reward!";
+          itemPrice.textContent = `Target: ${formatPrice(q.answer)}`;
+          itemNote.textContent = "Could not load item details right now, but great job!";
+          itemImg.src =
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Crystal_21139.jpg/640px-Crystal_21139.jpg";
+          itemImg.classList.remove("hidden");
+        }
+
+        q.solved = true;
+        updateProgressUI();
+        submitBtn.disabled = true;
+        nextBtn.classList.remove("hidden");
+        rerollBtn.classList.remove("hidden");
+      } else {
+        q.usedWrongAttempt = true;
+        playWrongSound();
+        feedback.textContent = "Not quite. Look at JJ, then try again!";
+        feedback.className = "feedback bad";
+        itemWrap.classList.add("hidden");
+        showJjImage();
+        answerInput.disabled = false;
+        submitBtn.disabled = false;
+        answerInput.focus();
+        answerInput.select();
+      }
+    }
+
+    function goToNextQuestion() {
+      state.currentIndex += 1;
+      if (state.currentIndex >= state.questions.length) {
+        showResults();
+      } else {
+        renderQuestion();
+      }
+    }
+
+    startBtn.addEventListener("click", startRound);
+    submitBtn.addEventListener("click", handleSubmit);
+    nextBtn.addEventListener("click", goToNextQuestion);
+    rerollBtn.addEventListener("click", handleRerollReward);
+    answerInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") handleSubmit();
+    });
+    gameCard.addEventListener("click", (e) => {
+      const clickedAction =
+        e.target === submitBtn ||
+        e.target === nextBtn ||
+        e.target === rerollBtn ||
+        e.target === startBtn ||
+        e.target === restartBtn;
+      if (!clickedAction && !answerInput.disabled) {
+        answerInput.focus();
+      }
+    });
+    restartBtn.addEventListener("click", () => {
+      startRound();
+    });
+
+    // Ensure selected value always stays in allowed set.
+    tableNumberEl.addEventListener("change", () => {
+      if (!TABLE_OPTIONS.includes(Number(tableNumberEl.value))) {
+        tableNumberEl.value = "2";
+      }
+    });
+  </script>
+</body>
+</html>

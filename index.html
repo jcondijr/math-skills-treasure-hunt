@@ -444,6 +444,31 @@
           title: "Dragon Ball game collectible reward",
           image:
             "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball action figure showcase reward",
+          image:
+            "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball collector shelf reward",
+          image:
+            "https://images.unsplash.com/photo-1612036782180-6f0822045d9a?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball anime merch reward",
+          image:
+            "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball battle scene poster reward",
+          image:
+            "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          title: "Dragon Ball mini figure reward",
+          image:
+            "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=900&q=80"
         }
       ],
       Coin: [
@@ -522,35 +547,63 @@
         "https://www.ebay.com/itm/353249156517",
         "https://www.ebay.com/itm/205243738364",
         "https://www.ebay.com/itm/176641485739",
-        "https://www.ebay.com/itm/385939266291"
+        "https://www.ebay.com/itm/385939266291",
+        "https://www.ebay.com/itm/305321105448",
+        "https://www.ebay.com/itm/384846083288",
+        "https://www.ebay.com/itm/256717340194",
+        "https://www.ebay.com/itm/156288129339",
+        "https://www.ebay.com/itm/315251124622",
+        "https://www.ebay.com/itm/124280891778",
+        "https://www.ebay.com/itm/392990170146",
+        "https://www.ebay.com/itm/315251125242"
       ],
       Coin: [
         "https://www.ebay.com/itm/285583918465",
         "https://www.ebay.com/itm/321658007838",
         "https://www.ebay.com/itm/286280694644",
         "https://www.ebay.com/itm/363307855284",
-        "https://www.ebay.com/itm/155988218335"
+        "https://www.ebay.com/itm/155988218335",
+        "https://www.ebay.com/itm/376496039475",
+        "https://www.ebay.com/itm/186946648918",
+        "https://www.ebay.com/itm/388800545687",
+        "https://www.ebay.com/itm/285406916979",
+        "https://www.ebay.com/itm/315054561580"
       ],
       "Football card": [
         "https://www.ebay.com/itm/284816002483",
         "https://www.ebay.com/itm/393229000843",
         "https://www.ebay.com/itm/364269910375",
         "https://www.ebay.com/itm/274702987780",
-        "https://www.ebay.com/itm/386730409373"
+        "https://www.ebay.com/itm/386730409373",
+        "https://www.ebay.com/itm/376527574508",
+        "https://www.ebay.com/itm/388928252624",
+        "https://www.ebay.com/itm/406440016114"
       ],
       "Basketball card": [
         "https://www.ebay.com/itm/235821181458",
         "https://www.ebay.com/itm/303904481039",
         "https://www.ebay.com/itm/304019092854",
         "https://www.ebay.com/itm/276696748182",
-        "https://www.ebay.com/itm/324585840656"
+        "https://www.ebay.com/itm/324585840656",
+        "https://www.ebay.com/itm/156435242143",
+        "https://www.ebay.com/itm/154828482118",
+        "https://www.ebay.com/itm/266956859204",
+        "https://www.ebay.com/itm/187551749440",
+        "https://www.ebay.com/itm/157289044289"
       ],
       Gem: [
         "https://www.ebay.com/itm/306051557695",
         "https://www.ebay.com/itm/152659287508",
         "https://www.ebay.com/itm/260846355853",
         "https://www.ebay.com/itm/251008669455",
-        "https://www.ebay.com/itm/265742285187"
+        "https://www.ebay.com/itm/265742285187",
+        "https://www.ebay.com/itm/301364818253",
+        "https://www.ebay.com/itm/384461482870",
+        "https://www.ebay.com/itm/115344534381",
+        "https://www.ebay.com/itm/325801740705",
+        "https://www.ebay.com/itm/373841630099",
+        "https://www.ebay.com/itm/335817260021",
+        "https://www.ebay.com/itm/317644915721"
       ]
     };
 
@@ -620,6 +673,33 @@
         [copy[i], copy[j]] = [copy[j], copy[i]];
       }
       return copy;
+    }
+
+    function getIsoWeekSeed() {
+      const now = new Date();
+      const utcDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+      const dayNum = utcDate.getUTCDay() || 7;
+      utcDate.setUTCDate(utcDate.getUTCDate() + 4 - dayNum);
+      const yearStart = new Date(Date.UTC(utcDate.getUTCFullYear(), 0, 1));
+      const weekNo = Math.ceil(((utcDate - yearStart) / 86400000 + 1) / 7);
+      return utcDate.getUTCFullYear() * 100 + weekNo;
+    }
+
+    function hashString(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i += 1) {
+        hash = (hash * 31 + str.charCodeAt(i)) % 2147483647;
+      }
+      return hash;
+    }
+
+    function getWeeklyPool(items, label, maxSize = 12) {
+      if (!Array.isArray(items) || !items.length) return [];
+      if (items.length <= maxSize) return [...items];
+      const seed = getIsoWeekSeed() + hashString(label);
+      const start = Math.abs(seed) % items.length;
+      const rotated = [...items.slice(start), ...items.slice(0, start)];
+      return rotated.slice(0, maxSize);
     }
 
     function buildQuestions(tableNumber, count = 10) {
@@ -769,8 +849,9 @@
 
     function buildRewardKey(item) {
       if (!item) return "";
-      if (item.link) return `link:${item.link}`;
+      if (item.image && item.title) return `shown:${item.image}|${item.title}`;
       if (item.image) return `img:${item.image}`;
+      if (item.link) return `link:${item.link}`;
       return `title:${item.title || ""}`;
     }
 
@@ -802,14 +883,16 @@
 
     function buildReliableReward(category, answerValue, excludedKeys = []) {
       const excluded = new Set(excludedKeys);
-      const pool = RELIABLE_REWARDS[category.label] || [];
+      const fullPool = RELIABLE_REWARDS[category.label] || [];
+      const pool = getWeeklyPool(fullPool, `${category.label}:reliable`, 12);
       const filteredPool = pool.filter(
         (entry) => !excluded.has(`img:${entry.image}`) && !excluded.has(`title:${entry.title}`)
       );
       const picked = filteredPool.length
         ? randFrom(filteredPool)
         : (pool.length ? randFrom(pool) : null);
-      const linkPool = FALLBACK_ITEM_LINKS[category.label] || [];
+      const fullLinkPool = FALLBACK_ITEM_LINKS[category.label] || [];
+      const linkPool = getWeeklyPool(fullLinkPool, `${category.label}:links`, 12);
       const filteredLinks = linkPool.filter((link) => !excluded.has(`link:${link}`));
       const fallbackLink = filteredLinks.length
         ? randFrom(filteredLinks)
@@ -1044,6 +1127,9 @@
         q.solved = true;
         updateProgressUI();
         submitBtn.disabled = true;
+        nextBtn.textContent = state.currentIndex === state.questions.length - 1
+          ? "Finish Round 🎉"
+          : "Continue to Next Question";
         nextBtn.classList.remove("hidden");
         rerollBtn.classList.remove("hidden");
       } else {

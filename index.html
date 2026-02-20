@@ -507,19 +507,64 @@
       ],
       "Basketball card": [
         {
-          title: "Basketball Card in Top Loader Case",
+          title: "Duke 1987-88 Basketball Card - Alaa Abdelnaby",
           image:
-            "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Alaa_Abdelnaby_front.jpg"
         },
         {
-          title: "Star Player Basketball Card Reward",
+          title: "Duke 1987-88 Basketball Card - Billy King",
           image:
-            "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=900&q=80"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Billy_King_front.jpg"
         },
         {
-          title: "Collector Basketball Card Showcase",
+          title: "Duke 1987-88 Basketball Card - Danny Ferry",
           image:
-            "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=900&q=80"
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Danny_Ferry_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - George Burgin",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_George_Burgin_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Greg Koubek",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Greg_Koubek_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Joe Cook",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Joe_Cook_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - John Smith",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_John_Smith_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Kevin Strickland",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Kevin_Strickland_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Mike Krzyzewski",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Mike_Krzyzewski_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Phil Henderson",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Phil_Henderson_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Quin Snyder",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Quin_Snyder_front.jpg"
+        },
+        {
+          title: "Duke 1987-88 Basketball Card - Robert Brickey",
+          image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Duke_MBB_1987-88_card_-_Robert_Brickey_front.jpg"
         }
       ],
       Gem: [
@@ -543,7 +588,6 @@
 
     const FALLBACK_ITEM_LINKS = {
       "Dragon Ball": [
-        "https://www.ebay.com/itm/386902915711",
         "https://www.ebay.com/itm/353249156517",
         "https://www.ebay.com/itm/205243738364",
         "https://www.ebay.com/itm/176641485739",
@@ -552,10 +596,8 @@
         "https://www.ebay.com/itm/384846083288",
         "https://www.ebay.com/itm/256717340194",
         "https://www.ebay.com/itm/156288129339",
-        "https://www.ebay.com/itm/315251124622",
         "https://www.ebay.com/itm/124280891778",
-        "https://www.ebay.com/itm/392990170146",
-        "https://www.ebay.com/itm/315251125242"
+        "https://www.ebay.com/itm/392990170146"
       ],
       Coin: [
         "https://www.ebay.com/itm/285583918465",
@@ -602,9 +644,60 @@
         "https://www.ebay.com/itm/115344534381",
         "https://www.ebay.com/itm/325801740705",
         "https://www.ebay.com/itm/373841630099",
-        "https://www.ebay.com/itm/335817260021",
-        "https://www.ebay.com/itm/317644915721"
+        "https://www.ebay.com/itm/335817260021"
       ]
+    };
+
+    const KNOWN_LISTING_DATA = {
+      "https://www.ebay.com/itm/353249156517": { title: "Dragon Ball z Goku Super Saiyan | eBay", image: "https://i.ebayimg.com/images/g/~SsAAOSw6qdfk57g/s-l400.jpg" },
+      "https://www.ebay.com/itm/205243738364": { title: "Dragon Ball Coloring Page | eBay", image: "https://i.ebayimg.com/images/g/QEMAAOSwYAhnk4~s/s-l500.jpg" },
+      "https://www.ebay.com/itm/176641485739": { title: "Dragon Ball Z Episode 279 Subtitle Battle for the Universe Animation Cel z104 | eBay", image: "https://i.ebayimg.com/images/g/xvcAAOSwiGJnF3Ma/s-l500.jpg" },
+      "https://www.ebay.com/itm/385939266291": { title: "dragon ball super dragon balls | eBay", image: "https://i.ebayimg.com/images/g/XpsAAOSwU79k1TIx/s-l400.jpg" },
+      "https://www.ebay.com/itm/305321105448": { title: "Bandai Dragon Ball Z Son Goku Action Figure - BDIDB208778 for sale online | eBay", image: "https://i.ebayimg.com/images/g/0MEAAOSwKSxlJpoV/s-l640.jpg" },
+      "https://www.ebay.com/itm/384846083288": { title: "Bandai Dragon Ball Z: A Saiyan Raised on Earth Son Goku Action Figure for sale online | eBay", image: "https://i.ebayimg.com/images/g/X-4AAOSwb7JiChHt/s-l640.jpg" },
+      "https://www.ebay.com/itm/256717340194": { title: "Figure-rise Standard Dragon Ball Super Super Saiyan God Super Saiyan Son Goku!! | eBay", image: "https://i.ebayimg.com/images/g/XEkAAOSwLURnN4Jd/s-l400.jpg" },
+      "https://www.ebay.com/itm/156288129339": { title: "Vintage Dragon Ball Z Poster 1998 (Z Warriors in Space) (21\" x 15\") DBZ | eBay", image: "https://i.ebayimg.com/images/g/bksAAOSwF19mhzne/s-l400.jpg" },
+      "https://www.ebay.com/itm/124280891778": { title: "Dragon Ball Z - Goku Poster | eBay", image: "https://i.ebayimg.com/images/g/VGoAAOSwjLFfJHqr/s-l400.jpg" },
+      "https://www.ebay.com/itm/392990170146": { title: "Dragon Ball Z Poster Bardock Last Attack 12inx18inches Free Shipping | eBay", image: "https://i.ebayimg.com/images/g/GWcAAOSweIZfk42g/s-l500.png" },
+      "https://www.ebay.com/itm/285583918465": { title: "1820 Small Date, Curled 2, Capped Bust Half Dollar, NGC MS62+, Amazing Color! | eBay", image: "https://i.ebayimg.com/images/g/nBkAAOSwjERlZ9up/s-l400.jpg" },
+      "https://www.ebay.com/itm/321658007838": { title: "PHILIP II 249AD Antioch ANTIOCH Silver Tetradrachm Ancient Roman Coin i46827 | eBay", image: "https://i.ebayimg.com/images/g/B28AAOSwa39Uz2Oc/s-l400.jpg" },
+      "https://www.ebay.com/itm/286280694644": { title: "1893 Columbian Expo Commemorative Half Dollar M5712 | eBay", image: "https://i.ebayimg.com/images/g/NjcAAOSw~F9lLw0t/s-l400.jpg" },
+      "https://www.ebay.com/itm/363307855284": { title: "1892 Chicago Columbian Exposition Commemorative Half Dollar 50 Cents Silver Coin | eBay", image: "https://i.ebayimg.com/images/g/tIkAAOSwnbxgO95W/s-l400.jpg" },
+      "https://www.ebay.com/itm/155988218335": { title: "½ Half Dollar Franklin Silver Coin 1952 D Denver Mint 50C KM#199 | eBay", image: "https://i.ebayimg.com/images/g/TSkAAOSwaOBllj0y/s-l400.jpg" },
+      "https://www.ebay.com/itm/376496039475": { title: "1986 American Silver Eagle PCGS MS-70 Mercanti Signed | eBay", image: "https://i.ebayimg.com/images/g/KI8AAeSwtaFopjId/s-l500.jpg" },
+      "https://www.ebay.com/itm/186946648918": { title: "1795 Draped Bust Silver Dollar $1 Small Eagle Coin. Certified NGC XF Detail (EF) | eBay", image: "https://i.ebayimg.com/images/g/zUYAAOSweCplL2e1/s-l500.jpg" },
+      "https://www.ebay.com/itm/388800545687": { title: "2024-D Kennedy Half Dollar | eBay", image: "https://i.ebayimg.com/images/g/7y0AAeSwEA5okrWi/s-l500.jpg" },
+      "https://www.ebay.com/itm/285406916979": { title: "$600 Circulated Grade U.S. Half Dollars. Kennedy Halves. 50 Cent Coins. Money! | eBay", image: "https://i.ebayimg.com/images/g/MIYAAOSwpr9d-~AR/s-l400.jpg" },
+      "https://www.ebay.com/itm/315054561580": { title: "½ Half Dollar Walking Liberty Silver Coin 1944 P Philadelphia Mint 50C KM#142 | eBay", image: "https://i.ebayimg.com/images/g/xCgAAOSwBD5limX~/s-l400.jpg" },
+      "https://www.ebay.com/itm/284816002483": { title: "1986 TOPPS Football #11 WALTER PAYTON Rare In Great Condition | eBay", image: "https://i.ebayimg.com/images/g/GTQAAOSw1LdigTZj/s-l400.jpg" },
+      "https://www.ebay.com/itm/393229000843": { title: "1980 Topps Walter Payton All Pro NFC football card Chicago Bears #160 EX | eBay", image: "https://i.ebayimg.com/images/g/hlcAAOSwZh1gZRtT/s-l400.jpg" },
+      "https://www.ebay.com/itm/364269910375": { title: "1970 Topps football card #70 Gale Sayers Chicago Bears EXMT O/C | eBay", image: "https://i.ebayimg.com/images/g/OMwAAOSw7NNkbAAH/s-l400.jpg" },
+      "https://www.ebay.com/itm/274702987780": { title: "1972 Topps Super Bowl Game Cowboys vs Dolphins #139 Football Card | eBay", image: "https://i.ebayimg.com/images/g/oikAAOSwsnZgPTHc/s-l400.jpg" },
+      "https://www.ebay.com/itm/386730409373": { title: "1982 Topps - Joe Montana #488 for sale online | eBay", image: "https://i.ebayimg.com/images/g/Tf4AAOSwMiZnpiQB/s-l1600.jpg" },
+      "https://www.ebay.com/itm/376527574508": { title: "1991 Upper Deck - Emmitt Smith #172 for sale online | eBay", image: "https://i.ebayimg.com/images/g/GOsAAOSwY5JnpjPy/s-l1600.jpg" },
+      "https://www.ebay.com/itm/388928252624": { title: "sports trading cards rookie psa graded 10 | eBay", image: "https://i.ebayimg.com/images/g/aicAAeSwJptop9hv/s-l500.jpg" },
+      "https://www.ebay.com/itm/406440016114": { title: "1976 Topps #148 Walter Payton Rookie Card PSA 6 EX-MT RC Chicago Bears | eBay", image: "https://i.ebayimg.com/images/g/ppwAAeSwFy1pLjby/s-l400.jpg" },
+      "https://www.ebay.com/itm/235821181458": { title: "1961 Fleer Elgin Baylor In Action #46 - PSA 4 - Rookie Card - RC - LA Lakers | eBay", image: "https://i.ebayimg.com/images/g/P9UAAOSw3TxnLSPi/s-l400.jpg" },
+      "https://www.ebay.com/itm/303904481039": { title: "1988-89 Fleer Michael Jordan #17 of 132 Basketball Card | eBay", image: "https://i.ebayimg.com/images/g/gEYAAOSwC3VgPVFP/s-l400.jpg" },
+      "https://www.ebay.com/itm/304019092854": { title: "1997-98 Topps - Kobe Bryant #171 for sale online | eBay", image: "https://i.ebayimg.com/images/g/w1sAAOSwr8JoAL4g/s-l1600.jpg" },
+      "https://www.ebay.com/itm/276696748182": { title: "1988-89 Fleer - Michael Jordan #17 for sale online | eBay", image: "https://i.ebayimg.com/images/g/fecAAOSwSmdnpjSv/s-l1600.jpg" },
+      "https://www.ebay.com/itm/324585840656": { title: "1988 Fleer Michael Jordan #120 Basketball Card | eBay", image: "https://i.ebayimg.com/images/g/De0AAOSwmR1ggex6/s-l400.jpg" },
+      "https://www.ebay.com/itm/156435242143": { title: "2023-24 Bowman University Chrome Sapphire Edition - Angel Reese #49 (RC) for sale online | eBay", image: "https://i.ebayimg.com/images/g/NbUAAOSwiv5npjUQ/s-l1600.jpg" },
+      "https://www.ebay.com/itm/154828482118": { title: "1996 Score Board #15 Kobe Bryant Basketball Rookies PSA 10 | eBay", image: "https://i.ebayimg.com/images/g/CqUAAOSwDgNh~b14/s-l400.jpg" },
+      "https://www.ebay.com/itm/266956859204": { title: "Graded 1978 Topps Kareem Abdul-Jabbar #110 Basketball Card PSA 8 NM-MT | eBay", image: "https://i.ebayimg.com/images/g/6KIAAOSwuRpny-Wu/s-l400.jpg" },
+      "https://www.ebay.com/itm/187551749440": { title: "1996 Score Board Kobe Bryant Basketball Rookie Card #15 Graded PSA 9 MINT | eBay", image: "https://i.ebayimg.com/images/g/VekAAeSwwaJovkl7/s-l400.jpg" },
+      "https://www.ebay.com/itm/157289044289": { title: "1992-93 Topps - Shaquille O'Neal #362 (RC) for sale online | eBay", image: "https://i.ebayimg.com/images/g/U9cAAOSw5ztnpiw4/s-l1600.jpg" },
+      "https://www.ebay.com/itm/306051557695": { title: "Loose Gemstone | eBay", image: "https://i.ebayimg.com/images/g/3noAAOSwYslnjUjE/s-l500.jpg" },
+      "https://www.ebay.com/itm/152659287508": { title: "Mixed Wholesale Gemstones, 100% Natural Semi-Precious Loose Gems, 4-8mm | eBay", image: "https://i.ebayimg.com/images/g/OUcAAOSwVdlgcEzA/s-l400.jpg" },
+      "https://www.ebay.com/itm/260846355853": { title: "500 Carat Lots of Unsearched Natural Amethyst Rough + FREE Faceted Gemstone | eBay", image: "https://i.ebayimg.com/images/g/-EYAAOxyhPxRFENz/s-l400.jpg" },
+      "https://www.ebay.com/itm/251008669455": { title: "1000 Carat Lots of Unsearched Natural Amazonite Rough - Plus a FREE Faceted Gem | eBay", image: "https://i.ebayimg.com/images/g/eVAAAOxyrUZRylDN/s-l400.jpg" },
+      "https://www.ebay.com/itm/265742285187": { title: "45x31 mm Natural Chalcedony Hand Made Carving Pair 76.30 CTS Loose Gems | eBay", image: "https://i.ebayimg.com/images/g/buUAAOSw-SNirYlT/s-l500.jpg" },
+      "https://www.ebay.com/itm/301364818253": { title: "100+ CT MIX LOT LOOSE FACETED NATURAL GEMSTONES MIXED GEMS WHOLESALE LOOSE GEM | eBay", image: "https://i.ebayimg.com/images/g/n1gAAOSwG5RnkZz1/s-l400.jpg" },
+      "https://www.ebay.com/itm/384461482870": { title: "500+ CARATS MIXED GEM LOT NATURAL LOOSE GEM STONE LOT (181702) | eBay", image: "https://i.ebayimg.com/images/g/M6kAAOSw0ThZowYu/s-l400.jpg" },
+      "https://www.ebay.com/itm/115344534381": { title: "Natural Mix Faceted Loose Gemstone Wholesale Lot | eBay", image: "https://i.ebayimg.com/images/g/QEIAAOSwCJRiWWHd/s-l400.jpg" },
+      "https://www.ebay.com/itm/325801740705": { title: "Natural Quartz Crystal Mineral Rock | eBay", image: "https://i.ebayimg.com/images/g/igoAAOSwg-Fk5Xqp/s-l400.jpg" },
+      "https://www.ebay.com/itm/373841630099": { title: "Natural Clear Quartz Crystal Genuine & Gorgeous Healing Crystals From Brazil | eBay", image: "https://i.ebayimg.com/images/g/O5AAAOSwozpjX0KQ/s-l400.jpg" },
+      "https://www.ebay.com/itm/335817260021": { title: "LONG! Very Translucent 100% Natural Quartz Crystal From Brazil 128gr | eBay", image: "https://i.ebayimg.com/images/g/KIQAAOSw24FlLAMu/s-l500.png" }
     };
 
     // Reliable YouTube thumbnails from known Cocomelon videos featuring JJ.
@@ -857,6 +950,20 @@
 
     async function enrichItemFromLink(link, answerValue, category) {
       if (!link) return null;
+      const known = KNOWN_LISTING_DATA[link];
+      if (known && known.image) {
+        const fromTitlePrice = extractPriceFromText(known.title);
+        return {
+          category: category.label,
+          link,
+          title: known.title || `${category.label} reward`,
+          image: known.image,
+          priceText: fromTitlePrice
+            ? `Price: ${formatPrice(fromTitlePrice)} | Target: ${formatPrice(answerValue)}`
+            : `Target: ${formatPrice(answerValue)}`
+        };
+      }
+
       const apiUrl = `https://api.microlink.io/?url=${encodeURIComponent(link)}`;
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error("Metadata lookup failed");
@@ -881,30 +988,11 @@
       };
     }
 
-    function buildReliableReward(category, answerValue, excludedKeys = []) {
+    function getCategoryFallbackLinks(categoryLabel, excludedKeys = []) {
       const excluded = new Set(excludedKeys);
-      const fullPool = RELIABLE_REWARDS[category.label] || [];
-      const pool = getWeeklyPool(fullPool, `${category.label}:reliable`, 12);
-      const filteredPool = pool.filter(
-        (entry) => !excluded.has(`img:${entry.image}`) && !excluded.has(`title:${entry.title}`)
-      );
-      const picked = filteredPool.length
-        ? randFrom(filteredPool)
-        : (pool.length ? randFrom(pool) : null);
-      const fullLinkPool = FALLBACK_ITEM_LINKS[category.label] || [];
-      const linkPool = getWeeklyPool(fullLinkPool, `${category.label}:links`, 12);
-      const filteredLinks = linkPool.filter((link) => !excluded.has(`link:${link}`));
-      const fallbackLink = filteredLinks.length
-        ? randFrom(filteredLinks)
-        : (linkPool.length ? randFrom(linkPool) : "");
-
-      return {
-        category: category.label,
-        link: fallbackLink,
-        title: picked ? picked.title : `${category.label} reward`,
-        image: picked ? picked.image : category.image,
-        priceText: `Target: ${formatPrice(answerValue)}`
-      };
+      const fullLinkPool = FALLBACK_ITEM_LINKS[categoryLabel] || [];
+      const weeklyLinks = getWeeklyPool(fullLinkPool, `${categoryLabel}:links`, 16);
+      return weeklyLinks.filter((link) => !excluded.has(`link:${link}`));
     }
 
     async function fetchDirectItemViaLocalApi(categoryQuery, answerValue) {
@@ -920,6 +1008,19 @@
       return data;
     }
 
+    async function fetchListingFromFallbackLinks(category, answerValue, excludedKeys = []) {
+      const links = shuffled(getCategoryFallbackLinks(category.label, excludedKeys));
+      for (const link of links) {
+        try {
+          const item = await enrichItemFromLink(link, answerValue, category);
+          if (item && item.image) return item;
+        } catch (err) {
+          // Keep trying other links until we get a real listing image.
+        }
+      }
+      throw new Error("No enriched fallback listing available");
+    }
+
     async function fetchItemForAnswer(answerValue, questionIndex, options = {}) {
       const forcedCategory = options.categoryLabel
         ? CATEGORIES.find((c) => c.label === options.categoryLabel)
@@ -930,39 +1031,19 @@
       try {
         const directItem = await fetchDirectItemViaLocalApi(category.query, answerValue);
         if (!directItem.link) {
-          return buildReliableReward(category, answerValue, excludedKeys);
+          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
         }
         try {
-          return await enrichItemFromLink(directItem.link, answerValue, category);
+          const enriched = await enrichItemFromLink(directItem.link, answerValue, category);
+          if (enriched && enriched.image) return enriched;
+          throw new Error("Direct listing missing image");
         } catch (metaErr) {
-          const lowFidelity = {
-            category: category.label,
-            link: directItem.link,
-            title: directItem.title || `${category.label} reward`,
-            image: directItem.image || category.image,
-            priceText: directItem.price
-              ? `Price: ${formatPrice(directItem.price)} | Target: ${formatPrice(answerValue)}`
-              : `Target: ${formatPrice(answerValue)}`
-          };
-          if (lowFidelity.image && lowFidelity.title && lowFidelity.title !== "Direct eBay item") {
-            return lowFidelity;
-          }
-          const reliable = buildReliableReward(category, answerValue, excludedKeys);
-          try {
-            return await enrichItemFromLink(reliable.link, answerValue, category);
-          } catch (err) {
-            return reliable;
-          }
+          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
         }
       } catch (directErr) {
-        // If local direct-item API is unavailable, use reliable in-app rewards.
+        // Local API unavailable on static hosting; fallback to curated eBay links.
       }
-      const reliable = buildReliableReward(category, answerValue, excludedKeys);
-      try {
-        return await enrichItemFromLink(reliable.link, answerValue, category);
-      } catch (err) {
-        return reliable;
-      }
+      return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
     }
 
     async function showReward(answerValue, options = {}) {
@@ -1004,7 +1085,11 @@
           CATEGORIES.find((c) => c.label === categoryLabel) ||
           state.rewardPlan[state.currentIndex] ||
           randFrom(CATEGORIES);
-        item = buildReliableReward(fallbackCategory, answerValue, Array.from(excludedKeys));
+        item = await fetchListingFromFallbackLinks(
+          fallbackCategory,
+          answerValue,
+          Array.from(excludedKeys)
+        );
         state.currentRewardKey = buildRewardKey(item);
       }
 
@@ -1022,8 +1107,8 @@
       }
       itemImg.src = item.image;
       itemImg.onerror = () => {
-        itemImg.src =
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Crystal_21139.jpg/640px-Crystal_21139.jpg";
+        itemImg.classList.add("hidden");
+        itemNote.textContent = "This listing image did not load. Tap Pull Different Award 🔄 for another real listing.";
       };
       itemImg.classList.remove("hidden");
       triggerPop(itemWrap);

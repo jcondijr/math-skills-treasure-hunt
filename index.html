@@ -963,10 +963,14 @@
           state.refreshNonce = parsed.refreshNonce;
         }
         if (parsed && Array.isArray(parsed.seenRewardLinks)) {
-          state.seenRewardLinks = new Set(parsed.seenRewardLinks.filter(Boolean));
+          state.seenRewardLinks = new Set(
+            parsed.seenRewardLinks.filter(Boolean).map((link) => normalizeEbayLink(link))
+          );
         }
         if (parsed && Array.isArray(parsed.blockedRewardLinks)) {
-          state.blockedRewardLinks = new Set(parsed.blockedRewardLinks.filter(Boolean));
+          state.blockedRewardLinks = new Set(
+            parsed.blockedRewardLinks.filter(Boolean).map((link) => normalizeEbayLink(link))
+          );
         }
       } catch (err) {
         // Ignore storage read failures and continue with defaults.
@@ -1253,6 +1257,23 @@
       return `title:${item.title || ""}`;
     }
 
+    function extractEbayItemId(link) {
+      const raw = String(link || "");
+      if (!raw) return "";
+      const pathMatch = raw.match(/\/itm\/(?:[^/]*\/)?(\d{9,14})/i);
+      if (pathMatch && pathMatch[1]) return pathMatch[1];
+      const queryMatch = raw.match(/[?&](?:item|itm)=(\d{9,14})/i);
+      return queryMatch && queryMatch[1] ? queryMatch[1] : "";
+    }
+
+    function normalizeEbayLink(link) {
+      const raw = String(link || "");
+      const itemId = extractEbayItemId(raw);
+      if (itemId) return `https://www.ebay.com/itm/${itemId}`;
+      const [clean] = raw.split("?");
+      return clean || raw;
+    }
+
     async function enrichItemFromLink(link, answerValue, category) {
       if (!link) return null;
       const known = KNOWN_LISTING_DATA[link];
@@ -1317,10 +1338,17 @@
       category,
       answerValue,
       excludedKeys = [],
-      excludedLinks = new Set()
+      excludedLinks = new Set(),
+      excludedItemIds = new Set()
     ) {
       const links = shuffled(getCategoryFallbackLinks(category.label, excludedKeys)).filter(
-        (link) => !excludedLinks.has(link)
+        (link) => {
+          const normalized = normalizeEbayLink(link);
+          const itemId = extractEbayItemId(normalized);
+          if (excludedLinks.has(normalized)) return false;
+          if (itemId && excludedItemIds.has(itemId)) return false;
+          return true;
+        }
       );
       for (const link of links) {
         try {
@@ -1340,23 +1368,51 @@
       const category = forcedCategory || state.rewardPlan[questionIndex] || randFrom(CATEGORIES);
       const excludedKeys = options.excludedKeys || [];
       const excludedLinks = options.excludedLinks || new Set();
+      const excludedItemIds = options.excludedItemIds || new Set();
 
       try {
         const directItem = await fetchDirectItemViaLocalApi(category.query, answerValue);
         if (!directItem.link) {
-          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
+          return await fetchListingFromFallbackLinks(
+            category,
+            answerValue,
+            excludedKeys,
+            excludedLinks,
+            excludedItemIds
+          );
         }
         try {
           const enriched = await enrichItemFromLink(directItem.link, answerValue, category);
-          if (enriched && enriched.image && !excludedLinks.has(enriched.link || "")) return enriched;
+          const normalizedLink = normalizeEbayLink((enriched && enriched.link) || "");
+          const itemId = extractEbayItemId(normalizedLink);
+          if (
+            enriched &&
+            enriched.image &&
+            !excludedLinks.has(normalizedLink) &&
+            (!itemId || !excludedItemIds.has(itemId))
+          ) {
+            return enriched;
+          }
           throw new Error("Direct listing missing image");
         } catch (metaErr) {
-          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
+          return await fetchListingFromFallbackLinks(
+            category,
+            answerValue,
+            excludedKeys,
+            excludedLinks,
+            excludedItemIds
+          );
         }
       } catch (directErr) {
         // Local API unavailable on static hosting; fallback to curated eBay links.
       }
-      return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
+      return await fetchListingFromFallbackLinks(
+        category,
+        answerValue,
+        excludedKeys,
+        excludedLinks,
+        excludedItemIds
+      );
     }
 
     async function showReward(answerValue, options = {}) {
@@ -1377,20 +1433,30 @@
       if (options.forceDifferent && state.currentRewardKey) {
         excludedKeys.add(state.currentRewardKey);
       }
-      let excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
+      let excludedLinks = new Set(
+        [...state.seenRewardLinks, ...state.blockedRewardLinks].map((link) => normalizeEbayLink(link))
+      );
+      let excludedItemIds = new Set(
+        Array.from(excludedLinks)
+          .map((link) => extractEbayItemId(link))
+          .filter(Boolean)
+      );
 
       let item = null;
       for (let attempt = 0; attempt < 6; attempt += 1) {
         const candidate = await fetchItemForAnswer(answerValue, state.currentIndex, {
           categoryLabel,
           excludedKeys: Array.from(excludedKeys),
-          excludedLinks
+          excludedLinks,
+          excludedItemIds
         });
         const candidateKey = buildRewardKey(candidate);
-        const candidateLink = (candidate && candidate.link) || "";
+        const candidateLink = normalizeEbayLink((candidate && candidate.link) || "");
+        const candidateItemId = extractEbayItemId(candidateLink);
         if (
           (!candidateKey || !excludedKeys.has(candidateKey)) &&
-          (!candidateLink || !excludedLinks.has(candidateLink))
+          (!candidateLink || !excludedLinks.has(candidateLink)) &&
+          (!candidateItemId || !excludedItemIds.has(candidateItemId))
         ) {
           item = candidate;
           state.currentRewardKey = candidateKey;
@@ -1398,6 +1464,7 @@
         }
         excludedKeys.add(candidateKey);
         if (candidateLink) excludedLinks.add(candidateLink);
+        if (candidateItemId) excludedItemIds.add(candidateItemId);
       }
 
       if (!item) {
@@ -1410,7 +1477,8 @@
             fallbackCategory,
             answerValue,
             [],
-            excludedLinks
+            excludedLinks,
+            excludedItemIds
           );
         } catch (sameCategoryErr) {
           const alternates = shuffled(
@@ -1418,7 +1486,7 @@
           );
           for (const alt of alternates) {
             try {
-              item = await fetchListingFromFallbackLinks(alt, answerValue, [], excludedLinks);
+              item = await fetchListingFromFallbackLinks(alt, answerValue, [], excludedLinks, excludedItemIds);
               break;
             } catch (altErr) {
               // Keep trying alternate categories until one resolves.
@@ -1429,13 +1497,21 @@
         if (!item && state.blockedRewardLinks.size > 0) {
           // Pool may be temporarily exhausted; trim oldest blocked links and retry once.
           state.blockedRewardLinks = new Set(Array.from(state.blockedRewardLinks).slice(-350));
-          excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
+          excludedLinks = new Set(
+            [...state.seenRewardLinks, ...state.blockedRewardLinks].map((link) => normalizeEbayLink(link))
+          );
+          excludedItemIds = new Set(
+            Array.from(excludedLinks)
+              .map((link) => extractEbayItemId(link))
+              .filter(Boolean)
+          );
           saveRewardState();
           item = await fetchListingFromFallbackLinks(
             fallbackCategory,
             answerValue,
             [],
-            excludedLinks
+            excludedLinks,
+            excludedItemIds
           );
         }
         state.currentRewardKey = buildRewardKey(item);
@@ -1445,7 +1521,7 @@
         state.seenRewardKeys.add(state.currentRewardKey);
       }
       if (item && item.link) {
-        state.seenRewardLinks.add(item.link);
+        state.seenRewardLinks.add(normalizeEbayLink(item.link));
         saveRewardState();
       }
 

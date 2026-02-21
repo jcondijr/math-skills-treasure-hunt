@@ -939,13 +939,19 @@
       blockedRewardLinks: new Set(),
       currentRewardKey: "",
       currentRewardContext: null,
-      refreshNonce: 0
+      refreshNonce: 0,
+      refreshToken: ""
     };
+
+    function makeRefreshToken() {
+      return `${Date.now()}-${Math.floor(Math.random() * 1e9)}`;
+    }
 
     function saveRewardState() {
       try {
         const payload = {
           refreshNonce: state.refreshNonce || 0,
+          refreshToken: state.refreshToken || "",
           blockedRewardKeys: Array.from(state.blockedRewardKeys || []).slice(-500),
           seenRewardLinks: Array.from(state.seenRewardLinks || []).slice(-300),
           blockedRewardLinks: Array.from(state.blockedRewardLinks || []).slice(-500)
@@ -963,6 +969,9 @@
         const parsed = JSON.parse(raw);
         if (parsed && Number.isFinite(parsed.refreshNonce)) {
           state.refreshNonce = parsed.refreshNonce;
+        }
+        if (parsed && typeof parsed.refreshToken === "string") {
+          state.refreshToken = parsed.refreshToken;
         }
         if (parsed && Array.isArray(parsed.blockedRewardKeys)) {
           state.blockedRewardKeys = new Set(parsed.blockedRewardKeys.filter(Boolean));
@@ -1155,6 +1164,7 @@
       refreshStatus.textContent = "Generating fresh weekly reward pools...";
       refreshProgressFill.style.width = "50%";
       state.refreshNonce += 1 + Math.floor(Math.random() * 1000);
+      state.refreshToken = makeRefreshToken();
       state.rewardPlan = buildRewardPlan(10);
       saveRewardState();
       await wait(220);
@@ -1329,11 +1339,28 @@
     function getCategoryFallbackLinks(categoryLabel, excludedKeys = []) {
       const excluded = new Set(excludedKeys);
       const fullLinkPool = FALLBACK_ITEM_LINKS[categoryLabel] || [];
-      const weeklyLinks = getWeeklyPool(fullLinkPool, `${categoryLabel}:links`, 16);
-      return weeklyLinks.filter((link) => !excluded.has(`link:${link}`));
+      if (!fullLinkPool.length) return [];
+
+      // Web-first rotation: pick a fresh per-refresh subset from the full pool.
+      const token = state.refreshToken || `${getIsoWeekSeed()}:${state.refreshNonce || 0}`;
+      const ranked = fullLinkPool
+        .map((link) => ({
+          link,
+          score: hashString(`${token}|${categoryLabel}|${link}`)
+        }))
+        .sort((a, b) => a.score - b.score)
+        .map((entry) => entry.link);
+      const selected = ranked.slice(0, Math.min(24, ranked.length));
+      return selected.filter((link) => !excluded.has(`link:${link}`));
     }
 
     async function fetchDirectItemViaLocalApi(categoryQuery, answerValue) {
+      const isLocalHost =
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1";
+      if (!isLocalHost) {
+        throw new Error("Local item API disabled on hosted site");
+      }
       const low = Math.max(1, answerValue - 1);
       const high = answerValue + 1;
       const url =
@@ -1681,6 +1708,10 @@
     }
 
     loadRewardState();
+    if (!state.refreshToken) {
+      state.refreshToken = makeRefreshToken();
+      saveRewardState();
+    }
 
     startBtn.addEventListener("click", startRound);
     menuToggle.addEventListener("click", toggleMenu);

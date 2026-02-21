@@ -925,6 +925,7 @@
     const refreshProgressFill = document.getElementById("refreshProgressFill");
     const refreshDone = document.getElementById("refreshDone");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
+    const REWARD_DATA_URL = "rewards.json";
 
     const state = {
       selectedTable: 2,
@@ -940,7 +941,9 @@
       currentRewardKey: "",
       currentRewardContext: null,
       refreshNonce: 0,
-      refreshToken: ""
+      refreshToken: "",
+      rewardsDataVersion: "embedded",
+      rewardsDataSalt: "embedded"
     };
 
     function makeRefreshToken() {
@@ -1165,6 +1168,9 @@
       refreshProgressFill.style.width = "50%";
       state.refreshNonce += 1 + Math.floor(Math.random() * 1000);
       state.refreshToken = makeRefreshToken();
+      await loadRewardsData({ force: true });
+      refreshStatus.textContent = "Building fresh reward plan...";
+      refreshProgressFill.style.width = "65%";
       state.rewardPlan = buildRewardPlan(10);
       saveRewardState();
       await wait(220);
@@ -1296,9 +1302,51 @@
       return clean || raw;
     }
 
+    function isPlainObject(value) {
+      return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+    }
+
+    let runtimeFallbackItemLinks = FALLBACK_ITEM_LINKS;
+    let runtimeKnownListingData = KNOWN_LISTING_DATA;
+
+    async function loadRewardsData(options = {}) {
+      const force = Boolean(options.force);
+      const cacheBust = force ? Date.now() : Math.floor(Date.now() / 60000);
+      const token = `${state.refreshToken || "boot"}|${state.rewardsDataSalt || "embedded"}`;
+      const url = `${REWARD_DATA_URL}?b=${encodeURIComponent(cacheBust)}&k=${encodeURIComponent(token)}`;
+      try {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error("Rewards dataset unavailable");
+        const payload = await response.json();
+        if (!isPlainObject(payload)) throw new Error("Invalid rewards dataset");
+
+        if (isPlainObject(payload.fallbackItemLinks)) {
+          runtimeFallbackItemLinks = payload.fallbackItemLinks;
+        } else {
+          runtimeFallbackItemLinks = FALLBACK_ITEM_LINKS;
+        }
+
+        if (isPlainObject(payload.knownListingData)) {
+          runtimeKnownListingData = payload.knownListingData;
+        } else {
+          runtimeKnownListingData = KNOWN_LISTING_DATA;
+        }
+
+        state.rewardsDataVersion = String(payload.version || "external");
+        state.rewardsDataSalt = String(payload.rotationSalt || payload.version || "external");
+        return true;
+      } catch (err) {
+        runtimeFallbackItemLinks = FALLBACK_ITEM_LINKS;
+        runtimeKnownListingData = KNOWN_LISTING_DATA;
+        state.rewardsDataVersion = "embedded";
+        state.rewardsDataSalt = "embedded";
+        return false;
+      }
+    }
+
     async function enrichItemFromLink(link, answerValue, category) {
       if (!link) return null;
-      const known = KNOWN_LISTING_DATA[link];
+      const known = runtimeKnownListingData[link];
       if (known && known.image) {
         const fromTitlePrice = extractPriceFromText(known.title);
         return {
@@ -1338,11 +1386,11 @@
 
     function getCategoryFallbackLinks(categoryLabel, excludedKeys = []) {
       const excluded = new Set(excludedKeys);
-      const fullLinkPool = FALLBACK_ITEM_LINKS[categoryLabel] || [];
+      const fullLinkPool = runtimeFallbackItemLinks[categoryLabel] || [];
       if (!fullLinkPool.length) return [];
 
       // Web-first rotation: pick a fresh per-refresh subset from the full pool.
-      const token = state.refreshToken || `${getIsoWeekSeed()}:${state.refreshNonce || 0}`;
+      const token = `${state.refreshToken || `${getIsoWeekSeed()}:${state.refreshNonce || 0}`}|${state.rewardsDataSalt}`;
       const ranked = fullLinkPool
         .map((link) => ({
           link,
@@ -1712,6 +1760,7 @@
       state.refreshToken = makeRefreshToken();
       saveRewardState();
     }
+    loadRewardsData();
 
     startBtn.addEventListener("click", startRound);
     menuToggle.addEventListener("click", toggleMenu);

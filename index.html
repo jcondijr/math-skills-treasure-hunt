@@ -930,7 +930,7 @@
     const buildInfo = document.getElementById("buildInfo");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
     const REWARD_DATA_URL = "rewards.json";
-    const APP_BUILD = "2026-02-21-12c42a0-cache-reset";
+    const APP_BUILD = "2026-02-21-cdc2c53-seeded-shuffle";
 
     const state = {
       selectedTable: 2,
@@ -1046,6 +1046,24 @@
 
     function wait(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function createSeededRng(seedInput) {
+      let seed = hashString(String(seedInput || "0")) || 1;
+      return function next() {
+        seed = (seed * 1664525 + 1013904223) % 4294967296;
+        return seed / 4294967296;
+      };
+    }
+
+    function seededShuffle(arr, seedInput) {
+      const copy = [...arr];
+      const rng = createSeededRng(seedInput);
+      for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(rng() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
     }
 
     function buildQuestions(tableNumber, count = 10) {
@@ -1431,16 +1449,10 @@
       const fullLinkPool = runtimeFallbackItemLinks[categoryLabel] || [];
       if (!fullLinkPool.length) return [];
 
-      // Web-first rotation: pick a fresh per-refresh subset from the full pool.
+      // Per-refresh seeded shuffle: refresh token creates a visibly different pool.
       const token = `${state.refreshToken || `${getIsoWeekSeed()}:${state.refreshNonce || 0}`}|${state.rewardsDataSalt}`;
-      const ranked = fullLinkPool
-        .map((link) => ({
-          link,
-          score: hashString(`${token}|${categoryLabel}|${link}`)
-        }))
-        .sort((a, b) => a.score - b.score)
-        .map((entry) => entry.link);
-      const selected = ranked.slice(0, Math.min(state.rewardsPoolSize || 8, ranked.length));
+      const ordered = seededShuffle(fullLinkPool, `${categoryLabel}|${token}|${fullLinkPool.length}`);
+      const selected = ordered.slice(0, Math.min(state.rewardsPoolSize || 8, ordered.length));
       return selected.filter((link) => !excluded.has(`link:${link}`));
     }
 

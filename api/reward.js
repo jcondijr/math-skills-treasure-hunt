@@ -24,6 +24,48 @@ function randomFrom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function unique(values) {
+  return Array.from(new Set(values));
+}
+
+function extractItemIdsFromSearchHtml(htmlText) {
+  const matches = String(htmlText || "").match(
+    /https:\/\/www\.ebay\.com\/itm\/(?:[^/]+\/)?(\d{9,14})/gi
+  ) || [];
+  const ids = matches
+    .map((url) => {
+      const m = url.match(/(\d{9,14})/);
+      return m && m[1] ? m[1] : "";
+    })
+    .filter(Boolean);
+  return unique(ids);
+}
+
+function parseMetaContent(htmlText, propertyName) {
+  const re = new RegExp(
+    `<meta[^>]+property=["']${propertyName}["'][^>]+content=["']([^"']+)["'][^>]*>`,
+    "i"
+  );
+  const match = String(htmlText || "").match(re);
+  return match && match[1] ? match[1].trim() : "";
+}
+
+async function fetchItemDetails(itemId) {
+  const link = `https://www.ebay.com/itm/${itemId}`;
+  const response = await fetch(link, {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
+    }
+  });
+  if (!response.ok) throw new Error(`Item page failed (${response.status})`);
+  const htmlText = await response.text();
+  const title = parseMetaContent(htmlText, "og:title") || `eBay listing ${itemId}`;
+  const image = parseMetaContent(htmlText, "og:image");
+  if (!image) throw new Error("Item image missing");
+  return { link, title, image };
+}
+
 module.exports = async function handler(req, res) {
   setCors(res);
   if (req.method === "OPTIONS") {
@@ -61,41 +103,33 @@ module.exports = async function handler(req, res) {
   ];
 
   try {
-    let items = [];
+    let itemIds = [];
     for (const searchUrl of searchUrls) {
-      const proxyUrl =
-        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(searchUrl)}` +
-        `&t=${Date.now()}`;
-      const response = await fetch(proxyUrl, {
+      const response = await fetch(searchUrl, {
         headers: {
           "User-Agent":
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
         }
       });
       if (!response.ok) continue;
-      const payload = await response.json();
-      if (!payload || payload.status !== "ok" || !Array.isArray(payload.items)) continue;
-      items = payload.items
-        .map((entry) => {
-          const link = normalizeEbayLink((entry && entry.link) || "");
-          const title = String((entry && entry.title) || "").trim();
-          const image =
-            (entry && entry.thumbnail) ||
-            (entry && entry.enclosure && entry.enclosure.link) ||
-            "";
-          return { title, link, image };
-        })
-        .filter((item) => item.link && /ebay\.com\//i.test(item.link))
-        .filter((item) => {
-          const itemId = extractEbayItemId(item.link);
-          return !itemId || !excludedSet.has(itemId);
-        });
-      if (items.length) break;
+      const htmlText = await response.text();
+      itemIds = extractItemIdsFromSearchHtml(htmlText).filter((id) => !excludedSet.has(id));
+      if (itemIds.length) break;
     }
 
-    if (!items.length) return res.status(404).json({ error: "No live items found" });
+    if (!itemIds.length) return res.status(404).json({ error: "No live items found" });
 
-    const picked = randomFrom(items);
+    const shuffledIds = itemIds.sort(() => Math.random() - 0.5).slice(0, 8);
+    let picked = null;
+    for (const itemId of shuffledIds) {
+      try {
+        picked = await fetchItemDetails(itemId);
+        if (picked && picked.image) break;
+      } catch (err) {
+        // Try another candidate item.
+      }
+    }
+    if (!picked) return res.status(404).json({ error: "No live items found" });
     return res.status(200).json({
       item: {
         link: picked.link,

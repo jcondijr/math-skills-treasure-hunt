@@ -930,7 +930,7 @@
     const buildInfo = document.getElementById("buildInfo");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
     const REWARD_DATA_URL = "rewards.json";
-    const APP_BUILD = "2026-02-21-live-rss-first";
+    const APP_BUILD = "2026-02-21-live-rss-direct";
 
     const state = {
       selectedTable: 2,
@@ -1475,10 +1475,10 @@
       return data;
     }
 
-    async function fetchLiveItemViaRss(categoryQuery, answerValue, excludedItemIds = new Set()) {
+    async function fetchLiveItemViaRss(category, answerValue, excludedItemIds = new Set()) {
       const low = Math.max(1, answerValue - 2);
       const high = answerValue + 2;
-      const rssUrl = `${buildEbaySearchUrl(categoryQuery, low, high)}&_rss=1`;
+      const rssUrl = `${buildEbaySearchUrl(category.query, low, high)}&_rss=1`;
       const proxyUrl =
         `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}` +
         `&t=${Date.now()}`;
@@ -1490,14 +1490,32 @@
       }
 
       const candidates = payload.items
-        .map((entry) => normalizeEbayLink((entry && entry.link) || ""))
-        .filter((link) => link && /ebay\.com\/itm\//i.test(link))
-        .filter((link) => {
-          const itemId = extractEbayItemId(link);
+        .map((entry) => {
+          const link = normalizeEbayLink((entry && entry.link) || "");
+          const title = String((entry && entry.title) || "").trim();
+          const image =
+            (entry && entry.thumbnail) ||
+            (entry && entry.enclosure && entry.enclosure.link) ||
+            "";
+          return { link, title, image };
+        })
+        .filter((entry) => entry.link && /ebay\.com\/itm\//i.test(entry.link))
+        .filter((entry) => {
+          const itemId = extractEbayItemId(entry.link);
           return !itemId || !excludedItemIds.has(itemId);
         });
       if (!candidates.length) throw new Error("No live item candidates");
-      return { link: randFrom(candidates) };
+      const picked = randFrom(candidates);
+      const fromTitlePrice = extractPriceFromText(picked.title);
+      return {
+        category: category.label,
+        link: picked.link,
+        title: picked.title || `${category.label} reward`,
+        image: picked.image || category.image,
+        priceText: fromTitlePrice
+          ? `Price: ${formatPrice(fromTitlePrice)} | Target: ${formatPrice(answerValue)}`
+          : `Target: ${formatPrice(answerValue)}`
+      };
     }
 
     async function fetchListingFromFallbackLinks(
@@ -1541,17 +1559,19 @@
 
       if (!isLocalHost) {
         try {
-          const liveItem = await fetchLiveItemViaRss(category.query, answerValue, excludedItemIds);
-          const liveEnriched = await enrichItemFromLink(liveItem.link, answerValue, category);
-          const liveLink = normalizeEbayLink((liveEnriched && liveEnriched.link) || "");
+          const liveItem = await fetchLiveItemViaRss(category, answerValue, excludedItemIds);
+          const liveLink = normalizeEbayLink((liveItem && liveItem.link) || "");
           const liveItemId = extractEbayItemId(liveLink);
           if (
-            liveEnriched &&
-            liveEnriched.image &&
+            liveItem &&
+            liveItem.image &&
             !excludedLinks.has(liveLink) &&
             (!liveItemId || !excludedItemIds.has(liveItemId))
           ) {
-            return liveEnriched;
+            return {
+              ...liveItem,
+              link: liveLink
+            };
           }
         } catch (liveErr) {
           // Live web fetch can fail due to rate limits/network; fallback remains available.

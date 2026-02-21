@@ -20,39 +20,6 @@ function normalizeEbayLink(link) {
   return clean || raw;
 }
 
-function stripCdata(value) {
-  return String(value || "")
-    .replace(/^<!\[CDATA\[/, "")
-    .replace(/\]\]>$/, "")
-    .trim();
-}
-
-function parseTag(block, tag) {
-  const re = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i");
-  const match = block.match(re);
-  return match ? stripCdata(match[1]) : "";
-}
-
-function parseMediaUrl(block) {
-  const mediaMatch = block.match(/<media:content[^>]*url="([^"]+)"/i);
-  if (mediaMatch && mediaMatch[1]) return mediaMatch[1];
-  const desc = parseTag(block, "description");
-  const imgMatch = desc.match(/<img[^>]+src="([^"]+)"/i);
-  return imgMatch && imgMatch[1] ? imgMatch[1] : "";
-}
-
-function parseRssItems(xmlText) {
-  const blocks = String(xmlText || "").match(/<item>([\s\S]*?)<\/item>/gi) || [];
-  return blocks
-    .map((block) => {
-      const title = parseTag(block, "title");
-      const link = normalizeEbayLink(parseTag(block, "link"));
-      const image = parseMediaUrl(block);
-      return { title, link, image };
-    })
-    .filter((item) => item.link && /ebay\.com\/itm\//i.test(item.link));
-}
-
 function randomFrom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -96,18 +63,33 @@ module.exports = async function handler(req, res) {
   try {
     let items = [];
     for (const searchUrl of searchUrls) {
-      const response = await fetch(searchUrl, {
+      const proxyUrl =
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(searchUrl)}` +
+        `&t=${Date.now()}`;
+      const response = await fetch(proxyUrl, {
         headers: {
           "User-Agent":
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
         }
       });
       if (!response.ok) continue;
-      const xmlText = await response.text();
-      items = parseRssItems(xmlText).filter((item) => {
-        const itemId = extractEbayItemId(item.link);
-        return !itemId || !excludedSet.has(itemId);
-      });
+      const payload = await response.json();
+      if (!payload || payload.status !== "ok" || !Array.isArray(payload.items)) continue;
+      items = payload.items
+        .map((entry) => {
+          const link = normalizeEbayLink((entry && entry.link) || "");
+          const title = String((entry && entry.title) || "").trim();
+          const image =
+            (entry && entry.thumbnail) ||
+            (entry && entry.enclosure && entry.enclosure.link) ||
+            "";
+          return { title, link, image };
+        })
+        .filter((item) => item.link && /ebay\.com\//i.test(item.link))
+        .filter((item) => {
+          const itemId = extractEbayItemId(item.link);
+          return !itemId || !excludedSet.has(itemId);
+        });
       if (items.length) break;
     }
 

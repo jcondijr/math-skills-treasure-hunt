@@ -1414,8 +1414,8 @@
       const base = String(state.liveProxyUrl || "").trim();
       if (!base) throw new Error("No live proxy URL configured");
 
-      const low = Math.max(1, answerValue - 2);
-      const high = answerValue + 2;
+      const low = Math.max(1, answerValue - 10);
+      const high = answerValue + 25;
       const excludeIds = Array.from(excludedItemIds).slice(0, 25).join(",");
       const url =
         `${base}?category=${encodeURIComponent(category.query)}` +

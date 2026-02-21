@@ -80,30 +80,38 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: "Missing category query" });
   }
 
-  const searchUrl =
+  const page = Math.max(1, Math.min(8, Number(req.query.page || Math.floor(Math.random() * 8) + 1)));
+  const searchUrls = [
     `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(category)}` +
-    `&LH_BIN=1&_udlo=${encodeURIComponent(low)}&_udhi=${encodeURIComponent(high)}&rt=nc&_ipg=50&_rss=1`;
+      `&LH_BIN=1&_udlo=${encodeURIComponent(low)}&_udhi=${encodeURIComponent(high)}` +
+      `&rt=nc&_ipg=50&_pgn=${encodeURIComponent(page)}&_sop=10&_rss=1`,
+    `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(category)}` +
+      `&_udlo=${encodeURIComponent(low)}&_udhi=${encodeURIComponent(high)}` +
+      `&rt=nc&_ipg=50&_pgn=${encodeURIComponent(page)}&_sop=10&_rss=1`,
+    `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(category)}` +
+      `&LH_BIN=1&_udlo=${encodeURIComponent(Math.max(1, low - 5))}&_udhi=${encodeURIComponent(high + 10)}` +
+      `&rt=nc&_ipg=50&_pgn=${encodeURIComponent(page)}&_sop=12&_rss=1`
+  ];
 
   try {
-    const response = await fetch(searchUrl, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
-      }
-    });
-    if (!response.ok) {
-      return res.status(502).json({ error: "Upstream search failed", status: response.status });
+    let items = [];
+    for (const searchUrl of searchUrls) {
+      const response = await fetch(searchUrl, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
+        }
+      });
+      if (!response.ok) continue;
+      const xmlText = await response.text();
+      items = parseRssItems(xmlText).filter((item) => {
+        const itemId = extractEbayItemId(item.link);
+        return !itemId || !excludedSet.has(itemId);
+      });
+      if (items.length) break;
     }
 
-    const xmlText = await response.text();
-    const items = parseRssItems(xmlText).filter((item) => {
-      const itemId = extractEbayItemId(item.link);
-      return !itemId || !excludedSet.has(itemId);
-    });
-
-    if (!items.length) {
-      return res.status(404).json({ error: "No live items found" });
-    }
+    if (!items.length) return res.status(404).json({ error: "No live items found" });
 
     const picked = randomFrom(items);
     return res.status(200).json({

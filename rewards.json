@@ -1,5 +1,6 @@
 {
-  "version": "2026-02-21-3",
-  "rotationSalt": "2026-02-21-4",
-  "rewardsPoolSize": 8
+  "version": "2026-02-21-4",
+  "rotationSalt": "2026-02-21-5",
+  "rewardsPoolSize": 8,
+  "liveProxyUrl": ""
 }

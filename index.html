@@ -930,7 +930,7 @@
     const buildInfo = document.getElementById("buildInfo");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
     const REWARD_DATA_URL = "rewards.json";
-    const APP_BUILD = "2026-02-21-live-rss-direct";
+    const APP_BUILD = "2026-02-21-vercel-proxy-first";
 
     const state = {
       selectedTable: 2,
@@ -949,7 +949,9 @@
       refreshToken: "",
       rewardsDataVersion: "embedded",
       rewardsDataSalt: "embedded",
-      rewardsPoolSize: 8
+      rewardsPoolSize: 8,
+      liveProxyUrl: "",
+      lastFetchMode: "init"
     };
 
     function makeRefreshToken() {
@@ -1380,6 +1382,7 @@
 
         state.rewardsDataVersion = String(payload.version || "external");
         state.rewardsDataSalt = String(payload.rotationSalt || payload.version || "external");
+        state.liveProxyUrl = String(payload.liveProxyUrl || "").trim();
         const parsedPoolSize = Number(payload.rewardsPoolSize);
         if (Number.isFinite(parsedPoolSize) && parsedPoolSize >= 4 && parsedPoolSize <= 20) {
           state.rewardsPoolSize = Math.floor(parsedPoolSize);
@@ -1394,6 +1397,7 @@
         state.rewardsDataVersion = "embedded";
         state.rewardsDataSalt = "embedded";
         state.rewardsPoolSize = 8;
+        state.liveProxyUrl = "";
         updateBuildInfo();
         return false;
       }
@@ -1401,7 +1405,43 @@
 
     function updateBuildInfo() {
       if (!buildInfo) return;
-      buildInfo.textContent = `Build: ${APP_BUILD} | Rewards data: ${state.rewardsDataVersion}`;
+      const proxyState = state.liveProxyUrl ? "proxy:on" : "proxy:off";
+      buildInfo.textContent =
+        `Build: ${APP_BUILD} | Rewards data: ${state.rewardsDataVersion} | ${proxyState} | Mode: ${state.lastFetchMode}`;
+    }
+
+    async function fetchLiveItemViaProxy(category, answerValue, excludedItemIds = new Set()) {
+      const base = String(state.liveProxyUrl || "").trim();
+      if (!base) throw new Error("No live proxy URL configured");
+
+      const low = Math.max(1, answerValue - 2);
+      const high = answerValue + 2;
+      const excludeIds = Array.from(excludedItemIds).slice(0, 25).join(",");
+      const url =
+        `${base}?category=${encodeURIComponent(category.query)}` +
+        `&target=${encodeURIComponent(answerValue)}` +
+        `&low=${encodeURIComponent(low)}` +
+        `&high=${encodeURIComponent(high)}` +
+        `&excludeIds=${encodeURIComponent(excludeIds)}` +
+        `&t=${Date.now()}`;
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) throw new Error("Live proxy request failed");
+      const payload = await response.json();
+      if (!payload || !payload.item || !payload.item.link) throw new Error("Live proxy payload invalid");
+      const item = payload.item;
+      const normalized = normalizeEbayLink(item.link);
+      const title = String(item.title || `${category.label} reward`);
+      const image = String(item.image || category.image);
+      const fromTitlePrice = extractPriceFromText(title);
+      return {
+        category: category.label,
+        link: normalized,
+        title,
+        image,
+        priceText: fromTitlePrice
+          ? `Price: ${formatPrice(fromTitlePrice)} | Target: ${formatPrice(answerValue)}`
+          : `Target: ${formatPrice(answerValue)}`
+      };
     }
 
     async function enrichItemFromLink(link, answerValue, category) {
@@ -1559,6 +1599,27 @@
 
       if (!isLocalHost) {
         try {
+          const proxyItem = await fetchLiveItemViaProxy(category, answerValue, excludedItemIds);
+          const proxyLink = normalizeEbayLink((proxyItem && proxyItem.link) || "");
+          const proxyItemId = extractEbayItemId(proxyLink);
+          if (
+            proxyItem &&
+            proxyItem.image &&
+            !excludedLinks.has(proxyLink) &&
+            (!proxyItemId || !excludedItemIds.has(proxyItemId))
+          ) {
+            state.lastFetchMode = "server-live";
+            updateBuildInfo();
+            return {
+              ...proxyItem,
+              link: proxyLink
+            };
+          }
+        } catch (proxyErr) {
+          // No proxy / proxy error; try client live path next.
+        }
+
+        try {
           const liveItem = await fetchLiveItemViaRss(category, answerValue, excludedItemIds);
           const liveLink = normalizeEbayLink((liveItem && liveItem.link) || "");
           const liveItemId = extractEbayItemId(liveLink);
@@ -1568,6 +1629,8 @@
             !excludedLinks.has(liveLink) &&
             (!liveItemId || !excludedItemIds.has(liveItemId))
           ) {
+            state.lastFetchMode = "client-live";
+            updateBuildInfo();
             return {
               ...liveItem,
               link: liveLink
@@ -1599,6 +1662,8 @@
             !excludedLinks.has(normalizedLink) &&
             (!itemId || !excludedItemIds.has(itemId))
           ) {
+            state.lastFetchMode = "local-api";
+            updateBuildInfo();
             return enriched;
           }
           throw new Error("Direct listing missing image");
@@ -1614,6 +1679,8 @@
       } catch (directErr) {
         // Local API unavailable on static hosting; fallback to curated eBay links.
       }
+      state.lastFetchMode = "fallback";
+      updateBuildInfo();
       return await fetchListingFromFallbackLinks(
         category,
         answerValue,
@@ -1732,6 +1799,10 @@
       if (item && item.link) {
         state.seenRewardLinks.add(normalizeEbayLink(item.link));
         saveRewardState();
+      }
+      if (state.lastFetchMode === "init") {
+        state.lastFetchMode = "fallback";
+        updateBuildInfo();
       }
 
       itemLoading.classList.add("hidden");

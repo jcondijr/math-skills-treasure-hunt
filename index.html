@@ -924,6 +924,7 @@
     const refreshProgress = document.getElementById("refreshProgress");
     const refreshProgressFill = document.getElementById("refreshProgressFill");
     const refreshDone = document.getElementById("refreshDone");
+    const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
 
     const state = {
       selectedTable: 2,
@@ -939,6 +940,38 @@
       currentRewardContext: null,
       refreshNonce: 0
     };
+
+    function saveRewardState() {
+      try {
+        const payload = {
+          refreshNonce: state.refreshNonce || 0,
+          seenRewardLinks: Array.from(state.seenRewardLinks || []).slice(-300),
+          blockedRewardLinks: Array.from(state.blockedRewardLinks || []).slice(-500)
+        };
+        localStorage.setItem(REWARD_STATE_STORAGE_KEY, JSON.stringify(payload));
+      } catch (err) {
+        // Ignore storage write failures (private mode, quota, etc).
+      }
+    }
+
+    function loadRewardState() {
+      try {
+        const raw = localStorage.getItem(REWARD_STATE_STORAGE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (parsed && Number.isFinite(parsed.refreshNonce)) {
+          state.refreshNonce = parsed.refreshNonce;
+        }
+        if (parsed && Array.isArray(parsed.seenRewardLinks)) {
+          state.seenRewardLinks = new Set(parsed.seenRewardLinks.filter(Boolean));
+        }
+        if (parsed && Array.isArray(parsed.blockedRewardLinks)) {
+          state.blockedRewardLinks = new Set(parsed.blockedRewardLinks.filter(Boolean));
+        }
+      } catch (err) {
+        // Ignore storage read failures and continue with defaults.
+      }
+    }
 
     function randFrom(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
@@ -1089,17 +1122,25 @@
 
       refreshStatus.textContent = "Purging current reward history...";
       refreshProgressFill.style.width = "20%";
-      state.blockedRewardLinks = new Set([...state.seenRewardLinks]);
+      state.blockedRewardLinks = new Set([
+        ...Array.from(state.blockedRewardLinks),
+        ...Array.from(state.seenRewardLinks)
+      ]);
+      if (state.blockedRewardLinks.size > 500) {
+        state.blockedRewardLinks = new Set(Array.from(state.blockedRewardLinks).slice(-500));
+      }
       state.seenRewardKeys = new Set();
       state.seenRewardLinks = new Set();
       state.currentRewardKey = "";
       state.currentRewardContext = null;
+      saveRewardState();
       await wait(220);
 
       refreshStatus.textContent = "Generating fresh weekly reward pools...";
       refreshProgressFill.style.width = "50%";
-      state.refreshNonce += 1;
+      state.refreshNonce += 1 + Math.floor(Math.random() * 1000);
       state.rewardPlan = buildRewardPlan(10);
+      saveRewardState();
       await wait(220);
 
       refreshStatus.textContent = "Refreshing round reward order...";
@@ -1378,6 +1419,7 @@
       }
       if (item && item.link) {
         state.seenRewardLinks.add(item.link);
+        saveRewardState();
       }
 
       itemLoading.classList.add("hidden");
@@ -1521,6 +1563,8 @@
         renderQuestion();
       }
     }
+
+    loadRewardState();
 
     startBtn.addEventListener("click", startRound);
     menuToggle.addEventListener("click", toggleMenu);

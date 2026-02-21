@@ -935,6 +935,7 @@
       rewardPlan: [],
       seenRewardKeys: new Set(),
       seenRewardLinks: new Set(),
+      blockedRewardKeys: new Set(),
       blockedRewardLinks: new Set(),
       currentRewardKey: "",
       currentRewardContext: null,
@@ -945,6 +946,7 @@
       try {
         const payload = {
           refreshNonce: state.refreshNonce || 0,
+          blockedRewardKeys: Array.from(state.blockedRewardKeys || []).slice(-500),
           seenRewardLinks: Array.from(state.seenRewardLinks || []).slice(-300),
           blockedRewardLinks: Array.from(state.blockedRewardLinks || []).slice(-500)
         };
@@ -961,6 +963,9 @@
         const parsed = JSON.parse(raw);
         if (parsed && Number.isFinite(parsed.refreshNonce)) {
           state.refreshNonce = parsed.refreshNonce;
+        }
+        if (parsed && Array.isArray(parsed.blockedRewardKeys)) {
+          state.blockedRewardKeys = new Set(parsed.blockedRewardKeys.filter(Boolean));
         }
         if (parsed && Array.isArray(parsed.seenRewardLinks)) {
           state.seenRewardLinks = new Set(
@@ -1130,8 +1135,15 @@
         ...Array.from(state.blockedRewardLinks),
         ...Array.from(state.seenRewardLinks)
       ]);
+      state.blockedRewardKeys = new Set([
+        ...Array.from(state.blockedRewardKeys),
+        ...Array.from(state.seenRewardKeys)
+      ]);
       if (state.blockedRewardLinks.size > 500) {
         state.blockedRewardLinks = new Set(Array.from(state.blockedRewardLinks).slice(-500));
+      }
+      if (state.blockedRewardKeys.size > 500) {
+        state.blockedRewardKeys = new Set(Array.from(state.blockedRewardKeys).slice(-500));
       }
       state.seenRewardKeys = new Set();
       state.seenRewardLinks = new Set();
@@ -1429,7 +1441,7 @@
         (state.currentRewardContext && state.currentRewardContext.categoryLabel) ||
         ((state.rewardPlan[state.currentIndex] && state.rewardPlan[state.currentIndex].label) || "");
 
-      const excludedKeys = new Set(state.seenRewardKeys);
+      const excludedKeys = new Set([...state.seenRewardKeys, ...state.blockedRewardKeys]);
       if (options.forceDifferent && state.currentRewardKey) {
         excludedKeys.add(state.currentRewardKey);
       }
@@ -1519,6 +1531,7 @@
 
       if (state.currentRewardKey) {
         state.seenRewardKeys.add(state.currentRewardKey);
+        saveRewardState();
       }
       if (item && item.link) {
         state.seenRewardLinks.add(normalizeEbayLink(item.link));

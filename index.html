@@ -1377,7 +1377,7 @@
       if (options.forceDifferent && state.currentRewardKey) {
         excludedKeys.add(state.currentRewardKey);
       }
-      const excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
+      let excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
 
       let item = null;
       for (let attempt = 0; attempt < 6; attempt += 1) {
@@ -1405,12 +1405,39 @@
           CATEGORIES.find((c) => c.label === categoryLabel) ||
           state.rewardPlan[state.currentIndex] ||
           randFrom(CATEGORIES);
-        item = await fetchListingFromFallbackLinks(
-          fallbackCategory,
-          answerValue,
-          [],
-          new Set()
-        );
+        try {
+          item = await fetchListingFromFallbackLinks(
+            fallbackCategory,
+            answerValue,
+            [],
+            excludedLinks
+          );
+        } catch (sameCategoryErr) {
+          const alternates = shuffled(
+            CATEGORIES.filter((c) => c.label !== fallbackCategory.label)
+          );
+          for (const alt of alternates) {
+            try {
+              item = await fetchListingFromFallbackLinks(alt, answerValue, [], excludedLinks);
+              break;
+            } catch (altErr) {
+              // Keep trying alternate categories until one resolves.
+            }
+          }
+        }
+
+        if (!item && state.blockedRewardLinks.size > 0) {
+          // Pool may be temporarily exhausted; trim oldest blocked links and retry once.
+          state.blockedRewardLinks = new Set(Array.from(state.blockedRewardLinks).slice(-350));
+          excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
+          saveRewardState();
+          item = await fetchListingFromFallbackLinks(
+            fallbackCategory,
+            answerValue,
+            [],
+            excludedLinks
+          );
+        }
         state.currentRewardKey = buildRewardKey(item);
       }
 

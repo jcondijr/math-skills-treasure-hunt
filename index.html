@@ -930,7 +930,7 @@
     const buildInfo = document.getElementById("buildInfo");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
     const REWARD_DATA_URL = "rewards.json";
-    const APP_BUILD = "2026-02-21-cdc2c53-seeded-shuffle";
+    const APP_BUILD = "2026-02-21-live-rss-first";
 
     const state = {
       selectedTable: 2,
@@ -1475,6 +1475,31 @@
       return data;
     }
 
+    async function fetchLiveItemViaRss(categoryQuery, answerValue, excludedItemIds = new Set()) {
+      const low = Math.max(1, answerValue - 2);
+      const high = answerValue + 2;
+      const rssUrl = `${buildEbaySearchUrl(categoryQuery, low, high)}&_rss=1`;
+      const proxyUrl =
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}` +
+        `&t=${Date.now()}`;
+      const response = await fetch(proxyUrl, { cache: "no-store" });
+      if (!response.ok) throw new Error("Live RSS request failed");
+      const payload = await response.json();
+      if (!payload || payload.status !== "ok" || !Array.isArray(payload.items)) {
+        throw new Error("Live RSS payload invalid");
+      }
+
+      const candidates = payload.items
+        .map((entry) => normalizeEbayLink((entry && entry.link) || ""))
+        .filter((link) => link && /ebay\.com\/itm\//i.test(link))
+        .filter((link) => {
+          const itemId = extractEbayItemId(link);
+          return !itemId || !excludedItemIds.has(itemId);
+        });
+      if (!candidates.length) throw new Error("No live item candidates");
+      return { link: randFrom(candidates) };
+    }
+
     async function fetchListingFromFallbackLinks(
       category,
       answerValue,
@@ -1510,6 +1535,28 @@
       const excludedKeys = options.excludedKeys || [];
       const excludedLinks = options.excludedLinks || new Set();
       const excludedItemIds = options.excludedItemIds || new Set();
+      const isLocalHost =
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1";
+
+      if (!isLocalHost) {
+        try {
+          const liveItem = await fetchLiveItemViaRss(category.query, answerValue, excludedItemIds);
+          const liveEnriched = await enrichItemFromLink(liveItem.link, answerValue, category);
+          const liveLink = normalizeEbayLink((liveEnriched && liveEnriched.link) || "");
+          const liveItemId = extractEbayItemId(liveLink);
+          if (
+            liveEnriched &&
+            liveEnriched.image &&
+            !excludedLinks.has(liveLink) &&
+            (!liveItemId || !excludedItemIds.has(liveItemId))
+          ) {
+            return liveEnriched;
+          }
+        } catch (liveErr) {
+          // Live web fetch can fail due to rate limits/network; fallback remains available.
+        }
+      }
 
       try {
         const directItem = await fetchDirectItemViaLocalApi(category.query, answerValue);

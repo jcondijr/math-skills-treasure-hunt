@@ -948,7 +948,8 @@
       refreshNonce: 0,
       refreshToken: "",
       rewardsDataVersion: "embedded",
-      rewardsDataSalt: "embedded"
+      rewardsDataSalt: "embedded",
+      rewardsPoolSize: 8
     };
 
     function makeRefreshToken() {
@@ -1361,6 +1362,12 @@
 
         state.rewardsDataVersion = String(payload.version || "external");
         state.rewardsDataSalt = String(payload.rotationSalt || payload.version || "external");
+        const parsedPoolSize = Number(payload.rewardsPoolSize);
+        if (Number.isFinite(parsedPoolSize) && parsedPoolSize >= 4 && parsedPoolSize <= 20) {
+          state.rewardsPoolSize = Math.floor(parsedPoolSize);
+        } else {
+          state.rewardsPoolSize = 8;
+        }
         updateBuildInfo();
         return true;
       } catch (err) {
@@ -1368,6 +1375,7 @@
         runtimeKnownListingData = KNOWN_LISTING_DATA;
         state.rewardsDataVersion = "embedded";
         state.rewardsDataSalt = "embedded";
+        state.rewardsPoolSize = 8;
         updateBuildInfo();
         return false;
       }
@@ -1432,7 +1440,7 @@
         }))
         .sort((a, b) => a.score - b.score)
         .map((entry) => entry.link);
-      const selected = ranked.slice(0, Math.min(24, ranked.length));
+      const selected = ranked.slice(0, Math.min(state.rewardsPoolSize || 8, ranked.length));
       return selected.filter((link) => !excluded.has(`link:${link}`));
     }
 

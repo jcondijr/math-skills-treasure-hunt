@@ -514,7 +514,7 @@
         <div id="itemTitle" class="item-title"></div>
         <div id="itemPrice" class="price"></div>
         <div id="itemNote" class="small"></div>
-        <button id="rerollBtn" class="hidden">Pull Different Award 🔄</button>
+        <button id="rerollBtn" class="hidden">Pull Different Reward 🔄</button>
       </div>
 
       <div id="jjWrap" class="jj-wrap hidden">
@@ -546,14 +546,14 @@
       <div class="card">
         <h1>Options</h1>
         <div class="option-block">
-          <div class="item-title">Hard Refresh Awards 🔄</div>
-          <p class="small">Purges current award history and rebuilds fresh reward pools for a new mix.</p>
-          <button id="hardRefreshAwardsBtn" type="button">Hard Refresh Awards 🔄</button>
+          <div class="item-title">Hard Refresh Rewards 🔄</div>
+          <p class="small">Purges current reward history and rebuilds fresh reward pools for a new mix.</p>
+          <button id="hardRefreshAwardsBtn" type="button">Hard Refresh Rewards 🔄</button>
           <div id="refreshLoading" class="loading-row hidden" role="status" aria-live="polite">
             <span class="spinner" aria-hidden="true"></span>
-            <span id="refreshStatus">Refreshing awards...</span>
+            <span id="refreshStatus">Refreshing rewards...</span>
           </div>
-          <div id="refreshProgress" class="refresh-progress hidden" aria-label="Award refresh progress">
+          <div id="refreshProgress" class="refresh-progress hidden" aria-label="Reward refresh progress">
             <div id="refreshProgressFill" class="refresh-progress-fill"></div>
           </div>
           <div id="refreshDone" class="small"></div>
@@ -933,6 +933,8 @@
       attempts: 0,
       rewardPlan: [],
       seenRewardKeys: new Set(),
+      seenRewardLinks: new Set(),
+      blockedRewardLinks: new Set(),
       currentRewardKey: "",
       currentRewardContext: null,
       refreshNonce: 0
@@ -1085,14 +1087,16 @@
       refreshLoading.classList.remove("hidden");
       refreshProgress.classList.remove("hidden");
 
-      refreshStatus.textContent = "Purging current award history...";
+      refreshStatus.textContent = "Purging current reward history...";
       refreshProgressFill.style.width = "20%";
+      state.blockedRewardLinks = new Set([...state.seenRewardLinks]);
       state.seenRewardKeys = new Set();
+      state.seenRewardLinks = new Set();
       state.currentRewardKey = "";
       state.currentRewardContext = null;
       await wait(220);
 
-      refreshStatus.textContent = "Generating fresh weekly award pools...";
+      refreshStatus.textContent = "Generating fresh weekly reward pools...";
       refreshProgressFill.style.width = "50%";
       state.refreshNonce += 1;
       state.rewardPlan = buildRewardPlan(10);
@@ -1106,7 +1110,7 @@
       }
       await wait(220);
 
-      refreshStatus.textContent = "Awards refreshed!";
+      refreshStatus.textContent = "Rewards refreshed!";
       refreshProgressFill.style.width = "100%";
       const now = new Date();
       refreshDone.textContent = `Done: ${now.toLocaleString()}`;
@@ -1268,8 +1272,15 @@
       return data;
     }
 
-    async function fetchListingFromFallbackLinks(category, answerValue, excludedKeys = []) {
-      const links = shuffled(getCategoryFallbackLinks(category.label, excludedKeys));
+    async function fetchListingFromFallbackLinks(
+      category,
+      answerValue,
+      excludedKeys = [],
+      excludedLinks = new Set()
+    ) {
+      const links = shuffled(getCategoryFallbackLinks(category.label, excludedKeys)).filter(
+        (link) => !excludedLinks.has(link)
+      );
       for (const link of links) {
         try {
           const item = await enrichItemFromLink(link, answerValue, category);
@@ -1287,23 +1298,24 @@
         : null;
       const category = forcedCategory || state.rewardPlan[questionIndex] || randFrom(CATEGORIES);
       const excludedKeys = options.excludedKeys || [];
+      const excludedLinks = options.excludedLinks || new Set();
 
       try {
         const directItem = await fetchDirectItemViaLocalApi(category.query, answerValue);
         if (!directItem.link) {
-          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
+          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
         }
         try {
           const enriched = await enrichItemFromLink(directItem.link, answerValue, category);
-          if (enriched && enriched.image) return enriched;
+          if (enriched && enriched.image && !excludedLinks.has(enriched.link || "")) return enriched;
           throw new Error("Direct listing missing image");
         } catch (metaErr) {
-          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
+          return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
         }
       } catch (directErr) {
         // Local API unavailable on static hosting; fallback to curated eBay links.
       }
-      return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys);
+      return await fetchListingFromFallbackLinks(category, answerValue, excludedKeys, excludedLinks);
     }
 
     async function showReward(answerValue, options = {}) {
@@ -1324,20 +1336,27 @@
       if (options.forceDifferent && state.currentRewardKey) {
         excludedKeys.add(state.currentRewardKey);
       }
+      const excludedLinks = new Set([...state.seenRewardLinks, ...state.blockedRewardLinks]);
 
       let item = null;
       for (let attempt = 0; attempt < 6; attempt += 1) {
         const candidate = await fetchItemForAnswer(answerValue, state.currentIndex, {
           categoryLabel,
-          excludedKeys: Array.from(excludedKeys)
+          excludedKeys: Array.from(excludedKeys),
+          excludedLinks
         });
         const candidateKey = buildRewardKey(candidate);
-        if (!candidateKey || !excludedKeys.has(candidateKey)) {
+        const candidateLink = (candidate && candidate.link) || "";
+        if (
+          (!candidateKey || !excludedKeys.has(candidateKey)) &&
+          (!candidateLink || !excludedLinks.has(candidateLink))
+        ) {
           item = candidate;
           state.currentRewardKey = candidateKey;
           break;
         }
         excludedKeys.add(candidateKey);
+        if (candidateLink) excludedLinks.add(candidateLink);
       }
 
       if (!item) {
@@ -1348,13 +1367,17 @@
         item = await fetchListingFromFallbackLinks(
           fallbackCategory,
           answerValue,
-          Array.from(excludedKeys)
+          [],
+          new Set()
         );
         state.currentRewardKey = buildRewardKey(item);
       }
 
       if (state.currentRewardKey) {
         state.seenRewardKeys.add(state.currentRewardKey);
+      }
+      if (item && item.link) {
+        state.seenRewardLinks.add(item.link);
       }
 
       itemLoading.classList.add("hidden");
@@ -1368,7 +1391,7 @@
       itemImg.src = item.image;
       itemImg.onerror = () => {
         itemImg.classList.add("hidden");
-        itemNote.textContent = "This listing image did not load. Tap Pull Different Award 🔄 for another real listing.";
+        itemNote.textContent = "This listing image did not load. Tap Pull Different Reward 🔄 for another real listing.";
       };
       itemImg.classList.remove("hidden");
       triggerPop(itemWrap);
@@ -1422,7 +1445,6 @@
       state.currentIndex = 0;
       state.firstTryCorrect = 0;
       state.attempts = 0;
-      state.seenRewardKeys = new Set();
       state.currentRewardKey = "";
       state.currentRewardContext = null;
 

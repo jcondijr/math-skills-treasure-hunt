@@ -1,6 +1,2766 @@
 {
-  "version": "2026-02-21-4",
-  "rotationSalt": "2026-02-21-5",
-  "rewardsPoolSize": 8,
-  "liveProxyUrl": "https://math-skills-treasure-hunt-kkly.vercel.app/api/reward"
+  "version": "2026-02-21-7",
+  "rotationSalt": "2026-02-21-8",
+  "rewardsPoolSize": 24,
+  "liveProxyUrl": "https://math-skills-treasure-hunt-kkly.vercel.app/api/reward",
+  "fallbackItemLinks": {
+    "Dragon Ball": [
+      "https://www.ebay.com/itm/358241517361",
+      "https://www.ebay.com/itm/188080212678",
+      "https://www.ebay.com/itm/188080181418",
+      "https://www.ebay.com/itm/137056876019",
+      "https://www.ebay.com/itm/137056874311",
+      "https://www.ebay.com/itm/306782547193",
+      "https://www.ebay.com/itm/206083992300",
+      "https://www.ebay.com/itm/406711805345",
+      "https://www.ebay.com/itm/406711805364",
+      "https://www.ebay.com/itm/397633538191",
+      "https://www.ebay.com/itm/406711804881",
+      "https://www.ebay.com/itm/406711804250",
+      "https://www.ebay.com/itm/257371024540",
+      "https://www.ebay.com/itm/358241180371",
+      "https://www.ebay.com/itm/358241136700",
+      "https://www.ebay.com/itm/358241136774",
+      "https://www.ebay.com/itm/389650181954",
+      "https://www.ebay.com/itm/306782428900",
+      "https://www.ebay.com/itm/206083818760",
+      "https://www.ebay.com/itm/206083778180",
+      "https://www.ebay.com/itm/206083773990",
+      "https://www.ebay.com/itm/188079710407",
+      "https://www.ebay.com/itm/389650039722",
+      "https://www.ebay.com/itm/137056412986",
+      "https://www.ebay.com/itm/188079668346",
+      "https://www.ebay.com/itm/287154821538",
+      "https://www.ebay.com/itm/397633173111",
+      "https://www.ebay.com/itm/389649881037",
+      "https://www.ebay.com/itm/206083683037",
+      "https://www.ebay.com/itm/317905303052",
+      "https://www.ebay.com/itm/227225581726",
+      "https://www.ebay.com/itm/389649785049",
+      "https://www.ebay.com/itm/168174473539",
+      "https://www.ebay.com/itm/127696196732",
+      "https://www.ebay.com/itm/206083580856",
+      "https://www.ebay.com/itm/188079397789",
+      "https://www.ebay.com/itm/389649651023",
+      "https://www.ebay.com/itm/397632889752",
+      "https://www.ebay.com/itm/397632889674",
+      "https://www.ebay.com/itm/397632889734",
+      "https://www.ebay.com/itm/397632885226",
+      "https://www.ebay.com/itm/397632885213",
+      "https://www.ebay.com/itm/177879543404",
+      "https://www.ebay.com/itm/177879534098",
+      "https://www.ebay.com/itm/406711409619",
+      "https://www.ebay.com/itm/157696253944",
+      "https://www.ebay.com/itm/177879528463",
+      "https://www.ebay.com/itm/188079289282",
+      "https://www.ebay.com/itm/389649500663",
+      "https://www.ebay.com/itm/177879444036",
+      "https://www.ebay.com/itm/397632720774",
+      "https://www.ebay.com/itm/177879430995",
+      "https://www.ebay.com/itm/177879417923",
+      "https://www.ebay.com/itm/389649460201",
+      "https://www.ebay.com/itm/389649455810",
+      "https://www.ebay.com/itm/389649454007",
+      "https://www.ebay.com/itm/389649436413",
+      "https://www.ebay.com/itm/188079202429",
+      "https://www.ebay.com/itm/358238076682",
+      "https://www.ebay.com/itm/206083374634",
+      "https://www.ebay.com/itm/188079124426",
+      "https://www.ebay.com/itm/188079123377",
+      "https://www.ebay.com/itm/188079104062",
+      "https://www.ebay.com/itm/188079094465",
+      "https://www.ebay.com/itm/168174159863",
+      "https://www.ebay.com/itm/188079080140",
+      "https://www.ebay.com/itm/177879255553",
+      "https://www.ebay.com/itm/206083330907",
+      "https://www.ebay.com/itm/188079043190",
+      "https://www.ebay.com/itm/366216266432",
+      "https://www.ebay.com/itm/147163975386",
+      "https://www.ebay.com/itm/366216264539",
+      "https://www.ebay.com/itm/206083311611",
+      "https://www.ebay.com/itm/317904620936",
+      "https://www.ebay.com/itm/397632520709",
+      "https://www.ebay.com/itm/198124376212",
+      "https://www.ebay.com/itm/317904607577",
+      "https://www.ebay.com/itm/206083295531",
+      "https://www.ebay.com/itm/317904590938",
+      "https://www.ebay.com/itm/358239925036",
+      "https://www.ebay.com/itm/317904571303",
+      "https://www.ebay.com/itm/317904569999",
+      "https://www.ebay.com/itm/317904568120",
+      "https://www.ebay.com/itm/317904559567",
+      "https://www.ebay.com/itm/317904535603",
+      "https://www.ebay.com/itm/298050900990",
+      "https://www.ebay.com/itm/188078851302",
+      "https://www.ebay.com/itm/227225290619",
+      "https://www.ebay.com/itm/317904393446",
+      "https://www.ebay.com/itm/157695658310",
+      "https://www.ebay.com/itm/127695765010",
+      "https://www.ebay.com/itm/236646601647",
+      "https://www.ebay.com/itm/188078665067",
+      "https://www.ebay.com/itm/298050405568",
+      "https://www.ebay.com/itm/188078568440",
+      "https://www.ebay.com/itm/137055319829",
+      "https://www.ebay.com/itm/188078491889",
+      "https://www.ebay.com/itm/188078488894",
+      "https://www.ebay.com/itm/358239344105",
+      "https://www.ebay.com/itm/358238093648",
+      "https://www.ebay.com/itm/358238093663",
+      "https://www.ebay.com/itm/206082994131",
+      "https://www.ebay.com/itm/287153982407",
+      "https://www.ebay.com/itm/358239196225",
+      "https://www.ebay.com/itm/358239196231",
+      "https://www.ebay.com/itm/317903860665",
+      "https://www.ebay.com/itm/198123933835",
+      "https://www.ebay.com/itm/406710757473",
+      "https://www.ebay.com/itm/358238093116",
+      "https://www.ebay.com/itm/287153868502"
+    ],
+    "Coin": [
+      "https://www.ebay.com/itm/188074719124",
+      "https://www.ebay.com/itm/188074716766",
+      "https://www.ebay.com/itm/188074699065",
+      "https://www.ebay.com/itm/168171070716",
+      "https://www.ebay.com/itm/157692930071",
+      "https://www.ebay.com/itm/358234613828",
+      "https://www.ebay.com/itm/366213103559",
+      "https://www.ebay.com/itm/397628123120",
+      "https://www.ebay.com/itm/397628089584",
+      "https://www.ebay.com/itm/298046614974",
+      "https://www.ebay.com/itm/397627220016",
+      "https://www.ebay.com/itm/406707936684",
+      "https://www.ebay.com/itm/267580482163",
+      "https://www.ebay.com/itm/168170587374",
+      "https://www.ebay.com/itm/198120984975",
+      "https://www.ebay.com/itm/287151168075",
+      "https://www.ebay.com/itm/287151154832",
+      "https://www.ebay.com/itm/358233589746",
+      "https://www.ebay.com/itm/389642910372",
+      "https://www.ebay.com/itm/177874742101",
+      "https://www.ebay.com/itm/267580384554",
+      "https://www.ebay.com/itm/236643769018",
+      "https://www.ebay.com/itm/317897962147",
+      "https://www.ebay.com/itm/206079751726",
+      "https://www.ebay.com/itm/306778560123",
+      "https://www.ebay.com/itm/168170288713",
+      "https://www.ebay.com/itm/406707333357",
+      "https://www.ebay.com/itm/267580349559",
+      "https://www.ebay.com/itm/267580349365",
+      "https://www.ebay.com/itm/267580337532",
+      "https://www.ebay.com/itm/236643649214",
+      "https://www.ebay.com/itm/358233269440",
+      "https://www.ebay.com/itm/406707178476",
+      "https://www.ebay.com/itm/298045584977",
+      "https://www.ebay.com/itm/298042988355",
+      "https://www.ebay.com/itm/306776890340",
+      "https://www.ebay.com/itm/306776906599",
+      "https://www.ebay.com/itm/336419664484",
+      "https://www.ebay.com/itm/277737674242",
+      "https://www.ebay.com/itm/147161077114",
+      "https://www.ebay.com/itm/397626848690",
+      "https://www.ebay.com/itm/277736259469",
+      "https://www.ebay.com/itm/376973477640",
+      "https://www.ebay.com/itm/287150783769",
+      "https://www.ebay.com/itm/257367447318",
+      "https://www.ebay.com/itm/277737565825",
+      "https://www.ebay.com/itm/188072827302",
+      "https://www.ebay.com/itm/188072819447",
+      "https://www.ebay.com/itm/137050103038",
+      "https://www.ebay.com/itm/366211877613",
+      "https://www.ebay.com/itm/137050084894",
+      "https://www.ebay.com/itm/137050070482",
+      "https://www.ebay.com/itm/406706855694",
+      "https://www.ebay.com/itm/406706849918",
+      "https://www.ebay.com/itm/406706840783",
+      "https://www.ebay.com/itm/406706835794",
+      "https://www.ebay.com/itm/327008082492",
+      "https://www.ebay.com/itm/406706832038",
+      "https://www.ebay.com/itm/389642045645",
+      "https://www.ebay.com/itm/389642041087",
+      "https://www.ebay.com/itm/406706813704",
+      "https://www.ebay.com/itm/406706801764",
+      "https://www.ebay.com/itm/406706784904",
+      "https://www.ebay.com/itm/137049994630",
+      "https://www.ebay.com/itm/177874234124",
+      "https://www.ebay.com/itm/137049983030",
+      "https://www.ebay.com/itm/188072578106",
+      "https://www.ebay.com/itm/358232829769",
+      "https://www.ebay.com/itm/137049971583",
+      "https://www.ebay.com/itm/257367303351",
+      "https://www.ebay.com/itm/137049950268",
+      "https://www.ebay.com/itm/306778192059",
+      "https://www.ebay.com/itm/147160779400",
+      "https://www.ebay.com/itm/389641920607",
+      "https://www.ebay.com/itm/137049915100",
+      "https://www.ebay.com/itm/117044891072",
+      "https://www.ebay.com/itm/168169764509",
+      "https://www.ebay.com/itm/236643239364",
+      "https://www.ebay.com/itm/317896740330",
+      "https://www.ebay.com/itm/236643237381",
+      "https://www.ebay.com/itm/389641870612",
+      "https://www.ebay.com/itm/157691651109",
+      "https://www.ebay.com/itm/366211651023",
+      "https://www.ebay.com/itm/236643203825",
+      "https://www.ebay.com/itm/366211648743",
+      "https://www.ebay.com/itm/236643185399",
+      "https://www.ebay.com/itm/397626235185",
+      "https://www.ebay.com/itm/198120015944",
+      "https://www.ebay.com/itm/177874032598",
+      "https://www.ebay.com/itm/298044972864",
+      "https://www.ebay.com/itm/298044971545",
+      "https://www.ebay.com/itm/117044761603",
+      "https://www.ebay.com/itm/306778067972",
+      "https://www.ebay.com/itm/236643162956",
+      "https://www.ebay.com/itm/389641660168",
+      "https://www.ebay.com/itm/389641644894",
+      "https://www.ebay.com/itm/147160598568",
+      "https://www.ebay.com/itm/406706430400",
+      "https://www.ebay.com/itm/137049496769",
+      "https://www.ebay.com/itm/376974170704",
+      "https://www.ebay.com/itm/188072096619",
+      "https://www.ebay.com/itm/168169503933",
+      "https://www.ebay.com/itm/227222550343",
+      "https://www.ebay.com/itm/188072087262",
+      "https://www.ebay.com/itm/236643053543",
+      "https://www.ebay.com/itm/188072056923",
+      "https://www.ebay.com/itm/376974114989",
+      "https://www.ebay.com/itm/277736856268",
+      "https://www.ebay.com/itm/267579960763",
+      "https://www.ebay.com/itm/267579957427"
+    ],
+    "Football card": [
+      "https://www.ebay.com/itm/389650663730",
+      "https://www.ebay.com/itm/137056979253",
+      "https://www.ebay.com/itm/389650656269",
+      "https://www.ebay.com/itm/389650620929",
+      "https://www.ebay.com/itm/257371124053",
+      "https://www.ebay.com/itm/127696615644",
+      "https://www.ebay.com/itm/336445094567",
+      "https://www.ebay.com/itm/358241548667",
+      "https://www.ebay.com/itm/389650604853",
+      "https://www.ebay.com/itm/389650587126",
+      "https://www.ebay.com/itm/336445079444",
+      "https://www.ebay.com/itm/236647396024",
+      "https://www.ebay.com/itm/157696778934",
+      "https://www.ebay.com/itm/168175346681",
+      "https://www.ebay.com/itm/227225827343",
+      "https://www.ebay.com/itm/127696583383",
+      "https://www.ebay.com/itm/358241462613",
+      "https://www.ebay.com/itm/267582255413",
+      "https://www.ebay.com/itm/267582255453",
+      "https://www.ebay.com/itm/267582255469",
+      "https://www.ebay.com/itm/236647365474",
+      "https://www.ebay.com/itm/306782556580",
+      "https://www.ebay.com/itm/306782555759",
+      "https://www.ebay.com/itm/236647349539",
+      "https://www.ebay.com/itm/358241382274",
+      "https://www.ebay.com/itm/117049004163",
+      "https://www.ebay.com/itm/257371053119",
+      "https://www.ebay.com/itm/336445014964",
+      "https://www.ebay.com/itm/317906106065",
+      "https://www.ebay.com/itm/358241356075",
+      "https://www.ebay.com/itm/137056790676",
+      "https://www.ebay.com/itm/206083977827",
+      "https://www.ebay.com/itm/298051923214",
+      "https://www.ebay.com/itm/298051921621",
+      "https://www.ebay.com/itm/397633505093",
+      "https://www.ebay.com/itm/358241284942",
+      "https://www.ebay.com/itm/168175026303",
+      "https://www.ebay.com/itm/188080005623",
+      "https://www.ebay.com/itm/358241278935",
+      "https://www.ebay.com/itm/227225754164",
+      "https://www.ebay.com/itm/358241245537",
+      "https://www.ebay.com/itm/317905952909",
+      "https://www.ebay.com/itm/206083928742",
+      "https://www.ebay.com/itm/358241203934",
+      "https://www.ebay.com/itm/147164534558",
+      "https://www.ebay.com/itm/358241195055",
+      "https://www.ebay.com/itm/397633427446",
+      "https://www.ebay.com/itm/358241185053",
+      "https://www.ebay.com/itm/206083889812",
+      "https://www.ebay.com/itm/358241165415",
+      "https://www.ebay.com/itm/157696609362",
+      "https://www.ebay.com/itm/317905877179",
+      "https://www.ebay.com/itm/376980030624",
+      "https://www.ebay.com/itm/177879941688",
+      "https://www.ebay.com/itm/358241109177",
+      "https://www.ebay.com/itm/358241096142",
+      "https://www.ebay.com/itm/327011466264",
+      "https://www.ebay.com/itm/177879922987",
+      "https://www.ebay.com/itm/127696433893",
+      "https://www.ebay.com/itm/177879920051",
+      "https://www.ebay.com/itm/177879905162",
+      "https://www.ebay.com/itm/257370924756",
+      "https://www.ebay.com/itm/287154897786",
+      "https://www.ebay.com/itm/177879902621",
+      "https://www.ebay.com/itm/397632576441",
+      "https://www.ebay.com/itm/287154895675",
+      "https://www.ebay.com/itm/177879898428",
+      "https://www.ebay.com/itm/306782417847",
+      "https://www.ebay.com/itm/177879890427",
+      "https://www.ebay.com/itm/117048853740",
+      "https://www.ebay.com/itm/397633301266",
+      "https://www.ebay.com/itm/358240997350",
+      "https://www.ebay.com/itm/397633299953",
+      "https://www.ebay.com/itm/236647149864",
+      "https://www.ebay.com/itm/358240996194",
+      "https://www.ebay.com/itm/358240995452",
+      "https://www.ebay.com/itm/397633295196",
+      "https://www.ebay.com/itm/306782409007",
+      "https://www.ebay.com/itm/327011431938",
+      "https://www.ebay.com/itm/306782402311",
+      "https://www.ebay.com/itm/198124965153",
+      "https://www.ebay.com/itm/306782400758",
+      "https://www.ebay.com/itm/198124964267",
+      "https://www.ebay.com/itm/306782400437",
+      "https://www.ebay.com/itm/397633281274",
+      "https://www.ebay.com/itm/397633272866",
+      "https://www.ebay.com/itm/306782397062",
+      "https://www.ebay.com/itm/397633270765",
+      "https://www.ebay.com/itm/317905593326",
+      "https://www.ebay.com/itm/206083771965",
+      "https://www.ebay.com/itm/306782395334",
+      "https://www.ebay.com/itm/168174670310",
+      "https://www.ebay.com/itm/397633260352",
+      "https://www.ebay.com/itm/306782389966",
+      "https://www.ebay.com/itm/358240935940",
+      "https://www.ebay.com/itm/366216819759",
+      "https://www.ebay.com/itm/397633252909",
+      "https://www.ebay.com/itm/397633248571",
+      "https://www.ebay.com/itm/397633241176",
+      "https://www.ebay.com/itm/198124897093",
+      "https://www.ebay.com/itm/298051629509",
+      "https://www.ebay.com/itm/358240859207",
+      "https://www.ebay.com/itm/206083740149",
+      "https://www.ebay.com/itm/206083738448",
+      "https://www.ebay.com/itm/127696326478",
+      "https://www.ebay.com/itm/206083724809",
+      "https://www.ebay.com/itm/406711566957",
+      "https://www.ebay.com/itm/267582091780",
+      "https://www.ebay.com/itm/389649910178",
+      "https://www.ebay.com/itm/227225616654"
+    ],
+    "Basketball card": [
+      "https://www.ebay.com/itm/389650618980",
+      "https://www.ebay.com/itm/336445098120",
+      "https://www.ebay.com/itm/147164656899",
+      "https://www.ebay.com/itm/336445076782",
+      "https://www.ebay.com/itm/257371103076",
+      "https://www.ebay.com/itm/236647397304",
+      "https://www.ebay.com/itm/358241475476",
+      "https://www.ebay.com/itm/227225814925",
+      "https://www.ebay.com/itm/168175275487",
+      "https://www.ebay.com/itm/227225811555",
+      "https://www.ebay.com/itm/227225810731",
+      "https://www.ebay.com/itm/358241400185",
+      "https://www.ebay.com/itm/298051978808",
+      "https://www.ebay.com/itm/317905957530",
+      "https://www.ebay.com/itm/317905957539",
+      "https://www.ebay.com/itm/317905953774",
+      "https://www.ebay.com/itm/317905952956",
+      "https://www.ebay.com/itm/317905952896",
+      "https://www.ebay.com/itm/317905952916",
+      "https://www.ebay.com/itm/317905952918",
+      "https://www.ebay.com/itm/317905952922",
+      "https://www.ebay.com/itm/358241216713",
+      "https://www.ebay.com/itm/147164529549",
+      "https://www.ebay.com/itm/358241177514",
+      "https://www.ebay.com/itm/298051825181",
+      "https://www.ebay.com/itm/389650261130",
+      "https://www.ebay.com/itm/358241133367",
+      "https://www.ebay.com/itm/397633372515",
+      "https://www.ebay.com/itm/366216892416",
+      "https://www.ebay.com/itm/358241076157",
+      "https://www.ebay.com/itm/188079806145",
+      "https://www.ebay.com/itm/376979963632",
+      "https://www.ebay.com/itm/358241041912",
+      "https://www.ebay.com/itm/287154889685",
+      "https://www.ebay.com/itm/358240992230",
+      "https://www.ebay.com/itm/327011427288",
+      "https://www.ebay.com/itm/358240952363",
+      "https://www.ebay.com/itm/376979889243",
+      "https://www.ebay.com/itm/206083771965",
+      "https://www.ebay.com/itm/206083765112",
+      "https://www.ebay.com/itm/358240865153",
+      "https://www.ebay.com/itm/227225636038",
+      "https://www.ebay.com/itm/227225629615",
+      "https://www.ebay.com/itm/366216771756",
+      "https://www.ebay.com/itm/177879702206",
+      "https://www.ebay.com/itm/227225612956",
+      "https://www.ebay.com/itm/358240726078",
+      "https://www.ebay.com/itm/358240717184",
+      "https://www.ebay.com/itm/198124777321",
+      "https://www.ebay.com/itm/358240680801",
+      "https://www.ebay.com/itm/406711527052",
+      "https://www.ebay.com/itm/267582077073",
+      "https://www.ebay.com/itm/267582072926",
+      "https://www.ebay.com/itm/336444782858",
+      "https://www.ebay.com/itm/397633017793",
+      "https://www.ebay.com/itm/157696338748",
+      "https://www.ebay.com/itm/287154699878",
+      "https://www.ebay.com/itm/227225531985",
+      "https://www.ebay.com/itm/206083559407",
+      "https://www.ebay.com/itm/127696138164",
+      "https://www.ebay.com/itm/317905075516",
+      "https://www.ebay.com/itm/358240443798",
+      "https://www.ebay.com/itm/117048660632",
+      "https://www.ebay.com/itm/257370614483",
+      "https://www.ebay.com/itm/397632792649",
+      "https://www.ebay.com/itm/317904931538",
+      "https://www.ebay.com/itm/137056013303",
+      "https://www.ebay.com/itm/257370579585",
+      "https://www.ebay.com/itm/236646841514",
+      "https://www.ebay.com/itm/298051231700",
+      "https://www.ebay.com/itm/298051228724",
+      "https://www.ebay.com/itm/298051222413",
+      "https://www.ebay.com/itm/376979429470",
+      "https://www.ebay.com/itm/298051218978",
+      "https://www.ebay.com/itm/287154533030",
+      "https://www.ebay.com/itm/298051207369",
+      "https://www.ebay.com/itm/298051200747",
+      "https://www.ebay.com/itm/366216409761",
+      "https://www.ebay.com/itm/298051191407",
+      "https://www.ebay.com/itm/397632676945",
+      "https://www.ebay.com/itm/389649415070",
+      "https://www.ebay.com/itm/358240178730",
+      "https://www.ebay.com/itm/177879372686",
+      "https://www.ebay.com/itm/389649404093",
+      "https://www.ebay.com/itm/147164043653",
+      "https://www.ebay.com/itm/358240170261",
+      "https://www.ebay.com/itm/358240165237",
+      "https://www.ebay.com/itm/127695991004",
+      "https://www.ebay.com/itm/147164035060",
+      "https://www.ebay.com/itm/147164029787",
+      "https://www.ebay.com/itm/389649373979",
+      "https://www.ebay.com/itm/397632614711",
+      "https://www.ebay.com/itm/406711231090",
+      "https://www.ebay.com/itm/317904696595",
+      "https://www.ebay.com/itm/336444580010",
+      "https://www.ebay.com/itm/389649319868",
+      "https://www.ebay.com/itm/397632577729",
+      "https://www.ebay.com/itm/117048516930",
+      "https://www.ebay.com/itm/117048516932",
+      "https://www.ebay.com/itm/117048516940",
+      "https://www.ebay.com/itm/117048517004",
+      "https://www.ebay.com/itm/117048517013",
+      "https://www.ebay.com/itm/117048517058",
+      "https://www.ebay.com/itm/117048517073",
+      "https://www.ebay.com/itm/117048514780",
+      "https://www.ebay.com/itm/397632572571",
+      "https://www.ebay.com/itm/389649298486",
+      "https://www.ebay.com/itm/397632554604",
+      "https://www.ebay.com/itm/147163981678",
+      "https://www.ebay.com/itm/168174137910"
+    ],
+    "Gem": [
+      "https://www.ebay.com/itm/257371138922",
+      "https://www.ebay.com/itm/257371134527",
+      "https://www.ebay.com/itm/406711897514",
+      "https://www.ebay.com/itm/317906229175",
+      "https://www.ebay.com/itm/358214514434",
+      "https://www.ebay.com/itm/366217065082",
+      "https://www.ebay.com/itm/366217063468",
+      "https://www.ebay.com/itm/366217062794",
+      "https://www.ebay.com/itm/366217061829",
+      "https://www.ebay.com/itm/277743409954",
+      "https://www.ebay.com/itm/397633589015",
+      "https://www.ebay.com/itm/147161170791",
+      "https://www.ebay.com/itm/406694635014",
+      "https://www.ebay.com/itm/188080088147",
+      "https://www.ebay.com/itm/188080047041",
+      "https://www.ebay.com/itm/358214514352",
+      "https://www.ebay.com/itm/188080010084",
+      "https://www.ebay.com/itm/406694635063",
+      "https://www.ebay.com/itm/206083932578",
+      "https://www.ebay.com/itm/317905916269",
+      "https://www.ebay.com/itm/277739757070",
+      "https://www.ebay.com/itm/366215225461",
+      "https://www.ebay.com/itm/236647195903",
+      "https://www.ebay.com/itm/227225698934",
+      "https://www.ebay.com/itm/389650171055",
+      "https://www.ebay.com/itm/389650171063",
+      "https://www.ebay.com/itm/389650171119",
+      "https://www.ebay.com/itm/389650170997",
+      "https://www.ebay.com/itm/389650171031",
+      "https://www.ebay.com/itm/389650170924",
+      "https://www.ebay.com/itm/389650170926",
+      "https://www.ebay.com/itm/168174746369",
+      "https://www.ebay.com/itm/336444906953",
+      "https://www.ebay.com/itm/287154891970",
+      "https://www.ebay.com/itm/298051709393",
+      "https://www.ebay.com/itm/306782411336",
+      "https://www.ebay.com/itm/306782408667",
+      "https://www.ebay.com/itm/198105198689",
+      "https://www.ebay.com/itm/317883263263",
+      "https://www.ebay.com/itm/177879811641",
+      "https://www.ebay.com/itm/366216800715",
+      "https://www.ebay.com/itm/358214514387",
+      "https://www.ebay.com/itm/366216798648",
+      "https://www.ebay.com/itm/366216796187",
+      "https://www.ebay.com/itm/366216779337",
+      "https://www.ebay.com/itm/366216778075",
+      "https://www.ebay.com/itm/389649952361",
+      "https://www.ebay.com/itm/366216777244",
+      "https://www.ebay.com/itm/366216773814",
+      "https://www.ebay.com/itm/157696431384",
+      "https://www.ebay.com/itm/267582075030",
+      "https://www.ebay.com/itm/267582071463",
+      "https://www.ebay.com/itm/267582070389",
+      "https://www.ebay.com/itm/198124720598",
+      "https://www.ebay.com/itm/298051432602",
+      "https://www.ebay.com/itm/147161170779",
+      "https://www.ebay.com/itm/257370689418",
+      "https://www.ebay.com/itm/376979602112",
+      "https://www.ebay.com/itm/406711459837",
+      "https://www.ebay.com/itm/376979589881",
+      "https://www.ebay.com/itm/358214514392",
+      "https://www.ebay.com/itm/376979574999",
+      "https://www.ebay.com/itm/376979569236",
+      "https://www.ebay.com/itm/277742799934",
+      "https://www.ebay.com/itm/376979556130",
+      "https://www.ebay.com/itm/376979554841",
+      "https://www.ebay.com/itm/287154629443",
+      "https://www.ebay.com/itm/168174371351",
+      "https://www.ebay.com/itm/157696250828",
+      "https://www.ebay.com/itm/376979543098",
+      "https://www.ebay.com/itm/168174366428",
+      "https://www.ebay.com/itm/287154613800",
+      "https://www.ebay.com/itm/168174356838",
+      "https://www.ebay.com/itm/397632799457",
+      "https://www.ebay.com/itm/406711357735",
+      "https://www.ebay.com/itm/397632794609",
+      "https://www.ebay.com/itm/406694634977",
+      "https://www.ebay.com/itm/287154575759",
+      "https://www.ebay.com/itm/257370578952",
+      "https://www.ebay.com/itm/198124565379",
+      "https://www.ebay.com/itm/287154574241",
+      "https://www.ebay.com/itm/397632746071",
+      "https://www.ebay.com/itm/397632736260",
+      "https://www.ebay.com/itm/287154569053",
+      "https://www.ebay.com/itm/358214514334",
+      "https://www.ebay.com/itm/227225458223",
+      "https://www.ebay.com/itm/287154547316",
+      "https://www.ebay.com/itm/376979452058",
+      "https://www.ebay.com/itm/267581972005",
+      "https://www.ebay.com/itm/298051228527",
+      "https://www.ebay.com/itm/287154539035",
+      "https://www.ebay.com/itm/287154537885",
+      "https://www.ebay.com/itm/298051213787",
+      "https://www.ebay.com/itm/157696128322",
+      "https://www.ebay.com/itm/298051196787",
+      "https://www.ebay.com/itm/157696121601",
+      "https://www.ebay.com/itm/358240199822",
+      "https://www.ebay.com/itm/358240199833",
+      "https://www.ebay.com/itm/358240199679",
+      "https://www.ebay.com/itm/358240196049",
+      "https://www.ebay.com/itm/358240196051",
+      "https://www.ebay.com/itm/358240196211",
+      "https://www.ebay.com/itm/358240185892",
+      "https://www.ebay.com/itm/376979404006",
+      "https://www.ebay.com/itm/298051165898",
+      "https://www.ebay.com/itm/366215225346",
+      "https://www.ebay.com/itm/406711250310",
+      "https://www.ebay.com/itm/358214514440",
+      "https://www.ebay.com/itm/287154449712",
+      "https://www.ebay.com/itm/287154447737"
+    ]
+  },
+  "knownListingData": {
+    "https://www.ebay.com/itm/358241517361": {
+      "title": "Dragon Ball Super: Frieza's Spaceship Exclusive Figure Toy Dragon Stars Nano NEWOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ohQAAeSwEdBpmVPs/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188080212678": {
+      "title": "SHF Dragon Ball Super Saiyan Broly Full Power Action Figure - NewOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wkYAAeSwRKlpmVNZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188080181418": {
+      "title": "Dragon Ball Snap Collection 2 Oob Unopened (Bulk)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vAoAAeSw8KppmVCx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/137056876019": {
+      "title": "Vintage 2002 Dragon Ball Z DBZ Flying Krillin Figure Burger King Toy MealOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/tZMAAeSwHyppmU8h/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/137056874311": {
+      "title": "Dragonball Z Saiyan Saga KRILLIN Action Figure 2000 Irwin ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pKgAAeSwhbRpmU58/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/306782547193": {
+      "title": "Dragon Ball Z Son Goku -A Saiyan Raised On Earth, Bandai S.H.Figuarts [New Toy]Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/m6wAAeSwq9NpmUoP/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083992300": {
+      "title": "Dragon Ball Figure Ichiban Kuji Chaoz Assembly Toy CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Ls8AAeSwj~VpmUfb/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711805345": {
+      "title": "Gashapon Paragus Miniature Dragon Ball Z Capsule ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cSwAAeSwum9pmUUo/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711805364": {
+      "title": "Dragon Ball Gashapon Miniature Kuririn Battle Suit Version ToysOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/SjYAAeSwoNppmUS5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397633538191": {
+      "title": "Dragon Ball Mecha Collection 1 Son Goku Miniature ToyOpens in a new window or tab",
+      "image": "https://secureir.ebaystatic.com/pictures/aw/pics/stockimage1.jpg"
+    },
+    "https://www.ebay.com/itm/406711804881": {
+      "title": "Dragon Ball Bardock Gashapon Miniature Shodo Figure Capsule ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QlwAAeSwMCBpmUTm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711804250": {
+      "title": "Dragon Ball Gashapon Super Saiyan 3 Son Goku miniature toy capsuleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KDIAAeSwTnppmUVd/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257371024540": {
+      "title": "S.H.Figuarts Dragon Ball Z Cooler Final Form limited Action Figure Toy BANDAIOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YYIAAOSwIBdm2nJC/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241180371": {
+      "title": "Dragon Ball Super - BGS 10 SS4: The Vermilion Saiyans BT15-152 SCR Card - PSA 10Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/AO4AAeSwXWZpmTSx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241136700": {
+      "title": "1996 Vintage Dragon Ball Z: SS Super Saiyan Gogeta Action Figure Irwin Toys Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/p4cAAOSwmvRlj7T~/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241136774": {
+      "title": "2000 DBZ Dragon Ball Z Vegeta Action Figure Burger King Kids Meal ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pV0AAOSwcl1kZxCQ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650181954": {
+      "title": "Dragon Ball Z Tapestry Anime Woven Throw Blanket Retro Anime Room Japan 58x52Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/DPwAAeSwwmFo-xuE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/306782428900": {
+      "title": "Ty Beanie Balls Spark Dragon With Tag Stuffed Plush Toy Purple Sparkle 3 InOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/PMgAAeSwmtFpcYtp/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083818760": {
+      "title": "In-Stock Bandai S.H.Figuarts Dragon Ball Z Kyewi Action Figure SHF Toy Gift NewOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1CgAAeSw7ZRpmSi2/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083778180": {
+      "title": "Bandai S.H.Figuarts Dragon Ball Z Bardock Action Figure SHF Toy Brand NewOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ojIAAeSwviJpmSGY/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083773990": {
+      "title": "Bandai S.H.Figuarts Dragon Ball Z Raditz Action Figure SHF Toy Gift New In HandOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mxoAAeSwMDtpmSEI/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079710407": {
+      "title": "Lottery Capsule Figures - Naruto, Dragon Ball, One PieceOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r4UAAeSwsDBpmSEN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650039722": {
+      "title": "Dragon Ball 6-Piece Figure Set - Bulk SaleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/e7sAAeSw~J9pmR8j/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/137056412986": {
+      "title": "Irwin Toys 1999 Dragon Ball Z Saga Continues TRUNKS Action Figure Series 7Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kFQAAOSw-c9nTj4V/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079668346": {
+      "title": "Dragon Ball Chousaien 3 A Prize Capsule Toy UnopenedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/eDAAAeSwiKBpmRva/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154821538": {
+      "title": "Funko Pop! Dragon Ball Super - Hit - Toys R Us Exclusive #315 w/ ProtectorOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7bEAAeSwARVpi8XU/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397633173111": {
+      "title": "VERY USED Dragon Ball Z: The Saga Continues Super Saiyan Broly 1989 Irwin ToysOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/t9AAAeSwoN5pmRWH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649881037": {
+      "title": "Dragon Ball BWFC Verock Action Figure - New, Large SizeOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mZ4AAeSw6m9pmRH3/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083683037": {
+      "title": "KIDULT Figure Dragon Ball B Type Unopened Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZFAAAeSwhDxpmRK0/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905303052": {
+      "title": "Dragon Ball Scultures BIG Modeling Tenkaichi Budokai 3 Son Goku Figure ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UE4AAeSwM0tpmQtf/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225581726": {
+      "title": "Dragon Ball Super Saiyan God Blue Hair Gogeta PVC Figure Toy Statue 6.75 in Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Cx4AAeSws09pmQki/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649785049": {
+      "title": "Dragon Ball 40th Anniversary Gashapon Part2 C Son Goku - UnopenedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ax0AAeSwN6dpmQpk/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174473539": {
+      "title": "Dragon Ball Z Son Goku Figure Toy 2022 Anime very NiceOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/K78AAeSwXLtpmQdm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/127696196732": {
+      "title": "2002 DRAGONBALL Z DBZ Irwin Toy Flying Air Bike #67 w/ Gohan Vintage - Tested Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9c4AAOSwHjNnP8ea/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083580856": {
+      "title": "Dragon Ball Z Vegeta Figurine with Fire Effect, A Grade, Pre-OwnedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/VToAAeSw5EhpmQRT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079397789": {
+      "title": "2Pack Snake Climbing Rings for Ball Python Lizard Bearded Dragon Ring Climb ToysOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HTYAAeSwgeJpmP7a/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649651023": {
+      "title": "Dragon Ball Z Ichiban Kuji Japan Last One Goku & GohanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Hh4AAeSw~8dpmP-O/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632889752": {
+      "title": "Dragon Ball 40th Anniversary Candy Toy Biscuit w/ Rubber Key Chain UsedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/EbQAAeSw71NpmP4Z/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632889674": {
+      "title": "Dragon Ball 40th Anniversary Keychain Candy Toy with Biscuit Used JapanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/C-wAAeSwMdhpmP4Z/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632889734": {
+      "title": "Dragon Ball 40th Anniversary Lava Mascot Key Chain Candy Toy Used JapanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/OI8AAeSw5btpmP2f/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632885226": {
+      "title": "Dragon Ball Super Super Saiyan Gogeta Candy Toy Trading Figure UsedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KzkAAeSwqxBpmP2n/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632885213": {
+      "title": "Dragon Ball Super Trunks Future Candy Toy Trading Figure Used JapanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/rWAAAeSwuGtpmP1k/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879543404": {
+      "title": "Dragon Ball SHF Goku & Vegeta Super Saiyan Gogeta DBZ Action Figure Toy GiftOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/A2oAAeSwVQlpmPxt/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879534098": {
+      "title": "15cm Dragon Ball Z Ginyu Force Anime Action Figure DBZ Collectible Toy GiftOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gRAAAeSwrhBpmPue/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711409619": {
+      "title": "Adverge Dragon Ball Figure Snack ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/77kAAeSw7ylpmP0R/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696253944": {
+      "title": "Dragon Ball Scultures BIG Zoukei Tenkaichi Budokai 2 Son Goku Boys [Toy one sizeOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/o4YAAeSwCOppmU15/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879528463": {
+      "title": "L.S.Studio Dragon Ball Super Moro Breakout King A/B Anime Action Figure ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/I~QAAeSw8uJpmPpN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079289282": {
+      "title": "Dragon Ball Snap 2 Set of A, B, D Grades New SealedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/f-YAAeSwIaRpmPTh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649500663": {
+      "title": "Dragon Ball Z Tares Unopened FigureOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/DCAAAeSwrpRpmPMU/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879444036": {
+      "title": "SSS Studio SHF Dragon Ball Z Trunks SSJ3 Super Saiyan 3 Anime Action Figure ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/78sAAeSwIh5pmPAS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632720774": {
+      "title": "Dragon Ball Z Son Goku & Vegeta PVC Figurines Set in Original Display CasesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/y28AAeSwVkBpmO-k/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879430995": {
+      "title": "Dragon Ball Super Saiyan Goku & Gohan Father & Son Anime 6\" Action Figure ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CXgAAeSwIyhpmO85/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879417923": {
+      "title": "Dragon Ball GT Super Saiyan 4 Gogeta Anime Action Figure Toy Collectible GiftOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kcIAAeSwJnZpmO5U/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649460201": {
+      "title": "[Used] Unused Dragon Ball Kai DX Assembled Pichi Pichi Gal Figure Videl [Toys &Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qbgAAeSw3olpmO9t/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649455810": {
+      "title": "[Dragon Ball Figure] irWin Toy Stomp CycleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UbkAAeSw2zhpmO6s/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649454007": {
+      "title": "Dragon Ball toy model figure figurine present 7Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sD4AAeSwUixpmO7V/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649436413": {
+      "title": "Dragon Quest Slime Crown Plush Toy Stress Ball Cute FuzzyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/nocAAeSwuzBpmOzc/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079202429": {
+      "title": "Dragon Ball 19-Item Set (Today Only Discount)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6zMAAeSwHGNpmOv7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358238076682": {
+      "title": "Naruto Mirror Collection Sakura Spring Toy Collector  eBayOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/VZsAAeSwHappmEIU/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083374634": {
+      "title": "Dragon Ball Mokujii Stand & Logo Block Set - UnopenedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WkkAAeSwJnZpmOMl/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079124426": {
+      "title": "Dragon Ball Son Goku 2 Figurine - New Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/q30AAeSwqxBpmOLH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079123377": {
+      "title": "Dragon Ball Son Goku Figure Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Gk4AAeSw2zhpmOL-/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079104062": {
+      "title": "Dragon Ball 40th Anniversary Acrylic Stand Set, Unopened, 12 PiecesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/c4AAAeSwAiNpmOEm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079094465": {
+      "title": "Banpresto Dragon Ball Z History Box Vol 5 Frieza Goku FiguresOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jkQAAeSwr75pmOCe/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174159863": {
+      "title": "Super Dragon Ball Heroes Zamasu Black Goku 25cm PVC Action Figures-with box-25cmOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/oy8AAeSwobZpmNsa/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079080140": {
+      "title": "Dragon Ball Ichibankuji Muten Roshi Figure Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/X-AAAeSwfVVpmN0I/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879255553": {
+      "title": "Dragon Ball Z SHF Super Saiyan Trunks 15cm Action Figure Model Toy CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/aUMAAeSwjFppmNtE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083330907": {
+      "title": "Dragon Ball Figure Set - Goku, Trunks, Super Saiyan, Used, No BoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/dIQAAeSwn4NpmNsN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079043190": {
+      "title": "Majin Buu Plush Dragon Ball Z 8\" Collectible Toy, Anime, Toei/Funimation Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/frEAAeSwotdpmNce/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216266432": {
+      "title": "Protector For Dragon Ball 1 Japanese Manga Comic Book Anime Akira ToriyamaOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mZYAAeSwoN5pmNkw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147163975386": {
+      "title": "Protector For Bandai Dragon Ball Limit Breaker Super Saiyan Blue Goku And Veg...Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jP4AAeSwHyppmNkO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216264539": {
+      "title": "Protector For Bandai Dragon Ball Limit Breaker Series Super Saiyan Goku/veget...Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Sx8AAeSwoZ9pmNge/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083311611": {
+      "title": "Dragon Ball Z Ichiban Kuji Frieza Large Figure with Dororia BonusOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/NcMAAeSwxzNpmNeN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904620936": {
+      "title": "Dragon Ball Goku & Chichi Wedding Figure 9cm Anime PVC Model Toy Gift*Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LoEAAeSwXLtpmNXD/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632520709": {
+      "title": "Dragon Ball Z Vegeta Goku Super Saiyan Action Figure Set Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/bqsAAeSwqxBpmNZu/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198124376212": {
+      "title": "Funko Pop! Vinyl: Dragon Ball - Kid Buu - Galactic Toys (Exclusive) #878Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HDcAAeSwbmhpmNOd/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904607577": {
+      "title": "Dragonball Z Perfect Cell Saga SS Trunks Figure Irwin Toys 2001Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/E0sAAeSwLb5pmNLS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083295531": {
+      "title": "Dragon Ball WCF Frieza, Goku, Vegeta, Bulma Set of 4Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/BcYAAeSwrL5pmNOk/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904590938": {
+      "title": "Dragonball Z Android 16 Android Saga Irwin Toy 2001 Exclusive Silver NewOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-2gAAeSwLYRpmNGm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358239925036": {
+      "title": "Dragon Ball Goku and Dragon 15cm PVC Figure Statue Collectible Anime Model ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/NwIAAeSwtrppmM4z/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904571303": {
+      "title": "35cm Dragon Ball Z Super Saiyan 3 Son Goku Figure with LED Base Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-IcAAeSw4~9pmM67/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904569999": {
+      "title": "Dragon Ball Z Androids Saga GOKU Irwin Toy Funmation w/ Androids MedallionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/OKQAAeSwKytpmM5V/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904568120": {
+      "title": "Dragon Ball Super Saiyan Son Gohan Anime Figure Collectible Desk Model ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Sn8AAeSwCOppmM3n/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904559567": {
+      "title": "Dragon Ball Z Androids Saga GOKU Figure Irwin Toy Funmation 2001 w/ MedallionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1o4AAeSwstJpmMyK/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904535603": {
+      "title": "Dragon Ball Z Androids Saga Goku Action Figure Irwin Toy 2001 w/ CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/74sAAeSwfOlpmMuF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298050900990": {
+      "title": "DRAGONBALL GTA ACTION FIGURE SS4 GENERAL RILLDO 5' Jakks 2004 HELMET CAPOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4pMAAOSwjpNk9oWB/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188078851302": {
+      "title": "Dragon Ball 40th Anniversary Acrylic Stand Set, Unopened, 12 PiecesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/BugAAeSwSUBpmMOz/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225290619": {
+      "title": "dragon ball Z , Dragon Ball Súper ,Figures Lot Of (31) Read the descriptionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cdgAAeSwPJ1pmLzx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904393446": {
+      "title": "Dragon Ball Z KRILLIN Figure Toy Movie Collection IF Labs 6”Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9uUAAeSwSBNpmLqn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157695658310": {
+      "title": "Vintage 2000 Irwin Toy Dragon Ball Z Future Trunks Action Figure 6\" Loose DBZOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/acUAAOSw6mxiuf4h/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/127695765010": {
+      "title": "Dragon Ball Z Action Figures Shenron Dragonball Z Figures Set Highly DetailedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/AJEAAeSwG6xpmLSI/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/236646601647": {
+      "title": "Bandai S.H. Figuarts Super Saiyan Gotenks Dragon Ball Z Action Figure SHF Toy~Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/978AAeSw2r5pmLLg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188078665067": {
+      "title": "Dragon Ball Z Son Goku Chosaiyan Figure Ichiban Kuji Unopened JapanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ouYAAeSwPo5pmLH6/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298050405568": {
+      "title": "Dragon Ball Z S.H.Figuarts Miniature Collection Capsule Toy Complete 4 Types setOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~ocAAeSwdpxpmJMy/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188078568440": {
+      "title": "Dragon Ball Z E-Grade Bibidi Figure, Ichiban Kuji, JapanOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MZEAAeSwy4ZpmKv0/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/137055319829": {
+      "title": "Dragon Ball Z Super Saiyan God Super Saiyan Vegito Action Figure ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gzIAAeSwvPRo23Dh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188078491889": {
+      "title": "Lot Of 4 Vintage 2002 Burger King Dragon Ball Z Toys Goku Piccolo Vegeta CoolerOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cZsAAeSw0eVpmKLA/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188078488894": {
+      "title": "Lot Of 4 Vintage 2000 Burger King Dragon Ball Z Figures Goku Krillin Piccolo...Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/a48AAeSwQDVpmKIV/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358239344105": {
+      "title": "Large Shenron Dragon Ball Z Figure - Iconic Display Statue (New in Box)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/J8kAAeSwtydpmKGb/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358238093648": {
+      "title": "Dragon Ball Carddass Set Used Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QWEAAeSwOGxpmER5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358238093663": {
+      "title": "Dragon Ball Carddass Rare Collectible ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~q8AAeSwD~VpmEPr/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206082994131": {
+      "title": "Dragon Ball Z Super Saiyan Blue Oozaru Figure with Slight Box DamageOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/VZQAAeSwu-NpmJ4O/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287153982407": {
+      "title": "Dragon Ball Z King Piccolo 2002 Burger King Action Figure Loose Promotional ToyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vGgAAeSwrr1pmJa5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358239196225": {
+      "title": "Takara Tomy Dream Tomica X Dragon Ball Red Ribbon Army Small Fighter Mini CarOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MAMAAeSwTnppmQwt/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358239196231": {
+      "title": "Takara Tomy Dream Tomica X Dragon Ball Master Roshi's Wagon Car Toy Mini CarOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/GDUAAeSw6bBpmQt5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317903860665": {
+      "title": "1.4 Inch Crystal Stars Dragon Ball and Transparent Base, Goku Action Figure.Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~CgAAeSwG6xpmIh7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198123933835": {
+      "title": "Funko Pop! Vinyl: Dragon Ball - Goku (Yardrat) - Toy Temple Collectibles...Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jxUAAeSw2NRpmIki/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406710757473": {
+      "title": "Takara Tomy Dream Tomica Dragon Ball Red Ribbon Army 2-Car Set Master Roshi NEWOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YakAAeSwYxJpl~tz/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358238093116": {
+      "title": "Dragon Ball Wafer Single Card Collectible Toy Card GameOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wecAAeSwM0tpmERz/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287153868502": {
+      "title": "Dragon Quest V Sky Bride Figure Soft Vinyl Character Toy Miniature Capsule 4.5cmOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lW8AAeSwD~VpmIK~/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188074719124": {
+      "title": "The Forty Niners Framed US Commemorative Coin Collection Display Set UncertifiedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/10gAAeSw5llplytH/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188074716766": {
+      "title": "Obsolete Coins of Yesteryear Framed US Collection Walking Liberty, Mercury, Ind…Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7hQAAeSwKBBplyqw/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188074699065": {
+      "title": "United States Commemorative Presidential Framed Coin and Currency Collection SetOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uHQAAeSwK~NplyhZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168171070716": {
+      "title": "2008 Proof set CN-Clad W/ Kennedy & Presidential Dollars OGP 14 coins & COAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/O5sAAeSw-xxplxyR/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/157692930071": {
+      "title": "90% Silver U.S. Mixed Coin CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cMUAAeSwG1Jplxh-/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358234613828": {
+      "title": "Postal Commemorative John Tyler Presidential Dollar 1 $ Coin Stamp CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZJwAAeSwSBNpllUJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/366213103559": {
+      "title": "1939 Washington Quarter Collectible US Coin Vintage Liberty Eagle SilverOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/l44AAeSwe5Zo0d0d/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397628123120": {
+      "title": "U.S Coin + Token Starter Collection - Vintage/Modern U.S CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/JVEAAeSwpCVplwa2/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397628089584": {
+      "title": "U.S Coin + Token Starter Collection - Vintage/Modern U.S CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8VQAAeSwK8BplwSW/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298046614974": {
+      "title": "1986 Usa Quarter Coin - 25¢ - Mint Mark \"D\" (Denver) - CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WxQAAeSwcJ5pllx3/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397627220016": {
+      "title": "1972 Kennedy Half Dollar, a collectible coin featuring President John F. KennedyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hp4AAeSw9S9plpN8/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406707936684": {
+      "title": "NGC AU53 1897 O MORGAN STACK'S W 57TH ST COLLECTION SILVER DOLLAR COIN-MAR711Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6b0AAOSw3Zhn5TCr/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267580482163": {
+      "title": "1949 Roosevelt Dime Circulated Silver 10c Coin Collectible USAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uaUAAeSwgzRpltjb/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168170587374": {
+      "title": "US Presidential $1 Dollar Coin Collection Uncirculated Madison Adams Jefferson …Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pBgAAeSwDoBplskx/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/198120984975": {
+      "title": "Morgan Million Dollar Collection Morgan Coins Set Of 5 Coins Silver Clad w/ BoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ReUAAeSw8n1plr~P/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/287151168075": {
+      "title": "1974-D Roosevelt Dime US Coins Collection Circulated #8.40Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WMQAAeSwzchplr6c/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/287151154832": {
+      "title": "Collection of Rare Coins of the Last Century - 5 Coins FramedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/E9QAAeSwqhpplrqW/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358233589746": {
+      "title": "1945 Lincoln Wheat Cent Copper 1 Cent Coin Collection Lot with Error CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-qgAAeSwVe5plrL4/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389642910372": {
+      "title": "1976 Eisenhower Dollar Bicentennial $1 Coin Uncertified US CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3jEAAeSwQDVplq0O/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177874742101": {
+      "title": "1977 Washington Quarter ERROR Filled D Mint Mark Error Coin! Rare & Collectible!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/yPwAAeSwKAJpiaCZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267580384554": {
+      "title": "Favorite Coins of the Last Century 3 Coin Collection - 1941 MERCURY DIMEOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/syEAAeSwws5plqfe/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643769018": {
+      "title": "Wheat Penny Coin Set 17 Piece CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xG8AAeSw3oFplqdq/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317897962147": {
+      "title": "Jefferson Nickel 1948 Circulated 5C US Coin Uncertified Collectible VintageOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xJcAAeSwKpxplqVI/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206079751726": {
+      "title": "George Washington Dollar Coin 1789-1797 Super Rare CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZvgAAeSwCBhplpzg/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306778560123": {
+      "title": "1921 E PLURIBUS UNUM Morgan Silver Dollar Coin Rare Coins Cryptocurrency CollectOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pyIAAeSwwVtplptV/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168170288713": {
+      "title": "1939 Jefferson Nickel 5C Circulated US Coin Uncertified Collectible VintageOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/iMEAAeSwAcJplpaY/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406707333357": {
+      "title": "1977 Kennedy Half Dollar 50C Circulated Coin Uncertified US Currency CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YUQAAeSwQ8xplpQt/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267580349559": {
+      "title": "1971-D Eisenhower Dollar Ike US Mint Actual Coin ! Start Your Ike CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/SfgAAeSwB7tplpEZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267580349365": {
+      "title": "Indian Head Pennies 1900/1905 Coin CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/flcAAeSwwVtplpCf/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267580337532": {
+      "title": "1902 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Q8UAAeSwLb5plokh/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643649214": {
+      "title": "Collection Batman X-men & Archie Comics Coins Cards Stamps & Meteorites 1855Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/is0AAeSwFrxpjd2a/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358233269440": {
+      "title": "Washington Quarters Lot Circulated Mixed Years 25C US Coins CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/JQMAAeSwkI1ploMa/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406707178476": {
+      "title": "1944-D Lincoln Wheat Cent Penny US Coin Collection CirculatedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CPcAAeSw5btpln5k/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298045584977": {
+      "title": "Lincoln Pennies 1944 - 1980 Collection Of 52 Coins No DuplicatesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FVwAAOSwNGll0mik/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298042988355": {
+      "title": "1900-S US MORGAN 90% SILVER DOLLAR Coin Cent High Value Collectible Display MoneOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/rhIAAeSwTLlplV85/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306776890340": {
+      "title": "1904 P Morgan 90% Silver Dollar Coin Cent High Value Collectible Display MoneyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3AsAAeSwOetplV3T/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306776906599": {
+      "title": "1901-O Morgan $1 90% Silver Coin Cent High Value Collectible Display MoneyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RO4AAeSwemZplWDO/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/336419664484": {
+      "title": "Rare US 1909 Indian Head Cent & 1909 Lincoln Wheat Penny Coin Collection Lot T16Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-A0AAeSwUH5pgli0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/277737674242": {
+      "title": "The Americana Series - The Presidents (5 Coins) CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ulcAAeSwRL9plnfS/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/147161077114": {
+      "title": "1977 Kennedy Half Dollar 50C Coin Circulated Uncertified US Mint CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4tkAAeSwvIdplndS/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397626848690": {
+      "title": "Lincoln Kennedy Coin Collection Truth Stranger Than Fiction Display Case 9 CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4RMAAeSwCxBplnWg/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/277736259469": {
+      "title": "~Huge AUCTION !!!  Coins, Currency Gold, Silver Collectibles Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/nywAAOSwEJllBE-8/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/376973477640": {
+      "title": "~Huge AUCTION !!!  Coins, Currency Gold, Silver Collectibles Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/AkcAAeSw8C9omfRS/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/287150783769": {
+      "title": "1853 Braided Hair Large One Cent Copper Coin, VF Details, Highly CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7GAAAeSwG-Jplmwi/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257367447318": {
+      "title": "U.S. Coins of the 20th Century Collection by PCS 6 Panels /22 Coins Many SilverOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sJcAAeSwQUNplmnv/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/277737565825": {
+      "title": "1942 D Lincoln Wheat Cent Circulated Penny 1c Coin CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1G4AAeSwN6dplmlN/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072827302": {
+      "title": "1984 PD US Mint Set (OGP) 10 coinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gpwAAeSwoVJplmce/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072819447": {
+      "title": "1910-P F Silver Barber Dime,   Nice Grade Coin for a collectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vB4AAeSwIyhplmbF/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137050103038": {
+      "title": "1941 P MERCURY SILVER DIME 90% SILVER - US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/k4YAAeSw5iFpll14/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/366211877613": {
+      "title": "Abraham Lincoln Presidential $1 Bronze Coin Uncertified US Dollar CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/0jYAAeSwl4lpllzi/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137050084894": {
+      "title": "1880 P $1 MORGAN DOLLAR 90% SILVER - US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kpoAAeSwwsBpllt0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137050070482": {
+      "title": "1945 P WASHINGTON QUARTER 90% SILVER US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/w7YAAeSwqVVpllly/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706855694": {
+      "title": "1908 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WFcAAeSwtVpplllR/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706849918": {
+      "title": "1890 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jPoAAeSwHypplli0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706840783": {
+      "title": "1902 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/dmgAAeSwUH9pllgS/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706835794": {
+      "title": "1906 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hBMAAeSwu15pllfA/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/327008082492": {
+      "title": "1979 Susan B Anthony Dollar Coin $1 wide rim Collectible United States MintOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YNEAAeSw6HRpllYK/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706832038": {
+      "title": "1901 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/e54AAeSwhTxpllc0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389642045645": {
+      "title": "1974 Kennedy Half Dollar Good Condition Collectable US CoinOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/XbQAAeSwz0BpllYR/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389642041087": {
+      "title": "1972 John F Kennedy Half Dollar Coin No Mint Mark US Coin Rare CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/k90AAeSwsZxpllUs/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706813704": {
+      "title": "1898 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CwsAAeSwaaVpllWi/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706801764": {
+      "title": "1899 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MqYAAeSwqz1pllRo/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706784904": {
+      "title": "1907 Indian Head Cent Penny   \"Actual Coin Pictured\" Add To Your Collection NowOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6RgAAeSwIXNpllOX/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049994630": {
+      "title": "1945 P WASHINGTON QUARTER 90% SILVER US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lqsAAeSwCx9pllKZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177874234124": {
+      "title": "1903- Barber Quarter Collectible US Silver CoinOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-foAAeSwxi1pllKe/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049983030": {
+      "title": "1979P Gold-Plated Susan B. Anthony Dollar Coin - Excellent Condition CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/otQAAeSw2r5pllJA/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072578106": {
+      "title": "SACAGAWEA ONE DOLLAR COIN US LIBERTY No Edge Lettering Rare Unique Collectable Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QBsAAeSwviJplk5N/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358232829769": {
+      "title": "2023 P Jovita Idar Quarter Error Coin 'In Cod We Trust' Rare CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FZ4AAeSw~J9pllCF/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049971583": {
+      "title": "1929 S MERCURY SILVER DIME 90% SILVER - US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/EEIAAeSwTVFplk~i/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257367303351": {
+      "title": "1974 Lincoln Penny No Mint Mark - Rare Collectible CoinOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CpwAAeSwemZplk-q/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049950268": {
+      "title": "1928 S MERCURY SILVER DIME 90% SILVER - US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/V1kAAeSwFQxplk6o/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306778192059": {
+      "title": "2005-S US Mint American Legacy Collection Silver Proof Set OGP COA 13 Coins BoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/D9IAAeSw9l1plkjX/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/147160779400": {
+      "title": "1964 Jefferson Nickel Circulated US Five Cents Coin Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/M~oAAeSw0gNplksM/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389641920607": {
+      "title": "Presidential $1 Dollar Coin John Quincy Adams Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Qe0AAeSwk5dplkgc/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049915100": {
+      "title": "1926 P MERCURY SILVER DIME 90% SILVER - US COLLECTIBLE COINOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4FkAAeSwvmdplklg/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/117044891072": {
+      "title": "Collectible 1976 D KENNEDY HALF DOLLAR JFK 50 Cent Piece VINTAGE COIN 70sOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/coAAAOSw9yRmPr3v/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168169764509": {
+      "title": "Lincoln Memorial Small Cent BN Circulated US Coin Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Tj4AAeSwMCBplkcU/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643239364": {
+      "title": "1990 S US Proof Coin Set - Superb Gem Uncirculated - Rare Collectible CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FGgAAeSwdpxplkaN/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317896740330": {
+      "title": "Roosevelt Dime United States 10C Uncertified Collectible CoinOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/GGwAAeSwnPZplkVo/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643237381": {
+      "title": "Morgan 1921 $1 Dollar Coin Circulated Uncertified US Currency CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pbUAAeSwG7pplkW6/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389641870612": {
+      "title": "Presidential $1 Dollar Coin Statue of Liberty Reverse Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Xa0AAeSwCx9plkSV/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/157691651109": {
+      "title": "1940-S Walking Liberty Half Dollar Coin, 90% Silver, CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/0U0AAeSwnaNplkNx/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/366211651023": {
+      "title": "1974 S Washington Quarter Choice Proof 25c US Coin CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/zYUAAeSwtj9pljzg/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643203825": {
+      "title": "Lincoln Memorial Cent Collection Framed 1959-1971 Penny Coin SetOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/w0cAAeSwuGtplj1b/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/366211648743": {
+      "title": "1973 S Washington Quarter Choice Proof 25c US Coin Collectible Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6VEAAeSwEYJpljyU/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643185399": {
+      "title": "Kennedy Mint Bicentennial Coin Collection 18th & 19th Century Framed Set StarOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qtAAAeSwDwtpljg6/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397626235185": {
+      "title": "Roosevelt Dime 2015 Denver Circulated 10C US Coin Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/rmMAAeSwXMRpljbI/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/198120015944": {
+      "title": "1805 Draped BUST Half Cent 1/2c #EC3 East Coast Coin & Collectables, Inc.Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/2PYAAeSwmDRpljRa/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177874032598": {
+      "title": "Quarter Rare Bicentennial Filled D Collectable 1776 -1976 Error CoinOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/NGYAAeSw9JRpUuuu/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298044972864": {
+      "title": "1945 S Jefferson Nickel Circulated Wartime Silver 5c Coin CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mBoAAeSwPxNpljFL/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298044971545": {
+      "title": "1884 Morgan Silver Dollar $1 Coin Uncertified US Silver 0.9 Fineness CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wbQAAeSwh0dpli9L/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/117044761603": {
+      "title": "US Coin Collection Lot - Silver Walking Liberty Halves, Barber 1912, Mercury 19…Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/j50AAeSwcEdpli7J/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306778067972": {
+      "title": "1970 Lincoln Memorial Small Cent BN US Coin Circulated Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/I7AAAeSwleRpli-q/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643162956": {
+      "title": "1999 US Mint Proof Coin Set - Original Government Packaging, Collectible CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jDMAAeSwxbJpli90/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389641660168": {
+      "title": "1979 US Susan B Anthony $1 Dollar Coin Uncertified Collectible United StatesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kI4AAeSw5dRplixP/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389641644894": {
+      "title": "Lincoln Wheat 1943 Small Cent Steel Coin BN Circulated Uncertified CollectibleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MXIAAeSwBWNpi-E6/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/147160598568": {
+      "title": "2009 US MINT PROOF SET-4 COIN SETS -18 COINS -DIRECT FROM THE MINT-PERFECT COND.Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sKoAAeSwrL5pi7Rn/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406706430400": {
+      "title": "US Coin Lot – Kennedy Half Dollars, Eisenhower Dollar, Wheat Pennies CollectionOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MjMAAeSwbMppliAs/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137049496769": {
+      "title": "40% silver 1973 Eisenhower $1 Coin US One Dollar Collectible UncertifiedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/XyIAAeSw~vRplh~g/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/376974170704": {
+      "title": "Lot 26 Jefferson Nickel Coins 5 Cent Piece 5c US Coin Collection 1941 - 1960Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RdUAAeSwNKZog81o/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072096619": {
+      "title": "United States Presidential Dollar Collection Display Frame Includes 31 CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/fH4AAeSwCx9plhr0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168169503933": {
+      "title": "Desert Storm Coin Collection Album and 45 Coins Certificate AuthenticOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LPUAAeSwIzRplhey/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/227222550343": {
+      "title": "U.S. Coin Collection Lot 90% Silver 1963 Franklin Half ANACS PR69 QuarterOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KncAAeSwEYJplhnJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072087262": {
+      "title": "United States Presidential Dollar Collection Display Frame Includes 14 CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Zf0AAeSw2NRplhlQ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236643053543": {
+      "title": "Huge Collection Of Trader Bea Graded Coins.Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KzAAAeSwk3FplhbT/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188072056923": {
+      "title": "United States Presidential Dollar Collection Display Frame Includes 17 CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LLQAAeSwLbVplhPv/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/376974114989": {
+      "title": "Danbury Mint World War II 1942-1945 Coin Collection Raising The Flag On Iwo JimaOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mcYAAeSwk-RpG4UJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/277736856268": {
+      "title": "1853  Dime with Arrows Fine  Rare Collectible USA Coin Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4RgAAOSwaORjFzgk/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267579960763": {
+      "title": "2003-S  SILVER Gem Proof State Quarter Collection Set  28.35G  ASW 5 CoinsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8cYAAeSwN2tplhF-/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267579957427": {
+      "title": "1972 Kennedy Half Dollar 50C Circulated Coin Uncertified Collectible US CurrencyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~bUAAeSw53Zplg0C/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650663730": {
+      "title": "New ListingPanini NFL Football Trading Card Lot 5 Cards Drake Maye Rookie Patriots 2024Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/zkcAAeSwziJpmVsG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137056979253": {
+      "title": "New Listing2022 Panini Select NFL Trading Card Box Silver Prizm Die-Cut Autographs 24 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/zMoAAeSwB7tpmVrG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650656269": {
+      "title": "New ListingPanini Donruss NFL Football Trading Card Lot 2 Cards Chris Olave Saints RookieOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7bcAAeSwJ05pmVq6/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650620929": {
+      "title": "New ListingPanini Select NFL Football Trading Card Lot 4 Cards Josh Jacobs Carson SteeleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vDMAAeSw71NpmViD/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257371124053": {
+      "title": "New Listing2004 National Trading Card Day Michael Vick #UD-9 PSA 9 MINT 5wgOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mS0AAeSwtj9pmVjy/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/127696615644": {
+      "title": "New ListingTopps 2014 Valor Ndamukong Suh #94 Detroit Lions NFL Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/g94AAeSwemZpmVcO/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/336445094567": {
+      "title": "New Listing2004 National Trading Card Day Eli Manning #PP6 PSA 9 MINT ni4Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7kAAAeSw~zBpmVeM/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241548667": {
+      "title": "New Listing 1990 Mike Tomtzak 18 Bears 458 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/l7AAAeSwWpdpmVX1/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650604853": {
+      "title": "New ListingPanini Prizm NFL Football Giants Trading Card Lot 2 Cards Waller ThibodeauxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vv4AAeSwWklpmVVZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650587126": {
+      "title": "New Listing1993 Pro Set Football Trading Cards Power Update New Factory Sealed Box 48 PacksOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/w-oAAeSwKqlpmVJt/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/336445079444": {
+      "title": "New Listing2004 National Trading Card Day Jimmie Johnson #PP3 SGC 9 MINT HOF m5xOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lrEAAeSw53ZpmVPX/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236647396024": {
+      "title": "New Listing2004 National Trading Card Day Tony Stewart #PP5 HOF 0mf9Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/joUAAeSw~pNpmVMe/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/157696778934": {
+      "title": "New Listing1994 Upper Deck World Cup USA 94 Football Soccer Trading Cards Box - NEW SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mYMAAeSwJCdpmVDG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168175346681": {
+      "title": "New Listing1994 Upper Deck World Cup USA 94 Football Soccer Trading Cards Box - NEW SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WroAAeSwUfFpmU~4/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/227225827343": {
+      "title": "New ListingUpper Deck 2009 First Edition Football Trading Card Pack NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cJkAAeSw-HZpmU8x/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/127696583383": {
+      "title": "New Listing(5) 2023 Panini Contenders Football Trading Card Factory Sealed Blaster Box NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/aH8AAeSwgIBpmUpk/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241462613": {
+      "title": "New Listing 1990 Myron Guyton 29 Giants 253 Score Football Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uUUAAeSwq9NpmU6M/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267582255413": {
+      "title": "New Listing1994 Fleer Anthony Carter Minnesota Vikings #288 Trading Card Tc4Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pWsAAOSwfsNlCVln/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267582255453": {
+      "title": "New Listing1994 Fleer Chris Doleman Atlanta Falcons #291 Football Trading Card Tc4Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qlwAAOSwpqZlCVqJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267582255469": {
+      "title": "New Listing1994 Fleer #357 Jeff Lageman New York Jets Trading Card Tc4Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qzMAAOSwkYNlCVY9/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236647365474": {
+      "title": "New Listing2004 National Trading Card Day Eli Manning #PP6 BCCG 10 Mint or Better 2u3Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7P4AAeSwo9xpmU4p/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782556580": {
+      "title": "New ListingWilliam Green 2003 Playoff Prestige #31 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FogAAeSwEF9pLiv~/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782555759": {
+      "title": "New ListingChad Thomas RC 2018 Panini Playbook #135 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QnIAAeSwHt5pLis0/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236647349539": {
+      "title": "New Listing2004 National Trading Card Day Eli Manning #PP6 12g7Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/likAAeSwJ05pmUwo/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241382274": {
+      "title": "New Listing 1990 Mike Wilcher 54 Rams 175 National Football LeagueSports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/PogAAeSwzGxpmUlF/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/117049004163": {
+      "title": "New ListingPanini Gold Standard 2022 Derek Carr #61 Raiders Football NFL Trading Card 06/99Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lkEAAeSwAeBpmS39/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257371053119": {
+      "title": "New Listing2004 National Trading Card Day Eli Manning #PP6 7j5Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/VuAAAeSwMDtpmUjt/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/336445014964": {
+      "title": "New Listing1991 Pro Set Jerry Rice #11 San Francisco 49ers WR Football Trading Card HOFOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lEoAAOSwTsNlpVzN/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317906106065": {
+      "title": "New ListingPanini Ashton Jeanty Raiders Rookie NFL Trading Card Lot 2025 Prizm 6 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gNcAAeSw0uRpmUaC/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241356075": {
+      "title": "New Listing 1990 Mike Tomczak 18 Bears 458 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WrQAAeSwFd1pmUX-/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/137056790676": {
+      "title": "New ListingKyler Murray Arizona Cardinals Panini Serial Numbered Trading Card Lot Certifie…Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/O8cAAeSwR1hpmUUJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083977827": {
+      "title": "New ListingPanini Patrick Mahomes II Elite Series & My House Trading Cards 2024Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/GaEAAeSw9l1pmUOA/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298051923214": {
+      "title": "New Listing2025 Panini Revolution Mega Box NFL Trading CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uTcAAeSwxi1pmUFR/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298051921621": {
+      "title": "New Listing2025 Panini NFL Mosaic Football Trading Card Mega Box Factory Sealed Brand New!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/EAQAAeSwjpxpmUDn/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633505093": {
+      "title": "New Listing2022 Panini NFL Five Trading Card Game Lot of 5 Sealed PackOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/XvIAAeSwEdRpmUAI/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241284942": {
+      "title": "New Listing 1991 Don Griffin 29 49ers 248 Fleer Corp Football Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/EkQAAeSwLedpmT~I/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168175026303": {
+      "title": "New Listing2023 TOPPS adley rutschman rc trading card day #GP-1Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ehMAAOSwRvNlB6FP/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/188080005623": {
+      "title": "New ListingPanini Gladiators & Last Call T.J. Watt Steelers NFL Trading Card LotOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MG8AAeSwn4NpmT6f/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241278935": {
+      "title": "New ListingPanini Prestige 2022 NFL Football Trading Card Lot - Urlacher, Solomon - 4 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Bk0AAeSwgzRpmT7V/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/227225754164": {
+      "title": "New Listing1989 Pro Set Football Trading Cards  - 35 Factory Sealed PacksOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/lMUAAeSwG7ppmTw~/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241245537": {
+      "title": "New Listing 1990 Neal Anderson 35 Bears 380 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~xcAAeSwtydpmTv3/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317905952909": {
+      "title": "New ListingNFL - Action Packed Rookie Update Edition 84 Player Trading Cards Box - 1990Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9CoAAeSw~J9pmTtE/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083928742": {
+      "title": "New Listing021 Gunslingers Football Trading Cards, which are exclusive to WalgreensOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YYoAAeSwRihpjRKY/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241203934": {
+      "title": "New Listing 1990 Nick Lowery  Hi-Pro MKTG, Inc 115 Football Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~W4AAeSwPNNpmTjb/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/147164534558": {
+      "title": "New ListingAndrew Luck Lot of 3 DIFFERENT 2013 Topps Trading Cards w/1 INSERT NFL ColtsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/30wAAeSwmrZpmTgC/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241195055": {
+      "title": "New Listing 1991 Don Griffin 29 49ers 650 National Football League Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uNAAAeSwF9FpmTdG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633427446": {
+      "title": "New Listing2020 Panini Spectra Jalen Hurts 9/10 Autographed Trading Rookie Card PSAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8y4AAeSwPNNpmTZS/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241185053": {
+      "title": "New Listing 1991 Don Davey 99 Packers 796 National Football League Sport Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KlQAAeSwCDtpmTW9/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083889812": {
+      "title": "New Listing1991 Upper Deck Football Heroes Joe Montana #9 Checklist 49ers NFL Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/JvAAAeSwBuFpmTQi/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241165415": {
+      "title": "New Listing 1990 Kevin Haverdink 70 Saints 742 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/K9gAAeSwh0dpmTRZ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/157696609362": {
+      "title": "New Listing1994 Score Emmit Smith S2B NFL Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1GgAAeSwSmBoFbbs/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317905877179": {
+      "title": "New ListingUpper Deck 1997 Shane Burton #170 Miami Dolphins Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3BoAAeSw88xpmTOF/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/376980030624": {
+      "title": "New Listing1976 Sunbeam Bread - Team  Stand up trading card saver bookOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZpwAAeSwG7ppmS~R/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879941688": {
+      "title": "New ListingPanini Topps Leaf Prizm Rookie NFL Trading Card Lot - 10 cardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/o3YAAeSwCBhpmS~Y/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241109177": {
+      "title": "New Listing 139 Marvin Washington 97 Jets 1993 Topps Football Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1ooAAeSw2bppmS-x/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358241096142": {
+      "title": "New Listing 1990 Kevin Mack 34 Browns 380 Score Football Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/5QQAAeSwPxNpmS4J/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/327011466264": {
+      "title": "New ListingFootball Soccer 1962 sports trade card. Dickson Orde. EnglandOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vpsAAeSwkE1pmS35/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879922987": {
+      "title": "New ListingPanini Leaf Rookie NFL Trading Card Lot - 10 cards Burrow Allen Barkley Maye NixOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kQ4AAeSwRL9pmS0P/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/127696433893": {
+      "title": "New ListingERNEST BYNER Upper Deck Game Breaker  #GB4 Redskins Hologram Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r4MAAeSws09pmSyJ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879920051": {
+      "title": "New ListingPanini Rookies Select Prestige Rookie NFL Trading Card Lot - 10 cardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sksAAeSwstJpmSvx/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879905162": {
+      "title": "New ListingPanini Leaf Donruss HIT Rookie NFL Trading Card Lot - 10 cardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/SzQAAeSwpFRpmSpF/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257370924756": {
+      "title": "New Listing2015-16 Plivac Football Stars Trading Cards Luis Suarez #009 01eyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/DIwAAeSwSUBpmStO/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/287154897786": {
+      "title": "New Listing1992 Ultimate World League Byron Williams #115 Orlando Thunder Football CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/z7cAAeSw71NpmSoE/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879902621": {
+      "title": "New ListingPanini Select Contenders Draft Picks Rookie NFL Trading Card Lot - 10 cardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/BacAAeSwLQFpmSlM/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397632576441": {
+      "title": "New ListingDerrick Thomas 1989 Topps Traded Rookie Card #90T NFL HOF Kansas City ChiefsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/oOkAAOSwCH9f4XsK/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/287154895675": {
+      "title": "New Listing1992 Ultimate WLAF Harry Jackson #47 Frankfurt Galaxy Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RBEAAeSwrhBpmSke/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879898428": {
+      "title": "New ListingTopps Donruss Bowman Panini Rookie NFL Trading Card Lot - 10 cardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/0PEAAeSwgeJpmSiu/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782417847": {
+      "title": "New Listing1989 Pro Set #486 Deion Sanders HOF RC Rookie NM/MT Rookie CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vuIAAeSwIWNpmSeM/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/177879890427": {
+      "title": "New Listing1989 Pro Set Barry Sanders #494 Great Shape Rookie Trading Card!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9oYAAeSwl4xpmSdv/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/117048853740": {
+      "title": "New Listing1988 Seattle Seahawks Domino’s Pizza Football Poster With Trading Cards. NOSOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/IysAAeSwCDFpiiCN/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633301266": {
+      "title": "New ListingDak Prescott 2024 Panini Donruss #20 Dallas Cowboys Football Trading Card NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/v00AAeSwML9pmSVT/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358240997350": {
+      "title": "New Listing 1990 Neal Anderson 35 Bears 380 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/e4oAAeSw4tVpmSUL/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633299953": {
+      "title": "New Listing2024 Panini Donruss #19 Devin Singletary New York Giants Trading Card FREE SHIPOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/me8AAeSwcJ5pmSTf/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/236647149864": {
+      "title": "New ListingPanini 2025 Donruss Optic Football NFL Sealed Trading Card Case MPN 18837Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1tcAAeSwip5pmSLG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358240996194": {
+      "title": "New Listing2025 Panini Select NFL Football Trading Cards Blaster Box NEW FACTORY SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/53AAAeSwrpRpmSTW/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358240995452": {
+      "title": "New ListingIndianapolis Colts Star Card Lot – Jeff George #1 Pick, Andre RisonOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6FoAAeSwfVxpmSQ1/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633295196": {
+      "title": "New ListingDexter Lawrence 2024 Panini Donruss #18 Dominators New York Giants Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/eysAAeSwiU1pmSOQ/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782409007": {
+      "title": "New ListingWilliam Green 2003 Topps Total #58 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/eIUAAeSwyqlpL3PB/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/327011431938": {
+      "title": "New Listing1990 Pro Set NFL Football Trading Card # 343 Chris Hinton Colts 1990 Pro BowlOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/j7YAAOSwrPNlNePM/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782402311": {
+      "title": "New ListingWilliam Green 2003 Fleer Platinum #32 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mGkAAeSwR6BpL3IC/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/198124965153": {
+      "title": "New ListingPICK YOUR Custom Dual DownTown Custom  Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hWAAAeSw9ZFpmSJa/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782400758": {
+      "title": "New ListingTim Couch RC 1999 Upper Deck MVP #202 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/g5wAAeSwVuBpLl95/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/198124964267": {
+      "title": "New ListingPress Pass 2013 Showcase Kenny Stills #SC-KS Auto /199 Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/2i8AAeSw1KlpmSIR/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782400437": {
+      "title": "New ListingTim Couch RC 1999 Upper Deck MVP #200 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CH8AAeSwwLBpLl3D/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633281274": {
+      "title": "New Listing2024 Panini Donruss Fred Warner #18 San Francisco 49ers Trading Card FREE SHIPOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/234AAeSwLixpmSGG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633272866": {
+      "title": "New Listing2024 Panini Donruss Vince Ferragamo #17 Los Angeles Rams Trading Card FREE SHIPOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/O2QAAeSwiW9pmSEG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782397062": {
+      "title": "New ListingRahim Abdullah RC 1999 Fleer Ultra #280A Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UoAAAeSwSgppLilX/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633270765": {
+      "title": "New Listing2024 Donruss Drake London Action All-Pros Atlanta Falcons #16 Trading Card NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/nKEAAeSwhDxpmSCB/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/317905593326": {
+      "title": "New Listing2025 Jadan Baugh 7/10 T-Rex Pro-Look Dino-Might 1st Trading Card By Wild Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/WNEAAeSwxdVpmOVL/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083771965": {
+      "title": "New Listing1994 Upper Deck Trading Card SANTA CLAUSOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/abwAAeSw0r1pmSCO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/306782395334": {
+      "title": "New ListingTim Couch 2000 Fleer Ultra #140 Cleveland Browns Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CyEAAeSwt~xpLihL/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/168174670310": {
+      "title": "New ListingPanini Tai Felton Rookie Trading Card Lot 6 Cards Prizm Donruss Optic NCAAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QLkAAeSwK~NpmR8o/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633260352": {
+      "title": "New ListingNoah Gray 2024 Donruss #15 Champ Is Here Kansas City Chiefs Trading Card NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/p9kAAeSwn4NpmR8G/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/306782389966": {
+      "title": "New ListingTopps 2014 Fire #80 Jay Cutler Chicago Bears NFL Base Set Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/yB8AAeSwsA1pmR7s/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358240935940": {
+      "title": "New Listing 1990 Kevin Haverdink 70 Saints 742 National Football League Sports Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cTUAAeSwCxBpmR8C/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/366216819759": {
+      "title": "New Listing2024 Topps Trading Card Day Bowman U Cade Klubnik Clemson TigersOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ehwAAeSwhTxpmR5w/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633252909": {
+      "title": "New ListingBrian Burns 2024 Panini Donruss #14 New York Giants Football Trading Card NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/y54AAeSwEdRpmR4J/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633248571": {
+      "title": "New ListingTaysom Hill 2024 Donruss #13 The Elite Series New Orleans Saints Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/rSYAAeSwsZxpmR2M/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/397633241176": {
+      "title": "New Listing2024 Panini Donruss #13 Brandon Aiyuk San Francisco 49ers Trading Card FREE SHIPOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/agQAAeSw8ptpmR0N/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/198124897093": {
+      "title": "New Listing1990 Topps Traded Football Open Factory Set (132 Cards) Emmitt Smith RCOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uuEAAeSwQDVpmRo5/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/298051629509": {
+      "title": "New ListingWild Card Sweet CeeDee Lamb Premium Offerings 1/1 Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/aQ8AAeSwhTxpmRnd/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/358240859207": {
+      "title": "New ListingScore 2025 Rookie NFL Trading Card Lot Giants Cam Skattebo Abdul Carter DartOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ukkAAeSw96VpmRnG/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083740149": {
+      "title": "New ListingJonathan Taylor Indianapolis Colts NFL trading card lot 32 cards Rookie PaniniOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/oioAAeSwG1JpmRh8/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083738448": {
+      "title": "New ListingJIM McMAHON Signed Autographed 1990 Topps Traded Card #11T Eagles Bears VikingsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/upkAAeSw3oFpmRgB/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/127696326478": {
+      "title": "New Listing2011 Panini Matthew Stafford Adrenalyn Trading Card Game No. E-11Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Mh0AAeSw28NpYckn/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/206083724809": {
+      "title": "New ListingPro Set NFL Detroit Lions Football Trading Card Lot Barry Sanders 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sIoAAeSwrpRpmRc9/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406711566957": {
+      "title": "New ListingPanini Totally Certified & Certified NFL Trading Card Box 2024 2025 AutographOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/5iAAAeSwpttpmRVw/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/267582091780": {
+      "title": "New Listing2025 Panini Phoenix Roquan Smith #96 Ravens NFL Football Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/95UAAeSwgzRpmP98/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389649910178": {
+      "title": "New ListingDavid Montgomery NFL Trading Cards Bears/Lions (5)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/TacAAeSwhTxpmRMq/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/227225616654": {
+      "title": "New ListingPanini Chicago Bears NFL Football Trading Cards Lot Luther Burden III RookieOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QQwAAeSwHkFpmQ5l/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/389650618980": {
+      "title": "New ListingTrading Card Display Stand, 5 Tier Vertical Holder for Baseball Basketball SportOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qnAAAeSwKpxpmVfl/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/336445098120": {
+      "title": "New Listing2004 National Trading Card Day LeBron James #UD-7 SGC 8 0ji1Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/glQAAeSwHTRpmVkC/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/147164656899": {
+      "title": "New ListingLos Angeles Lakers 2020 NBA Finals Champions Panini 30 Card Team SetOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/2EUAAOSw5yVfudRW/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/336445076782": {
+      "title": "New Listing2004 National Trading Card Day LeBron James #UD-7 BCCG 10 Mint or Better z7jOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jJoAAeSw4~9pmVOS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257371103076": {
+      "title": "New Listing2004 National Trading Card Day LeBron James #UD-7 SGC 9 MINT wq7Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/rEsAAeSwAcJpmVNg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/236647397304": {
+      "title": "New Listing2004 National Trading Card Day LeBron James #UD-7 PSA 9 MINT 03rxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZPYAAeSwoAxpmVNg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241475476": {
+      "title": "New Listing 1991 DominiqueWilkins 21 NBA Properties 10 Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mQcAAeSwPo5pmVBH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225814925": {
+      "title": "New ListingTopps Tipoff 2008-09 NBA Basketball Trading Card Pack 6 Cards Michael BeasleyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UT4AAeSwOetpmUxH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168175275487": {
+      "title": "New ListingJoe Dumars ACEO Art Trading Card ATC & Real Card NBA Van Gogh Starry Night #83Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7XwAAOSwHJ9j9PUy/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225811555": {
+      "title": "New ListingUpper Deck 2008-09 First Edition Basketball Trading Card Pack 10 Cards RookieOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/S5IAAeSw~J9pmUuj/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225810731": {
+      "title": "New ListingFleer 2007-08 NBA Basketball Trading Card Pack Rookie Insert 8 Cards SuperSonicsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/S5kAAeSwxdVpmUt1/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241400185": {
+      "title": "New Listing 138 Jeff Turner 31 Orlando Magic 1993 Fleer Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ST8AAeSw7ylpmUrZ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051978808": {
+      "title": "New Listing1993-94 Ultra BASKETBALL Trading Cards - You Pick - Choose One or MoreOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/orMAAeSwxvxpmUD-/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905957530": {
+      "title": "New ListingFleer - National Trading Card Day 2004 Carmello Anthony F8 BCG GEM MINT 9.5Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/VQ4AAeSw5EhpmTvG/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905957539": {
+      "title": "New ListingFleer - National Trading Card Day 2004 Carmello Anthony F8 BCG GEM MINT 9.5Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RuwAAeSwkI1pmTvH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905953774": {
+      "title": "New ListingNBA Denver Nuggets Police Promo Complete Trading Card Set Basketball - 1983Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Pj8AAeSwCDtpmTtX/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905952956": {
+      "title": "New ListingUpper Deck Locker Series #5 Limited NBA Basketball Foil Pack Trading Cards 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9eMAAeSwws5pmTtF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905952896": {
+      "title": "New ListingUpper Deck Locker Series #6 Limited NBA Basketball Foil Pack Trading Cards 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UjcAAeSwV0hpmTtE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905952916": {
+      "title": "New ListingUpper Deck Locker Series #2 Limited NBA Basketball Foil Pack Trading Cards 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/D9QAAeSwMDtpmTtF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905952918": {
+      "title": "New ListingUpper Deck Locker Series #4 Limited NBA Basketball Foil Pack Trading Cards 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~W8AAeSwRihpmTtF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905952922": {
+      "title": "New ListingUpper Deck Locker Series #3 Limited NBA Basketball Foil Pack Trading Cards 1991Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9l0AAeSwoVJpmTtF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241216713": {
+      "title": "New ListingCount 8 Brand New Condition -NBA Trading CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/GesAAeSw7ZRpmTkh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147164529549": {
+      "title": "New Listing1992-93 Upper Deck Shaquille O'Neal Trade #1b ROOKIE RC PSA 7 Graded Card ONealOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/JZIAAeSwG1JpmTdL/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241177514": {
+      "title": "New ListingDirk Nowitzki Trading Card Lot Of 14 Dallas Mavericks NBA 2007-2013 HOFOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8XwAAeSwy~xpmTS5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051825181": {
+      "title": "New ListingShaquille Shaq O’Neal 1992-93 Upper Deck Rookie Trade Card RC #1b HOF MagicOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~OEAAeSwHTZpdqDP/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650261130": {
+      "title": "New Listing2025/26 Trading Cards (Topps Basketball - Panini NFL - and Upper Deck MVP)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KykAAeSw-fVpmTJf/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241133367": {
+      "title": "New Listing1990-91 NBA Hoops CHUCKY BROWN Signed Rookie Card #71   MintOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YJcAAOSw1G5ksh9p/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397633372515": {
+      "title": "New ListingTopps Panini Mosaic NBA Hall of Fame Old School Trading Card Lot 18 Cards Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r~YAAeSwyBdpmS4H/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216892416": {
+      "title": "New ListingUPPER DECK 1992-93 NBA DRAFT ROOKIE SHAQUILLE O'NEAL MAGIC TRADE CARD #1BOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/w~4AAeSwtchpmS7c/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241076157": {
+      "title": "New ListingPau Trading Card Lot Of 17 Los Angeles Lakers Memphis Grizzlies NBA 2007-2013Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LtgAAeSwAPJpmSxf/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188079806145": {
+      "title": "New ListingDonruss NBA Basketball Trading Card Lot Manu Ginobili Spurs Jackson PistonsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/CTcAAeSw5EhpmSnn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979963632": {
+      "title": "New ListingAllen Iverson 36 Card Lot Philadelphia 76ers NBA Trading Cards Set VintageOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3YAAAeSwTThpmSgD/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358241041912": {
+      "title": "New Listing 139 Derek Anderson 1 Spurs 2001 Topps Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7MQAAeSwoippmSmT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154889685": {
+      "title": "New ListingTopps MLB 2018 -2025, Allen & Ginter, Topps 75 MLB, NBA Sports Trading Card LotOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jcIAAeSwxdVpmSTH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240992230": {
+      "title": "New Listing10 Count- NBA Trading CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7wgAAeSwLQFpmSOo/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/327011427288": {
+      "title": "New Listing1991-92 NBA Hoops Philadelphia 76ers #293 Base Set Basketball Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-MUAAeSwgs9pmSHl/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240952363": {
+      "title": "New Listing 23 Pete Myers 20 Bulls 1994 Fleer Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/08gAAeSwhbRpmSHR/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979889243": {
+      "title": "New ListingPanini Mosaic 2023-24 NBA Basketball Trading Card Lot 60 Chris Paul BancheroOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sIMAAeSwcEdpmSDO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083765112": {
+      "title": "New ListingTopps NBA Basketball Trading Card Lot 8 Cards Knieppel Edgecombe Harper FlaggOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/b14AAeSwKBBpmR4m/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240865153": {
+      "title": "New Listing 266 Eddie Lee Wilkins C 45 76Ers 1993 Topps Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hacAAeSwNtxpmRpt/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225636038": {
+      "title": "New Listing2025 Panini Prizm WNBA Trading Cards Blaster Box NEW FACTORY SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZQ8AAeSwPwFpmRdn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225629615": {
+      "title": "New Listing2023-24 Panini Phoenix Basketball Trading Cards (3) Blaster Boxes FACTORY SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qB8AAeSwmItpmRZP/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216771756": {
+      "title": "New ListingPanini 2024-25 Mosaic #31 Victor Wembanyama San Antonio Spurs Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YM0AAeSw~KBpmRTS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879702206": {
+      "title": "New ListingVintage 90’s David ‘The Admiral’ Robinson Basketball Spurs Trading Card Lot (29)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4WsAAeSwx~FpmRGv/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225612956": {
+      "title": "New Listing2025 Panini Prizm WNBA Trading Cards (5) FIVE Blaster Boxes NEW FACTORY SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9gYAAeSw2zhpmREa/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240726078": {
+      "title": "New Listing 211 Michael Curry 12 Pistons 1991 Topps Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ZOYAAeSwPxNpmRFE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240717184": {
+      "title": "New ListingRookie of the Year Michael Jordan Rookie Sports Trading Cards Bulls White SoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ShIAAeSwW4xpmRBh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198124777321": {
+      "title": "New ListingMichael Jordan NBA Lot of 12 Basketball Trading Cards Chicago BullsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/KS4AAeSwws5pmQ2C/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240680801": {
+      "title": "New ListingUpper Deck 1992-93 Shaquille O'Neal Trade Card #1B Orlando Magic Basketball CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/TFkAAeSwJFVpmQ6S/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711527052": {
+      "title": "New ListingMonopoly Panini Prizm 2024-25 NBA Basketball Trading Cards Booster Box – SEALEDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LHAAAeSw9MVpmQ3P/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267582077073": {
+      "title": "New ListingThe Fairfield Co 75 Cards All One Sport Basketball Trading Cards (Sealed) 2005Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/G3cAAeSwqhppmQ4f/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267582072926": {
+      "title": "New ListingTopps 2025-26 Chrome Larry Bird #243 Boston Celtics Basketball Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/aGUAAeSwdHppmQyu/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/336444782858": {
+      "title": "New Listingtrading card singles joel embiidOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mqgAAeSwgs9pmQwZ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397633017793": {
+      "title": "New ListingSkyBox USA Basketball Trading Cards 1996 New & Sealed (170) pack Lot TexacoOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HicAAeSw3olpmQdb/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696338748": {
+      "title": "New Listing2024 Panini Select WNBA Trading Card Box Debut Edition Blaster Pink Ice Prizms Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/tLkAAeSwfX1pi0aj/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154699878": {
+      "title": "New ListingTopps Total 2003-04 NBA Basketball Trading Cards - LotOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MbUAAeSwjYFpmQRJ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225531985": {
+      "title": "New ListingCharles Barkley NBA Trading Card Lot 4 Cards Topps Fleer SkyBox Big Shots SetsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qbcAAeSwnhJpmQCk/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083559407": {
+      "title": "New ListingSkyBox Electrified Jordan Chicago Bulls Basketball Insert Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/BHEAAeSwDoBpmQAh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/127696138164": {
+      "title": "New Listing1990-91 NBA Hoops Karl Malone #21 All-Star Utah Jazz Basketball Trading CardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/AfQAAeSwx-5pmP~F/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905075516": {
+      "title": "New ListingBowman Panini Topps Donruss NFL NBA Autographed Rookie Trading Cards Lot 10Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7jAAAeSwbmhpmP2y/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240443798": {
+      "title": "New ListingJoey Dorsey Signed Basketball Card 2008 Upper Deck Rookie Standouts #RSJDOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wbQAAeSwn5JpmPun/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048660632": {
+      "title": "New Listing1992 Upper Deck NBA Basketball Jeff Sanders Atlanta Hawks Trading Card #270 S148Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Hu8AAeSwmItpmPmy/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257370614483": {
+      "title": "New Listing🏀 1200 NBA Trading Cards Collection Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/fpAAAeSwnaNpmPhT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632792649": {
+      "title": "New ListingChicago Bulls Jordan Basketball Trading Card Lot Gold Design 100 SeriesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/nP8AAeSwHTRpmPae/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904931538": {
+      "title": "New ListingPanini Mosaic Sports Trading Card Lot Magic Johnson Giannis Rookie NBA NFLOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/7lMAAeSwQUNpmPW1/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/137056013303": {
+      "title": "New ListingSports Trading Cards 80s-90s Vintage Football Baseball Basketball Starter SetOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hN0AAOSwDL1fpJTO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257370579585": {
+      "title": "New Listing🏀 650+ NBA Trading Card Collection In Binder Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/weYAAeSwx~BpmPTg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/236646841514": {
+      "title": "New Listing1992-93 Upper Deck Trade Card (Punched) #1a 12g7Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jZ0AAeSwYxJpmPAS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051231700": {
+      "title": "New ListingDonruss Dallas Wings Basketball Trading Card Lot 14 Cards Ogunbowale SiegristOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4mQAAeSwRKlpmO3L/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051228724": {
+      "title": "New ListingDonruss Indiana Fever WNBA Basketball Trading Card Lot 12 Cards Multiple PlayersOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/sz4AAeSwMCBpmO1S/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051222413": {
+      "title": "New ListingDonruss Los Angeles Sparks WNBA Basketball Trading Card Lot 10 Cards PlayersOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/dbsAAeSwGf9pmOyB/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979429470": {
+      "title": "New ListingNBA Hoops Basketball Trading Card Lot Yao Clingan Duncan Erving NBAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xaIAAeSwgeJpmOwh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051218978": {
+      "title": "New ListingDonruss Washington Mystics Basketball Trading Card Lot 8 Cards Edwards SykesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/m-8AAeSwVYVpmOwn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154533030": {
+      "title": "New Listing2000-01 Fleer Mystique NBA Trading Cards Sealed Hobby BoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/apAAAeSwayVpmOvY/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051207369": {
+      "title": "New ListingPanini Prizm WNBA Basketball Trading Card Lot 9 Cards Multiple Players TeamsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HfUAAeSwG7ppmOug/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051200747": {
+      "title": "New ListingDonruss WNBA Rated Rookie Basketball Trading Card Lot 16 Cards Full Set Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/6JoAAeSwpHhpmOqT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216409761": {
+      "title": "New ListingFleer Donruss SAGE NBA MLB Trading Card Lot Pacers Athletics Nelson AutographOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ckQAAeSws09pmOon/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051191407": {
+      "title": "New ListingDonruss Chicago Sky Basketball Trading Card Lot 12 Cards Vandersloot Allen NurseOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3v4AAeSwu-NpmOoK/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632676945": {
+      "title": "New ListingUpper Deck Michael Jordan Chicago Bulls 1988-89 NBA Vintage Trading Card LotOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r7oAAeSwhSNpmOmm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649415070": {
+      "title": "New ListingMICHAEL JORDAN TRADING CARD, CHICAGO BULLS (1995) UPPER DECK COLLECTORS CHOICEOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/i9kAAeSw5AlpmOi7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240178730": {
+      "title": "New ListingRussell Westbrook Trading Card Lot Of 13 OKC Oklahoma City Thunder NBA 2009-2012Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/k2IAAeSw3~FpmOj4/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879372686": {
+      "title": "New ListingCam Spencer Slam Custom Trading Card Auto Beckett Authentic AutoOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ogEAAeSwiP9pmOjh/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649404093": {
+      "title": "New ListingPanini Topps Football Basketball WNBA Rookie Insert Trading Card Lot 44 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1ecAAeSwG-JpmOhO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147164043653": {
+      "title": "New ListingPanini Luka Doncic Dallas Mavericks NBA Hoops Trading Card Lot (3 Cards)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1YsAAeSwIzRpmOhm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240170261": {
+      "title": "New ListingChris Paul Trading Card Lot Of 12 New Orleans Hornets 2007-2011Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/o~sAAeSwPxNpmOfI/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240165237": {
+      "title": "New Listing 219 Otis Thorpe 33 Rockets 1995 Upper Deck Basketball Sports Trading Card Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xy4AAeSwN6dpmOd7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/127695991004": {
+      "title": "New Listingmosaic prizm ochai agbaji 2023 nba #208 graded 10 trading cardOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1q0AAeSwJllpmOb3/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147164035060": {
+      "title": "New ListingPanini Stephen Curry Golden State Warriors NBA Hoops Trading Card Lot (4 Cards)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wq8AAeSwCDtpmOVL/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147164029787": {
+      "title": "New ListingPanini Nikola Jokić Denver Nuggets NBA Hoops Trading Card Lot (3 Cards)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/drAAAeSw~J9pmOTJ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649373979": {
+      "title": "New ListingMICHAEL JORDAN VS MAGIC TRADING CARD, CHICAGO BULLS (1995-96) UPPER DECK SILVEROpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/v58AAeSwmvdpmOPX/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632614711": {
+      "title": "New Listing1993 Upper Deck Rookie Exchange GOLD Trade Card TC1 - Unredeemed!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/avMAAeSwR1hpmOMu/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711231090": {
+      "title": "New ListingPaper Trading Cards NBA Basketball Card Collection Various Brands Lot Of  75Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/h1sAAeSwPxNpmOHA/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317904696595": {
+      "title": "New ListingDonruss NBA Basketball Trading Card Lot Pass the Rock Curry Haliburton FoxOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/foUAAeSwT-tpmN-a/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/336444580010": {
+      "title": "New ListingPanini AJ Johnson Rookie Basketball Card Lot 2 NBA Sports Trading CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/XbgAAeSwC4xpmN-X/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649319868": {
+      "title": "New ListingMICHAEL JORDAN TRADING CARD; CHICAGO BULLS BACK TO BACK MVP (1990-91) UPPER DECKOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/q2EAAeSw0MhpmN4Y/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632577729": {
+      "title": "New ListingNBA Hoops 1989-90 Sports Trading Card Lot 9 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/TwkAAeSw7QVpmNzJ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048516930": {
+      "title": "New Listing200+ Large Lot NBA Trading Cards Vintage Modern Inserts Rcs Cleveland CavaliersOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Tw4AAeSw1pxoumAx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048516932": {
+      "title": "New Listing125+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rcs Memphis GrizzliesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UbAAAeSwvw5ouTb7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048516940": {
+      "title": "New Listing230+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rcs Atlanta HawksOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YEoAAeSw865ouRCD/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048517004": {
+      "title": "New Listing225+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rc Bullets WizardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qVQAAeSw1pxouTJ8/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048517013": {
+      "title": "New Listing275+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rcs Milwaukee BucksOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9E8AAeSw4olouS79/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048517058": {
+      "title": "New Listing215+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rcs Detroit PistonsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/y6oAAeSwAEJouRT-/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048517073": {
+      "title": "New Listing120+ Large Lot NBA Trading Cards Vintage Modern Inserts Rcs Toronto Raptors Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qPsAAeSwvLpouTnW/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/117048514780": {
+      "title": "New Listing175+ Large Lot Of NBA Trading Cards Vintage Modern Inserts Rcs Pelicans HornetsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xGkAAeSw7ZtouRRa/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632572571": {
+      "title": "New ListingNBA HOOPS 1989 All-Star Game Basketball Trading Card Sealed SetOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ahcAAeSwbnVpmNwB/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649298486": {
+      "title": "New ListingDAVID ROBINSON TRADING CARD, SAN ANTONIO SPURS (1997-98) TOPPS 40 EXCELLENT!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/n8YAAeSw3oFpmNsz/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632554604": {
+      "title": "New ListingMichael Jordan Promo Sports Trading Card Lot U.S. Sports 5 CardsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/j2QAAeSwIzRpmNqI/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147163981678": {
+      "title": "New ListingPanini LeBron James Los Angeles Lakers NBA Hoops Trading Card Lot (3 Cards)Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FbUAAeSwvIdpmNjK/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174137910": {
+      "title": "New ListingQuest Draymond Green #46-Signed-Panini Crusade Trading Card-NM 2012-2013 RookieOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Q00AAeSwPwFpmNkx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257371138922": {
+      "title": "New ListingNatural crystal carved owl, a perfect choice for home decoration as a crystalOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qjYAAeSwZThpmVnp/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/257371134527": {
+      "title": "New Listing1pc Kristall Pyramide Orgone Pyramid Amethyst Peridot, Crystal Pyramid, composedOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qE4AAeSwxdVpmVnd/s-l500.webp"
+    },
+    "https://www.ebay.com/itm/406711897514": {
+      "title": "New Listing10.6LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal Specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/h58AAeSwLYRpmVNm/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317906229175": {
+      "title": "New ListingOrgone Pyramid,Amethyst Orgonite Pyramid for Protection,Healing Crystal GemstoneOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/j2cAAeSwMCBpmVFL/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514434": {
+      "title": "New Listing45.1lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8KwAAOSw-01oXggE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366217065082": {
+      "title": "New Listing188G Natural Amethyst geode quartz cluster crystal specimen Healing D39Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/4jAAAeSwx-1pmVCe/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366217063468": {
+      "title": "New Listing202G Natural Amethyst geode quartz cluster crystal specimen Healing D38Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jdMAAeSwyQ5pmVBr/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366217062794": {
+      "title": "New Listing2.41LB Natural Amethyst geode quartz cluster crystal specimen Healing D36Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/qsEAAeSwk5dpmVAo/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366217061829": {
+      "title": "New Listing572G Natural Amethyst geode quartz cluster crystal specimen Healing D35Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/B1QAAeSwpttpmU~e/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/277743409954": {
+      "title": "New ListingHuge Pink Amethyst Quartz Crystal Cluster Plate. Natural. 13.5\" Tall, 7.25 Lbs.Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/nXgAAeSw9LZoczQP/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397633589015": {
+      "title": "New ListingHealing Amethyst Pyramid Positive Energy Generator Good luck stone 46g E6422Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/h5gAAeSw8uJpmUqb/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147161170791": {
+      "title": "New Listing7.9lb Large Natural Amethyst geode quartz crystal cluster specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/IMEAAeSwR9Joop75/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406694635014": {
+      "title": "New Listing7.2lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/K3kAAOSwnhFoLucP/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188080088147": {
+      "title": "New Listing1pc Natural Amethyst Agate Geode QuartzCarved Crystal Elephant Skull Reiki DecorOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vWQAAeSwFGlpmUck/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188080047041": {
+      "title": "New Listing20*14*10mm Natural Amethyst Quartz fortune pig Bracelet Crystal Reiki HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/P6EAAeSwjYFpmUJg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514352": {
+      "title": "New Listing38.9lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/598AAOSwZ~BoVQo8/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/188080010084": {
+      "title": "New Listing19*16*11mm Natural Amethyst Quartz Cabbage Bracelet Crystal Reiki Healing AAAAAOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Ve8AAeSwhbRpmUBt/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406694635063": {
+      "title": "New Listing3.4lb Natural Amethyst geode quartz cluster crystal specimen Healing tariff-freeOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3QQAAOSwri9nzoA5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/206083932578": {
+      "title": "New ListingAmethyst Pouch For Personal Growth Necklace Healing StoneOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/JeQAAOSwvVJmoH9l/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317905916269": {
+      "title": "New Listing13.4LB Natural amethyst Skeletal Quartz Super 7 Crystal Cluster Mineral energyOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/J-IAAeSwAWlpmTbO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/277739757070": {
+      "title": "New ListingAmethyst Crystal Piece - 2” Long 1.5” Tall - 5 Oz WeightOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RMgAAeSw7Rtpl4h2/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366215225461": {
+      "title": "New Listing1.1lb Natural Dream amethyst crystal hand carved skull mineral specimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r70AAeSwpY9of1eT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/236647195903": {
+      "title": "New ListingCrystal Quartz+Amethyst 300+ Gemstones SIlver Branch Tree Decor 10.5\" GWOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/y1oAAeSwvmdpkGfY/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225698934": {
+      "title": "New Listing75 + Rose Quartz+Amethyst Gemstones Silver Branches Bonsai Tree Decor GWOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/H3IAAeSwTVNphdae/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650171055": {
+      "title": "New Listing3.029LB Natural Amethyst geode quartz cluster crystal specimen Healing D47Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/SW0AAeSwYxJpmRZ2/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650171063": {
+      "title": "New Listing5.32LB Natural Amethyst geode quartz cluster crystal specimen Healing D44Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/bDQAAeSwU69pmRUH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650171119": {
+      "title": "New Listing2.48LB Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kU0AAeSwM0tpmRoL/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650170997": {
+      "title": "New Listing1.65LB Natural Amethyst geode quartz cluster crystal specimen Healing D46Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/33cAAeSwhlBpmRYZ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650171031": {
+      "title": "New Listing2.95LB Natural Amethyst geode quartz cluster crystal specimen Healing D45Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xwQAAeSwAPJpmRXG/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650170924": {
+      "title": "New Listing710G Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/eQIAAeSwy~xpmRmw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389650170926": {
+      "title": "New Listing344G Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cl4AAeSwl~ZpmRpV/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174746369": {
+      "title": "New ListingPink  Amethyst & Flower Agate Druzy Tower 322 grams 4.75 in tall 1.5 x 1.5 baseOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9FoAAeSwwc1o2bVE/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/336444906953": {
+      "title": "New ListingNatural Purple Amethyst Quartz Crystal  Obelisk 6\" Tall 1\" Base *small ChipsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/LFAAAeSwFodpSdlS/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154891970": {
+      "title": "New ListingAmethyst Natural Crystal Cluster Collectible SpecimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/u28AAeSwziJpmScj/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051709393": {
+      "title": "New ListingRaw Amethyst Wands Natural Form (Set of 3 Wands) Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gGgAAeSwGf9pmSRF/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/306782411336": {
+      "title": "New ListingBlack Amethyst Geode Crystal Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/pxQAAeSwWKxpmSO8/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/306782408667": {
+      "title": "New ListingRainbow Amethyst Cluster Crystal Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/OVoAAeSwDGVpmSL9/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198105198689": {
+      "title": "New Listing44lb Natural Brazilian amethyst cluster crystal mineral raw specimen healingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Na8AAOSw~n9nb5FY/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/317883263263": {
+      "title": "New Listing9.6lb Natural Amethyst quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/hCkAAeSwN9NpDySw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/177879811641": {
+      "title": "New ListingNatural Chevron Dream Amethyst Quartz Crystal Sphere Ball Healing, Amazing!!!Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/fQAAAeSwjQxpmRnN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216800715": {
+      "title": "New Listing344G Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/cl4AAeSwl~ZpmRpV/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514387": {
+      "title": "New Listing44lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/IOMAAOSwfclnqdD5/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216798648": {
+      "title": "New Listing2.48LB Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/kU0AAeSwM0tpmRoL/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216796187": {
+      "title": "New Listing710G Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/eQIAAeSwy~xpmRmw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216779337": {
+      "title": "New Listing3.029LB Natural Amethyst geode quartz cluster crystal specimen Healing D47Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/SW0AAeSwYxJpmRZ2/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216778075": {
+      "title": "New Listing1.65LB Natural Amethyst geode quartz cluster crystal specimen Healing D46Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/33cAAeSwhlBpmRYZ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/389649952361": {
+      "title": "New Listing18g Top Natural amethyst quartz carved Crystal fish Pendant Reiki giftOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/vdAAAeSw1nlpmRWX/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216777244": {
+      "title": "New Listing2.95LB Natural Amethyst geode quartz cluster crystal specimen Healing D45Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xwQAAeSwAPJpmRXG/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366216773814": {
+      "title": "New Listing5.32LB Natural Amethyst geode quartz cluster crystal specimen Healing D44Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/bDQAAeSwU69pmRUH/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696431384": {
+      "title": "New ListingAmethyst Base Wired Gemstone  Feng Shui Chakra TreeOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/PQEAAeSwBWNpk27i/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267582075030": {
+      "title": "New ListingNatural Rare Dream Amethyst  Crystal Dragon Egg Reiki Healing 75g d9613Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8AUAAOSweU5iOHr-/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267582071463": {
+      "title": "New ListingNatural Dream Amethyst Quartz Hand Carved Egg Crystal Reiki Healing 78g d9615Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/edYAAOSwOTliOH0I/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267582070389": {
+      "title": "New Listing10pcs NATURAL Dreamy Amethyst Crystal ball sphere Gem Stone Healing 92g a9963Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Lo0AAOSwZptiXKs0/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198124720598": {
+      "title": "New ListingNatural Amethyst Geode Blue Agate Clear Quartz Crystal Point Tower Beautiful 2lbOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/0YcAAOSw5kllDfTr/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051432602": {
+      "title": "New ListingAmethyst Cluster Tree On Rose QuartzOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/Ax8AAeSwMXtpmQPv/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/147161170779": {
+      "title": "New Listing19.4lb Natural Amethyst Quartz cluster Crystal mineral specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/3mIAAeSwaZJoowUO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257370689418": {
+      "title": "New ListingXL Uruguay Amethyst 4 lb Deep Purple Crystal on Stand Collector DisplayOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RqoAAeSwkWxpmQF-/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979602112": {
+      "title": "New Listing3.76LB 2pcs Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/8yYAAeSw1cFpe0jU/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711459837": {
+      "title": "New Listing133g Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/UM4AAeSwb5ZpmQEl/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979589881": {
+      "title": "New Listing3.85LB 2pcs Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-fIAAeSw8Vdpe0iu/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514392": {
+      "title": "New Listing24.5LB Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/h3MAAOSwaVpmhg38/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979574999": {
+      "title": "New Listing3.74LB 2PCS Natural Amethyst Uruguay Hole Crystal Cluster Gem Mineral SpecimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xtEAAeSwt1Jpbzrz/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979569236": {
+      "title": "New Listing4.51LB 3PCS Natural Amethyst Uruguay Hole Crystal Cluster Gem Mineral SpecimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/v8EAAeSw~bRpbzvq/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/277742799934": {
+      "title": "New ListingRare Amethyst Geode Decorative Rock Crystal Home Decor 34oz 5” PurpleOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/jssAAeSwat9pmN-m/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979556130": {
+      "title": "New Listing4.07LB 2PCS Natural Amethyst Uruguay Hole Crystal Cluster Gem Mineral SpecimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/w88AAeSwvadpbOFn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979554841": {
+      "title": "New Listing6.11LB Natural Amethyst Uruguay Hole Crystal Cluster Gem Mineral Specimen HealsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/H-4AAeSwUxxpbOBJ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154629443": {
+      "title": "New Listing4.53LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/bAoAAeSwk69pd1zT/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174371351": {
+      "title": "New Listing3.85LB 2pcs  Top Natural Amethyst Uruguay Cave Crystal Cluster Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ns0AAeSwfPNpdfqO/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696250828": {
+      "title": "New Listing17.27LB Natural Dream Amethyst Sphere Quartz Crystal Ball Specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/9WUAAOSw1INljNeu/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979543098": {
+      "title": "New Listing10.03LB Natural Amethyst Uruguay Hole Crystal Cluster Gem Mineral Specimen HealsOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/S5gAAeSwX6xpbN8n/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174366428": {
+      "title": "New Listing4.62LB 2pcs  Top Natural Amethyst Uruguay Cave Crystal Cluster Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/A~0AAeSwGJZpdfqk/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154613800": {
+      "title": "New Listing3.58LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/YzsAAeSwH35pd1lA/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/168174356838": {
+      "title": "New Listing3.76LB 2pcs  Top Natural Amethyst Uruguay Cave Crystal Cluster Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-nsAAeSwyX9pdfq7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632799457": {
+      "title": "New ListingPolished Chevron Amethyst Palm Stone, 70gOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/ziYAAeSwEltpmPc4/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711357735": {
+      "title": "New ListingLarge Amethyst Geode Cathedral Druzy Crystal with Quartz Parrot Set 8 InchesOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/F1cAAeSwLixpmPYe/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632794609": {
+      "title": "New ListingPolished Chevron Amethyst Palm Stone, 95gOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/y1kAAeSw3olpmPbe/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406694634977": {
+      "title": "New Listing20lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/1ckAAeSwfpJo2Nyf/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154575759": {
+      "title": "New Listing3.54LB Top Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/gZwAAeSw39dpfAV8/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/257370578952": {
+      "title": "New ListingBlack Amethyst Starry Night Druzy on Stand 8\" Dark Crystal Basalt 3.7 lbOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/I1oAAeSwgs9pmPNW/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/198124565379": {
+      "title": "New ListingLarge Amethyst geode quartz cluster crystal specimen Healing Purple 2.11lbOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/wEYAAeSwOAhpmPTe/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154574241": {
+      "title": "New Listing5.25LB Top Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/~A4AAeSw7WtpfAW0/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632746071": {
+      "title": "New ListingPolished Chevron Amethyst Palm Stone, 110.5gOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/BogAAeSw6yBpmPL7/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/397632736260": {
+      "title": "New ListingPolished Chevron Amethyst Palm Stone, 112gOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/FD4AAeSwx-1pmPKG/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154569053": {
+      "title": "New Listing31.02LB  Natural Dream Amethyst Quartz Crystal Sphere Ball HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/olIAAOSw4HFnnxRU/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514334": {
+      "title": "New Listing26.3LB Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/2KEAAOSwHldmhg3k/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/227225458223": {
+      "title": "New ListingFIRE QUARTZ AMETHYST PURPLE FLUORITE TOWERS HEART RAW LOTOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/r8EAAeSwU9ppmPBM/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154547316": {
+      "title": "New Listing3.69LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/aRoAAeSwc2ppd1Jx/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979452058": {
+      "title": "New Listing4.6LB Natural amethyst Cluster Quartz Crystal mineral Specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/0y8AAeSwqKxo0iWw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/267581972005": {
+      "title": "New ListingChevron Amethyst Tower Point Healing Crystal Wand Natural Home Decor 8” Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xAkAAeSwT-tpmO30/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051228527": {
+      "title": "New Listing1.95LB Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/DuQAAeSwc91pfezw/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154539035": {
+      "title": "New Listing4.66LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/n8oAAeSwILlpd14G/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154537885": {
+      "title": "New Listing4.2LB Top Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/t3IAAeSwC7lpfJ7p/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051213787": {
+      "title": "New Listing2.35LB Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/uv8AAeSwkp9pfe0K/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696128322": {
+      "title": "New Listing4.46LB 2PCS Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/zsEAAeSw5itpeKss/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051196787": {
+      "title": "New Listing2.12LB Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/QvkAAeSwANVpfe0b/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/157696121601": {
+      "title": "New Listing3.85LB 2PCS Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RhkAAeSwtI9peKwg/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240199822": {
+      "title": "New Listingsuperb lot of amethyst cluster mineral specimens crystal pieces 1073Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/InYAAOSwMa9gBvh1/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240199833": {
+      "title": "New Listingtop purple amethyst with golden apophyllite crystal mineral specimen stone 1565Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-MgAAOSw3sZh9sWJ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240199679": {
+      "title": "New Listingexcellent lot of glassy purple amethyst cluster crystal minerals specimens 1062Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HZQAAOSw1ctgBuYl/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240196049": {
+      "title": "New Listingsuperb clear glossy dark maroon amethyst crystal lot mineral specimen 883Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/MSkAAOSwpcBefwhN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240196051": {
+      "title": "New Listingpurple amethyst cluster natural minerals specimens 208Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/xkAAAOSwf75ckMnZ/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240196211": {
+      "title": "New Listingpurple amethyst crystal minerals specimens 207Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/OXMAAOSwYpVckMgB/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358240185892": {
+      "title": "New Listingglassy purple amethyst crystal lot mineral specimen 819Opens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/RoIAAOSwcIxee0Sp/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/376979404006": {
+      "title": "New ListingAmethyst Crystal GeodeOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/j7cAAeSwU69pmOiW/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/298051165898": {
+      "title": "New Listing6.83LB Natural Amethyst Uruguay Cave Crystal Cluster Gemstone Geode HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/HN8AAeSwhMVpfezn/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/366215225346": {
+      "title": "New Listing1.3lb Natural Dream amethyst crystal hand carved skull mineral specimenOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/mTgAAeSwtQlof1dN/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/406711250310": {
+      "title": "New ListingNatural Amethyst Crystal Cluster Lot of 2 Raw Purple Quartz SpecimensOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/-5wAAeSwRZ1pcA5r/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/358214514440": {
+      "title": "New Listing24.6lb Natural Amethyst geode quartz cluster crystal specimen HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/DHMAAOSwaXBn1THl/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154449712": {
+      "title": "New Listing2pc 3.05LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/fcEAAeSwO8ZpeMLI/s-l140.webp"
+    },
+    "https://www.ebay.com/itm/287154447737": {
+      "title": "New Listing3pc 4.37LB Natural Uruguayan Amethyst Quartz Cave Geode Crystal HealingOpens in a new window or tab",
+      "image": "https://i.ebayimg.com/images/g/oS0AAeSwCfFpeMDr/s-l140.webp"
+    }
+  }
 }

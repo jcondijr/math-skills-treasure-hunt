@@ -549,6 +549,7 @@
           <div class="item-title">Hard Refresh Rewards 🔄</div>
           <p class="small">Purges current reward history and rebuilds fresh reward pools for a new mix.</p>
           <button id="hardRefreshAwardsBtn" type="button">Hard Refresh Rewards 🔄</button>
+          <button id="forceDeviceUpdateBtn" type="button">Force Device Update 📲</button>
           <div id="refreshLoading" class="loading-row hidden" role="status" aria-live="polite">
             <span class="spinner" aria-hidden="true"></span>
             <span id="refreshStatus">Refreshing rewards...</span>
@@ -557,6 +558,7 @@
             <div id="refreshProgressFill" class="refresh-progress-fill"></div>
           </div>
           <div id="refreshDone" class="small"></div>
+          <div id="buildInfo" class="small"></div>
         </div>
       </div>
     </section>
@@ -924,8 +926,11 @@
     const refreshProgress = document.getElementById("refreshProgress");
     const refreshProgressFill = document.getElementById("refreshProgressFill");
     const refreshDone = document.getElementById("refreshDone");
+    const forceDeviceUpdateBtn = document.getElementById("forceDeviceUpdateBtn");
+    const buildInfo = document.getElementById("buildInfo");
     const REWARD_STATE_STORAGE_KEY = "mathTreasureHuntRewardStateV1";
     const REWARD_DATA_URL = "rewards.json";
+    const APP_BUILD = "2026-02-21-12c42a0-cache-reset";
 
     const state = {
       selectedTable: 2,
@@ -1193,6 +1198,28 @@
       hardRefreshAwardsBtn.disabled = false;
     }
 
+    async function handleForceDeviceUpdate() {
+      forceDeviceUpdateBtn.disabled = true;
+      refreshDone.textContent = "Resetting local cached state...";
+      try {
+        localStorage.removeItem(REWARD_STATE_STORAGE_KEY);
+      } catch (err) {
+        // Ignore localStorage errors.
+      }
+      if (window.caches && typeof window.caches.keys === "function") {
+        try {
+          const keys = await window.caches.keys();
+          await Promise.all(keys.map((key) => window.caches.delete(key)));
+        } catch (err) {
+          // Ignore Cache API errors.
+        }
+      }
+      const nextUrl =
+        `${location.origin}${location.pathname}` +
+        `?v=${encodeURIComponent(APP_BUILD)}&r=${Date.now()}`;
+      location.replace(nextUrl);
+    }
+
     function playCorrectSound() {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
       const now = ctx.currentTime;
@@ -1334,14 +1361,21 @@
 
         state.rewardsDataVersion = String(payload.version || "external");
         state.rewardsDataSalt = String(payload.rotationSalt || payload.version || "external");
+        updateBuildInfo();
         return true;
       } catch (err) {
         runtimeFallbackItemLinks = FALLBACK_ITEM_LINKS;
         runtimeKnownListingData = KNOWN_LISTING_DATA;
         state.rewardsDataVersion = "embedded";
         state.rewardsDataSalt = "embedded";
+        updateBuildInfo();
         return false;
       }
+    }
+
+    function updateBuildInfo() {
+      if (!buildInfo) return;
+      buildInfo.textContent = `Build: ${APP_BUILD} | Rewards data: ${state.rewardsDataVersion}`;
     }
 
     async function enrichItemFromLink(link, answerValue, category) {
@@ -1760,6 +1794,7 @@
       state.refreshToken = makeRefreshToken();
       saveRewardState();
     }
+    updateBuildInfo();
     loadRewardsData();
 
     startBtn.addEventListener("click", startRound);
@@ -1784,6 +1819,7 @@
     nextBtn.addEventListener("click", goToNextQuestion);
     rerollBtn.addEventListener("click", handleRerollReward);
     hardRefreshAwardsBtn.addEventListener("click", handleHardRefreshAwards);
+    forceDeviceUpdateBtn.addEventListener("click", handleForceDeviceUpdate);
     answerInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") handleSubmit();
     });
